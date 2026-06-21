@@ -288,7 +288,7 @@ window.NEIGHBORHOODS = {
       tag: "Quiet luxury, old money, on the edge of the Presidio",
       story: "Presidio Heights is the part of SF that backs up to the Presidio, with no commercial strip to speak of, and a population of houses that are the point. The architecture is mostly early 1900s Mediterranean and Spanish Revival, with a few modernist exceptions. The streets are silent except for the occasional dog-walker. Lake District is the part of Presidio Heights that faces Mountain Lake and backs up to the entrance to the Presidio\'s main park.",
       best_for: "High-net-worth families, design-trained buyers who want a real house, anyone who wants to walk into the Presidio for a morning run.",
-      schools: "Highly rated public: Claire Lilienthal (K-8, two campuses, very high demand). Private: Town School, Convent of the Sacred Heart, San Francisco Day School, Stuart Hall, the French American school.",
+      schools: "Public: Presidio Heights is zoned for SFUSD\'s lottery-based assignment, with no traditional K-5 school located directly inside the neighborhood. Nearby SFUSD options include Claire Lilienthal (K-8, Madison campus in Inner Richmond and main campus in Marina) and Sherman Elementary (Marina). The Marina Middle School and Presidio Middle School (also by lottery) are the most common public middle-school paths. Private schools within a short drive: Town School for Boys, Convent of the Sacred Heart, San Francisco Day School, Stuart Hall, the French American International School, the San Francisco Waldorf School, and others clustered in the Presidio Heights / Pacific Heights / Jordan Park / Laurel Heights corridor.",
       parks: "Mountain Lake Park (with the playground, tennis courts, and the path into the Presidio), the Lyon Street steps down to the Marina, the Presidio itself (1,500 acres of park and forest, technically federal land).",
       transit: "The 1, 3, 33, 38 buses serve the edges. There is no BART or Muni Metro stop in the neighborhood. Car ownership is normal.",
       noise: "Very quiet. The closest thing to a sound is wind in the cypress trees and the Presidio\'s wildlife."
@@ -305,7 +305,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94118 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94118 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -316,7 +316,7 @@ window.NEIGHBORHOODS = {
       tag: "Sunny, hilly, dog-park central, tight-knit",
       story: "Bernal Heights is the part of the Mission that climbed the south hill and stayed. The neighborhood is a mix of 1900s–1940s homes and a few mid-century pockets, all oriented toward the sun (it\'s the warmest, least-foggy neighborhood in central SF). Bernal Heights Park is the heart: a 26-acre hilltop with the famous off-leash dog area, 360-degree views of the city, and a community of regulars who wave at each other from the hill. Cortland Avenue is the small main street.",
       best_for: "Dog owners, families who want the sun and a real community, anyone priced out of Noe Valley who wants the same vibe one hill over.",
-      schools: "SFUSD K-5: Leonard Flynn, others. Middle: Everett, the SFUSD lottery. Charter and language-immersion options nearby.",
+      schools: "Public K-5: Leonard R. Flynn Elementary School (SFUSD, Bernal Heights). Also nearby: Bryant, Buena Vista Horace Mann K-8, Daniel Webster, George R. Moscone, Marshall, Starr King, Longfellow, Junipero Serra. Middle: James Denman, James Lick, the SFUSD lottery. High: Downtown, John O\'Connell, San Francisco International.",
       parks: "Bernal Heights Park (the hilltop with the off-leash area and the views), Holly Park (smaller, in the north end), the south end of McLaren Park (one of the city\'s largest).",
       transit: "The 24, 44, 67 buses. The BART is two blocks away at 24th Street Mission. Driving downtown is 15 minutes outside of rush hour.",
       noise: "Medium-to-quiet. The morning dog-park chatter from Bernal Heights Park is the neighborhood soundtrack; the Mission\'s weekend noise doesn\'t quite reach the top of the hill."
@@ -333,7 +333,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94110 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94110 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -361,7 +361,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94110 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94110 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -389,7 +389,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94102 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94102 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -400,7 +400,7 @@ window.NEIGHBORHOODS = {
       tag: "New-build, UCSF-centric, waterfront, condo-heavy",
       story: "Mission Bay is the part of SF that didn\'t exist 25 years ago: a former rail yard that the city rezoned in the 1990s and has been building out ever since. The neighborhood is now a mix of UCSF medical campus, biotech offices, mid-rise and high-rise condos, and a few restaurants. The population is dense, young, professional, and mostly there for proximity to UCSF or the tech corridor. The architecture is 2000s–2020s new-construction, mostly mid-rise to high-rise.",
       best_for: "UCSF-affiliated buyers (faculty, staff, students), biotech workers, anyone who wants a new-build condo in a walk-to-everything location.",
-      schools: "SFUSD K-5: by assignment, several local options including the newer Mission Bay School. Middle: by lottery, Marina or AP Giannini.",
+      schools: "Public K-5: Mission Bay School (SFUSD, K-8, in the neighborhood). Bessie Carmichael School (PreK-8 Filipino Education Center) is also nearby. Middle: by lottery, Marina Middle or others.",
       parks: "Mission Bay Park (the central green, with the play area and the bay views), the UCSF campus green, the channel-side trails, the new Oracle Park waterfront (just to the north).",
       transit: "The T Third Street Muni Metro runs through, with a stop at UCSF. The N Judah, BART, and Caltrain are walkable. The 280 is right at the south edge. Driving to downtown is 5 minutes.",
       noise: "Medium. The new-build density and the UCSF activity make this busier than the typical SF neighborhood. The waterfront side is quieter."
@@ -417,7 +417,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94158 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94158 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -428,7 +428,7 @@ window.NEIGHBORHOODS = {
       tag: "High-rise, waterfront, downtown-adjacent",
       story: "South Beach is the part of SF just south of the Financial District, on the Rincon Hill slope and the waterfront. The architecture is mostly 2000s–2010s high-rise condos and a few surviving 1900s warehouses (the South Beach Marina area). The population skews urban, professional, and often works in finance or tech. The Embarcadero is the spine; the Bay Bridge is the eastern edge. Population is dense, mostly renters, mostly new-build.",
       best_for: "Downtown workers, buyers who want a high-rise condo with bay views, anyone who wants walkability to FiDi and the Embarcadero.",
-      schools: "SFUSD K-5: by assignment, several local options. Middle: by lottery, Marina or AP Giannini.",
+      schools: "Public: Bessie Carmichael School PreK-8 Filipino Education Center (SFUSD, South of Market), Civic Center Secondary School, Tenderloin Community Elementary School. Youth Chance High School. Most K-5 South Beach families use SFUSD lottery for placement outside the immediate area.",
       parks: "South Beach Park (the small green at the foot of the Bay Bridge), the Embarcadero\'s promenade, Rincon Hill Park (the small park at the top of the hill).",
       transit: "Embarcadero BART and the F-Market streetcar, the T Third Street and N Judah, the 1, 8, 14, 30, 38, 41, 45 buses. The Bay Bridge is two blocks away. Walking to FiDi in 5 minutes.",
       noise: "Medium-to-loud. The Bay Bridge and the Embarcadero are the dominant sounds. The cross streets are quieter."
@@ -445,7 +445,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94105 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94105 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -456,7 +456,7 @@ window.NEIGHBORHOODS = {
       tag: "Loft-conversion, museums, downtown-edge, transit-tight",
       story: "SoMa (South of Market) is the part of SF that was mostly industrial until the 1990s and has been re-invented as the city\'s loft-and-museum district. The population is a mix: long-time residents in the housing projects, newer tech workers in the new condos, the museum-going crowd on weekends. The architecture is a mix: surviving 1900s warehouses converted to lofts, 2000s–2010s mid-rise and high-rise new builds, the Yerba Buena gardens, the museums (SFMOMA, the Contemporary Jewish Museum, the Museum of the African Diaspora, the Children\'s Creativity Museum).",
       best_for: "Downtown workers, design-literate buyers who want a loft, museum-and-arts scene lovers.",
-      schools: "SFUSD K-5: by assignment, several local options. Middle: by lottery, Marina or AP Giannini.",
+      schools: "Public: Bessie Carmichael School PreK-8 Filipino Education Center (SFUSD, SoMa), Civic Center Secondary School, Tenderloin Community Elementary School, Mission Bay School (SOMA/Mission Bay boundary), Youth Chance High School. Most K-5 SoMa families use SFUSD lottery for placement outside the immediate area.",
       parks: "Yerba Buena Gardens (the central green, with the fountains and the ice skating rink), South Park (the small circular park that gave the area its name), the small plazas around the museums.",
       transit: "Powell BART and the F-Market streetcar, the N Judah, the 5, 6, 7, 9, 14, 19, 30, 38, 45 buses. Walking to FiDi in 10 minutes; walking to Union Square in 5.",
       noise: "Medium-to-loud. The downtown traffic, the convention center, the nightlife on Folsom and Harrison, the museum crowds. The cross streets and the residential pockets (Yerba Buena, South Park) are quieter."
@@ -473,7 +473,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94103 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94103 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -484,7 +484,7 @@ window.NEIGHBORHOODS = {
       tag: "Industrial-turned-residential, design-warehouse, third street",
       story: "The Dogpatch is the part of SF that\'s been re-invented in the last 20 years: an old industrial waterfront (rail yards, warehouses, the shipyard to the south) that\'s been replaced, block by block, with new condos, design offices, and a few small restaurants. The population skews younger, design-trained, and tech-adjacent (UCSF Mission Bay is across the channel). The architecture is mostly 2000s–2020s new-builds with a few surviving 19th-century brick warehouses.",
       best_for: "Buyers who want a new-build condo with character, design-literate buyers, anyone who works at UCSF Mission Bay and wants to walk to work.",
-      schools: "SFUSD K-5: by assignment, several local options. Middle: by lottery, Marina or AP Giannini. Charter options in the broader area.",
+      schools: "Public K-5: by SFUSD lottery, the closest options are Mission Bay School (SOMA/Mission Bay boundary, K-8) and Daniel Webster (Potrero Hill). Most Dogpatch families use SFUSD lottery for elementary placement outside the immediate area. Middle and high: by lottery.",
       parks: "Crane Cove Park (newer, on the waterfront, with a beach and the historic crane), the Third Street corridor\'s new plazas, the bay-side trails at the end of Illinois Street.",
       transit: "The T Third Street Muni Metro line runs through the neighborhood, connecting to downtown in 15 minutes. The 19, 22, 48 buses. The 280 is right at the south edge.",
       noise: "Medium. The 280 is audible on the south edge; the waterfront side is quieter. The new development is denser and getting busier."
@@ -501,7 +501,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94107 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94107 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -512,7 +512,7 @@ window.NEIGHBORHOODS = {
       tag: "Sunny, tech-adjacent, hilltop views",
       story: "Potrero Hill is the part of SF that climbs the south slope of the Mission Creek basin, with the most reliable sun in the city (it\'s on the warm side of the fog line) and the best view of the downtown skyline from many blocks. The architecture is a mix: 1900s Victorians and Edwardians on the lower blocks, mid-century and 1990s new-builds climbing the hill, a few industrial-edge pockets. The population skews design-literate, tech-adjacent (the neighborhood is close to Mission Bay and SoMa), and family-friendly. Eighteenth Street is the small main street.",
       best_for: "Tech buyers who want a real house with a view, families priced out of Noe Valley, design-trained buyers who appreciate the architecture variety.",
-      schools: "SFUSD K-5: Daniel Webster, others. Middle: by lottery, Marina or AP Giannini. Private: Live Oak, Town School (nearby).",
+      schools: "Public K-5: Daniel Webster Elementary School (SFUSD, in the neighborhood). Also nearby: Bryant, Buena Vista Horace Mann K-8, César Chávez, George R. Moscone, Hilltop, Marshall, Starr King, Leonard R. Flynn. Middle: by lottery, often Marina Middle. High: Downtown, John O\'Connell. Private (close): Live Oak School (private K-8, not in SFUSD directory), Town School for Boys.",
       parks: "Potrero Hill Recreation Center (with the playground, tennis courts, and the famous hilltop views), McKinley Square, the small neighborhood playgrounds, the new Crane Cove Park (at the Mission Creek edge, walkable).",
       transit: "The 19, 22, 48 buses. The T Third Street is two blocks away at Mission Bay. The 280 freeway is right at the south edge. Driving downtown is 10 minutes outside of rush hour.",
       noise: "Medium. The 280 is audible on the south edge; the rest of the hill is quiet. The dogs and kids at the Rec Center are the daily soundtrack."
@@ -529,7 +529,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94107 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94107 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -540,7 +540,7 @@ window.NEIGHBORHOODS = {
       tag: "Foggy, Russian/Chinese immigrant hubs, family-first",
       story: "The Richmond is the Sunset\'s mirror twin: a 4-mile-long, 1-mile-wide grid north of Golden Gate Park, between the Park and the Pacific. The houses are the same vintage (1920s–1950s single-family), the fog is the same, and the population has its own distinct character: a long-standing Russian and Chinese immigrant community centered on Geary Boulevard, with new families and UCSF-connected buyers (the medical campus is on the south edge). Clement Street is the foodie strip; Geary is the immigrant-business spine.",
       best_for: "Families with kids, UCSF-connected buyers, anyone who wants the fog-and-quiet life with a more diverse commercial strip than the Inner Sunset.",
-      schools: "SFUSD K-5: a long list (Argonne, Alamo, Sherman, others). Middle: AP Giannini (the western families) or Marina Middle (the closer-in families). High: Lincoln, Lowell, Washington.",
+      schools: "Public K-5: Argonne Elementary School (SFUSD, Inner Richmond neighborhood), Alamo Elementary School (SFUSD, Richmond), Francis Scott Key Elementary, George Peabody Elementary, Lafayette Elementary, Robert Louis Stevenson Elementary, Sutro Elementary, Ulloa Elementary. Sherman Elementary is in the Marina. Middle: A.P. Giannini (Outer Sunset), Presidio Middle, Roosevelt Middle. High: George Washington High School (Outer Richmond), Lowell High School (lakeshore; by application), Abraham Lincoln High School (Parkside/Sunset; by lottery).",
       parks: "Golden Gate Park (the entire north end: the Murphy windmill, the polo field, the bison, Stow Lake, the AIDS Grove), Mountain Lake Park, the Presidio\'s east edge, Ocean Beach.",
       transit: "The 1 California, 2 Clement, 38 Geary buses. The 5, 31, 38 cover the spine. The 38 Geary is one of the busiest bus lines in the city. No Muni Metro inside the neighborhood.",
       noise: "Very quiet inside the residential blocks. Geary is the exception — it\'s a major thoroughfare and gets loud."
@@ -557,7 +557,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94118 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94118 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -568,7 +568,7 @@ window.NEIGHBORHOODS = {
       tag: "Foggy, residential, mid-century single-family",
       story: "The Sunset is the largest residential district in SF: a 4-mile-long, 1-mile-wide grid west of Twin Peaks, hemmed in by the ocean on one side and Golden Gate Park on the other. The houses are mostly 1940s–1960s single-family homes (one story, one car, one backyard, often a granny unit), with the occasional new build pushing taller. The commercial strips (Irving, Judah, Noriega, Taraval) are the only places with restaurants, grocery stores, and the famous dim sum. The fog is part of the address.",
       best_for: "Families with kids, anyone who wants a real single-family house in SF under $2M, buyers who are fine trading views for square footage.",
-      schools: "SFUSD K-5: a long list (Sunset, Lincoln, Jefferson, Noriega, others). Middle: AP Giannini (94116, in the Sunset, draws from all over the west side). High: Lincoln High (94116, in the Sunset).",
+      schools: "Public K-5: Sunset Elementary School (SFUSD, Outer Sunset), Commodore Sloat Elementary, Dianne Feinstein Elementary, E.R. Taylor Elementary, Francis Scott Key Elementary, Lafayette Elementary, Robert Louis Stevenson Elementary, Ulloa Elementary, Noriega Early Education School. Middle: A.P. Giannini Middle School (Outer Sunset), Dr. Martin Luther King Jr. Academic Middle School, Presidio Middle School, Lawton Alternative School K-8, Roosevelt Middle School. High: Abraham Lincoln High School (Parkside/Sunset), George Washington High School (Outer Richmond), Lowell High School (by application), Phillip and Sala Burton Academic High School (Portola).",
       parks: "Golden Gate Park (the entire west end: the Polo Field, the windmill, the Murphy Windmill, Ocean Beach, the Bison Paddock), Lake Merced, Stern Grove, Pine Lake Park, the smaller neighborhood playgrounds.",
       transit: "The L Taraval and N Judah Muni Metro lines run along the top and bottom of the district. The 7, 28, 29, 48 buses cover crosstown. Driving downtown is 20-30 minutes depending on traffic; the 280 is the freeway option.",
       noise: "Very quiet inside the residential blocks. The fog absorbs more sound than the east side. The ocean roar is the soundtrack if you\'re close enough."
@@ -585,7 +585,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94116 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94116 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -596,7 +596,7 @@ window.NEIGHBORHOODS = {
       tag: "Small-town village, canyon-edge, BART-direct",
       story: "Glen Park is the part of SF that still feels like a small town — partly because it actually was one until 1909. The village center is Diamond Street and Chenery, with a hardware store, a bookstore, a few coffee shops, and the kind of family-run places that have been there for decades. The neighborhood climbs the south slope of the city into Glen Canyon, with houses ranging from Edwardians to mid-century moderns. BART is here, which makes it one of the few genuinely transit-rich residential neighborhoods south of Twin Peaks.",
       best_for: "Families who want walkability and BART, people priced out of Noe Valley who want the same community vibe, design-trained buyers who appreciate the canyon edge.",
-      schools: "SFUSD K-5: Glen Park Elementary (SFUSD, very popular). Middle: AP Giannini (Sunset) or, by SFUSD lottery, others. Charter options in the broader area.",
+      schools: "Public K-5: Glen Park Elementary (SFUSD, in the neighborhood). Also nearby: Alvarado (Noe Valley), Dolores Huerta, Junipero Serra, Paul Revere PreK-8. Middle: James Lick Middle (SFUSD) or by lottery. High: by lottery.",
       parks: "Glen Canyon Park (70 acres of canyon wilderness, the only undeveloped creek in SF, with rock outcrops and native plantings), the village\'s small playgrounds, the south end of Twin Peaks.",
       transit: "Glen Park BART (Civic Center in 8 minutes, Mission in 4 minutes) is the transit spine. The 23, 35, 44, 52 buses cover the residential streets. Driving to downtown is 15 minutes.",
       noise: "Quiet. The canyon absorbs sound; the BART rumble is the closest thing to a daily sound, and longtime residents stop noticing it."
@@ -613,7 +613,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94131 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94131 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -624,7 +624,7 @@ window.NEIGHBORHOODS = {
       tag: "Tiny main street, family-friendly, fog-soft",
       story: "Cole Valley is the part of SF that fits between the Inner Sunset and Haight-Ashbury, and somehow has a separate identity: a half-block of small shops (a grocery, a coffee shop, a wine bar, a bookshop), a train stop, and then residential streets of Edwardians and Craftsman homes climbing toward the hills. Population skews families, long-term residents, and the kind of neighbors who know the corner store by name. Cole Valley is small enough to be a village.",
       best_for: "Families with young kids, anyone who wants walkability without the late-night noise, design-trained buyers who notice a good renovation.",
-      schools: "SFUSD K-5: Grattan Elementary, plus the SFUSD lottery for middle and high. Private: Urban School, Town School (close).",
+      schools: "Public K-5: Grattan Elementary School (SFUSD, Haight Ashbury neighborhood boundary). Also nearby: Alice Fong Yu (K-8, Inner Sunset), Chinese Immersion School at De Avila, John Muir Elementary, Jefferson Elementary, New Traditions Creative Arts Elementary. Middle and high: by SFUSD lottery. Private (close): Urban School of San Francisco, Town School for Boys.",
       parks: "Cole Valley\'s playground at the corner of Cole and Carl, the south end of Golden Gate Park (with the De Young and the Academy of Sciences within walking distance), the edge of the Panhandle.",
       transit: "The N Judah Muni Metro line stops at Cole Valley station. Direct to downtown in 20 minutes. The 6, 37, 43, 44 buses for crosstown and connecting to the Inner Sunset and UCSF.",
       noise: "Quiet. The N train is the loudest thing on most days, and longtime residents find its bell part of the rhythm."
@@ -641,7 +641,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94117 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94117 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -652,7 +652,7 @@ window.NEIGHBORHOODS = {
       tag: "Foggy, family-first, walking distance to Golden Gate Park",
       story: "The Inner Sunset is the part of SF closest to the ocean and closest to Golden Gate Park\'s east end — and it leans into both. Irving Street is the commercial strip: Asian restaurants, brunch spots, an old-school ice cream parlor, a hardware store, the kind of independent bookstore that knows your name. The residential blocks are 1920s–1940s single-family homes with garages, and a fair number of condo conversions. Population skews families, UCSF-affiliated people (the medical campus is two blocks south), and longtime residents who chose the fog over the noise.",
       best_for: "Families with kids, UCSF-connected buyers, anyone who wants the fog-and-quiet life with a real commercial strip.",
-      schools: "SFUSD K-5: Sunset Elementary, Alice Fong Yu (the SFUSD Chinese-immersion school, very high demand), and others. Middle by lottery; many use AP Giannini or Roosevelt.",
+      schools: "Public K-5: Sunset Elementary School (SFUSD, Outer Sunset neighborhood boundary), Alice Fong Yu Alternative School K-8 (SFUSD Chinese-immersion, very high demand), Chinese Immersion School at De Avila, Francis Scott Key, Jefferson, New Traditions Creative Arts, Robert Louis Stevenson, Ulloa. Middle by lottery; A.P. Giannini, Presidio, Roosevelt are common. Dr. Martin Luther King Jr. Academic Middle School is also in the area.",
       parks: "Golden Gate Park (the entire east end is walkable: the De Young, the Academy of Sciences, the Botanical Garden, the Conservatory of Flowers), the Inner Sunset\'s small playgrounds, the edge of the Panhandle.",
       transit: "The N Judah Muni Metro runs along Irving Street\'s edge, with several stops. The 44, 48, 71 buses cover crosstown and Sunset-to-other-corridors. Driving to downtown is a non-event in 20 minutes outside of rush hour.",
       noise: "Quiet. The fog softens everything. The N train is the closest thing to a daily sound."
@@ -669,7 +669,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94122 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94122 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -680,7 +680,7 @@ window.NEIGHBORHOODS = {
       tag: "Bay-view Victorians, cable cars, vertical streets",
       story: "Russian Hill climbs. The streets are steep, the houses are old, and the views from the top are the kind people move to SF for. Hyde and Powell run the cable car lines; the rest of the neighborhood is a tight grid of 1900s–1920s apartment buildings and a few surviving mansions. Lombard Street (the \'crookedest street in the world\') is technically here, though it\'s mostly a tourist stop these days. Population skews older, established, and quiet about money.",
       best_for: "Buyers who want a true SF address with views, walkability, and the cable car as a commute.",
-      schools: "SFUSD assignments for elementary and middle vary; many families use private schools. Sherman and Marina Middle are lottery options. Private: Town, Convent, Cathedral School for Boys.",
+      schools: "Public K-8: SFUSD assignments vary. Marina Middle School (SFUSD) is a common lottery middle-school option. Sherman Elementary is technically in the Marina (Marina neighborhood boundary). Galileo Academy of Science and Technology (high school) is in the Russian Hill / North Beach area. Private (within a short drive): Town School for Boys, Convent of the Sacred Heart, Cathedral School for Boys.",
       parks: "Russian Hill Park (small, at the top of the hill, with the best view you can get for free), Vallejo Street steps, the cable-car-line greenery on Hyde.",
       transit: "Powell-Hyde and Powell-Mason cable car lines run through the neighborhood. The 1, 19, 27, 30, 41, 45 buses cover the edges. No Muni Metro stop inside the neighborhood.",
       noise: "Quiet inside the apartments; the cable car gong is the soundtrack on Hyde."
@@ -697,7 +697,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94109 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94109 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -725,7 +725,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94123 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94123 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -736,7 +736,7 @@ window.NEIGHBORHOODS = {
       tag: "Historic hotels, cable cars, downtown-adjacent",
       story: "Nob Hill is downtown\'s older sibling — the neighborhood that was the center of SF wealth in the 1860s railroad era and still has the hotels, mansions, and Grace Cathedral to prove it. The Fairmont, the Mark Hopkins, the Huntington, Grace Cathedral: they\'re all on one hill. The residential blocks are mostly mid-rise apartments and a few surviving mansions. Population skews older, established, urbanite; the new construction is mostly luxury condos with views.",
       best_for: "Buyers who want walking distance to FiDi, Union Square, and Chinatown; people who like the cable car as a commute.",
-      schools: "SFUSD elementary assignments vary; Sherman Elementary and Spring Valley are lottery options. Private: Cathedral School for Boys, Stuart Hall.",
+      schools: "Public: Spring Valley Science Elementary School (SFUSD, Nob Hill, lottery) and others in the broader area. Sherman Elementary is in the Marina; by SFUSD lottery, Nob Hill families often reach Marina. Private schools (Cathedral, Stuart Hall, Town School) are within a short drive. Middle: by lottery, often Marina Middle or Francisco.",
       parks: "Grace Cathedral (the church, the labyrinth, the AIDS memorial, the walking meditation space), Huntington Park (the small green across from the Grace, with the library steps), the cable-car-line greenery on California.",
       transit: "Three cable car lines run through or near the neighborhood (Powell-Hyde, Powell-Mason, California). The 1, 8, 30, 45 buses. BART is two blocks north at Powell. Walk to FiDi in 15 minutes.",
       noise: "Medium. Cable car bells, downtown traffic on California, and the occasional hotel event noise. The cross streets are quieter than the spine streets."
@@ -753,7 +753,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94109 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94109 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -764,7 +764,7 @@ window.NEIGHBORHOODS = {
       tag: "Italian, Beat-era, café culture",
       story: "North Beach is the part of SF that doesn\'t quite feel like SF — more like a Mediterranean piazza dropped into a steep grid. Columbus Avenue is the spine: Italian delis, cafés with outdoor seating, neon signs, and the kind of bookstore that stays open until midnight. Washington Square is the park at the heart. Beat-era landmarks (City Lights, Vesuvio, the Jack Kerouac alley) sit next to old Italian social clubs. Population skews long-term residents, artists, and the people who\'ve been coming back for decades.",
       best_for: "Buyers who want a real SF neighborhood with character, walkability, and a strong café scene.",
-      schools: "SFUSD elementary: Jean Parker, Sherman, and others. Private: St. Mary the Angels (Catholic), French American.",
+      schools: "Public K-5: Jean Parker Elementary School (SFUSD, Chinatown/North Beach/Russian Hill), Garfield Elementary, John Yehall Chin Elementary, Yick Wo Alternative Elementary. Middle: Francisco Middle School (SFUSD). High: Galileo Academy of Science and Technology. Private (close): St. Mary the Angels (Catholic), French American International School, Convent of the Sacred Heart.",
       parks: "Washington Square (the heart of the neighborhood, used for bocce, dogs, and the Italian flag ceremony), Joe DiMaggio Playground, the Filbert Street steps (with the hidden Grace Marchant gardens).",
       transit: "The 8, 30, 41, 45 buses. The Powell-Mason cable car line ends at the edge of the neighborhood. BART is a 10-minute walk at Montgomery or Powell. Parking is famously terrible.",
       noise: "Loud on Columbus, especially on weekends; quieter on the side streets and the hill. The cafés spill onto the sidewalk until 1am."
@@ -781,7 +781,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94133 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94133 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -792,7 +792,7 @@ window.NEIGHBORHOODS = {
       tag: "High-rise, financial, transit-tight, weekend-quiet",
       story: "Downtown is the part of SF that\'s all office towers, hotels, and Union Square. The Financial District is the north end; Union Square is the shopping core; the south end bleeds into SoMa. The residential population is mostly renters in 1990s–2020s high-rise new-builds, with a small contingent of long-time loft owners in the few surviving historic buildings. Weekdays are crowded; weekends are quiet, which locals like and businesses struggle with.",
       best_for: "Buyers who want walking distance to everything, weekend-empty streets, and the densest transit in the city.",
-      schools: "SFUSD K-5: by assignment, several local options. Middle: by lottery, Marina or AP Giannini.",
+      schools: "Public: Bessie Carmichael School PreK-8 Filipino Education Center (SFUSD, South of Market), Civic Center Secondary School, Tenderloin Community Elementary School. Access SFUSD programs for older students. High: Youth Chance High School, Civic Center Secondary.",
       parks: "Union Square (the central plaza, with the Dewey Monument and the holiday ice rink), the Yerba Buena Gardens two blocks south, the Transamerica Redwood Park (the small redwood grove at the base of the Transamerica pyramid).",
       transit: "Embarcadero, Montgomery, Powell, Civic Center BART — four stations in the downtown core. The F-Market, all six Muni Metro lines, the cable cars. The 1, 5, 6, 7, 9, 14, 19, 21, 30, 38, 45 buses.",
       noise: "Loud on weekdays (financial-district traffic, the cable car bells, the office workers), quiet on weekends. The Financial District is the loudest; the Yerba Buena and Union Square edges are quieter."
@@ -809,7 +809,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94102 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94102 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -820,7 +820,7 @@ window.NEIGHBORHOODS = {
       tag: "Hilltop, view-blessed, quiet, residential",
       story: "Twin Peaks is the saddle of hills in the geographic center of SF, with the highest public viewpoints in the city (922 ft). The neighborhood wraps around the peaks, with streets climbing up from the Castro, Noe Valley, West Portal, and Glen Park. The houses are mostly 1920s–1940s single-family homes with views. The population skews long-term residents and design-trained buyers who want the views and the quiet. There\'s no commercial strip; the closest coffee shop is in one of the surrounding neighborhoods.",
       best_for: "Buyers who want view-block real estate, design-trained buyers who notice a good renovation, anyone who wants to be in the geographic center of the city with almost no through-traffic.",
-      schools: "SFUSD K-5: by assignment, several local options (Alvarado, Sunnyside, others). Middle: AP Giannini (Sunset) or by lottery.",
+      schools: "Public K-8: Rooftop School TK-8 (SFUSD, two campuses — main and Mayeda). Harvey Milk Civil Rights Academy (Castro/Upper Market). Clarendon Alternative Elementary. McKinley Elementary. Middle: James Lick Middle (SFUSD). High: Ruth Asawa San Francisco School of the Arts (SFUSD), Mission High School. Twin Peaks-area families use SFUSD lottery for elementary placement.",
       parks: "Twin Peaks summit (the public viewpoint, with 360-degree views of the city), the Twin Peaks open space, the Sutro Tower open space, the surrounding canyon and hill trails.",
       transit: "The 37, 48, 52 buses. No Muni Metro or BART inside the neighborhood. Driving downtown is 15 minutes; the 280 is two blocks away.",
       noise: "Very quiet. The wind is the loudest thing on most days. Sutro Tower hum is the late-night sound for the closest blocks."
@@ -837,7 +837,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94114 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94114 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -848,7 +848,7 @@ window.NEIGHBORHOODS = {
       tag: "Multicultural, working-class, foggy, residential",
       story: "The Excelsior is the part of SF south of Glen Park and Bernal, one of the largest residential districts in the city. The population is unusually diverse for SF — long-standing Latino and Asian immigrant communities, with newer families from across the Bay Area drawn by the relative affordability and the single-family-house stock. The architecture is mostly 1920s–1950s: one-story stucco homes with garages, a few mid-century pockets, the occasional new build. The commercial strips (Mission Street, Geneva Avenue) are immigrant-business spines.",
       best_for: "Families priced out of other SF neighborhoods, multi-generational buyers, anyone who wants a real house in SF under $1.5M.",
-      schools: "SFUSD K-5: a long list (Cleveland, Guadalupe, others). Middle: AP Giannini (Sunset) or by lottery. High: Burton, Lincoln, by lottery.",
+      schools: "Public K-5: Cleveland Elementary School (SFUSD, Excelsior), Guadalupe Elementary School, E.R. Taylor Elementary, Hillcrest Elementary, Monroe Elementary, Longfellow Elementary, June Jordan School for Equity. Middle: Dr. Martin Luther King Jr. Academic Middle School, James Denman Middle School. High: Balboa High School, Phillip and Sala Burton Academic High School, San Francisco Community School.",
       parks: "McLaren Park (one of the city\'s largest, mostly undeveloped), the Excelsior\'s neighborhood playgrounds, the edge of the Sunnyside Conservatory.",
       transit: "The J Church, M Ocean View, and T Third Street Muni Metro lines run through or near the neighborhood. The 8, 9, 14, 43, 44, 54 buses cover the residential streets. BART is two stops away at Glen Park or Balboa Park.",
       noise: "Quiet. The fog absorbs the noise. Mission Street and Geneva Avenue are the exceptions — they\'re busy and loud."
@@ -865,7 +865,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94112 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94112 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -876,7 +876,7 @@ window.NEIGHBORHOODS = {
       tag: "Industrial-past, residential-present, deep SF",
       story: "The Bayview is the part of SF that\'s been overlooked for most of the city\'s history and is now starting to be discovered. The neighborhood is a long strip between the Third Street light rail and the bay, with a long-standing African American community, a public housing legacy, and newer single-family-home developments. The architecture is a mix: 1940s–1960s homes, public housing, the newer Hunters Point development, the industrial shipyard. The commercial strip is Third Street, which is mid-revival.",
       best_for: "First-time SF buyers priced out of the rest of the city, people working at the new UCSF Mission Bay campus, anyone who wants to be part of a neighborhood that is changing fast.",
-      schools: "SFUSD K-5: Bayview Elementary, others. Middle: by lottery, Marina or AP Giannini. High: Burton, by lottery.",
+      schools: "Public K-5: Bret Harte Elementary School (SFUSD, Bayview), Dr. George Washington Carver Elementary School, Malcolm X Academy Elementary School, Leola M. Havard Early Education School. Middle: Willie L. Brown Jr. Middle School, C.A.R.E. Middle School. High: Thurgood Marshall Academic High School. (Bayview Elementary is not a current SFUSD school name.)",
       parks: "Candlestick Point State Recreation Area (the bayside park, partly developed), Heron\'s Head Park (the eco-park at the tip of the bay), the Bayview\'s neighborhood playgrounds, the India Basin development (newer mixed-use).",
       transit: "The T Third Street Muni Metro line runs through the heart of the neighborhood, connecting to downtown in 20 minutes. The 19, 24, 44, 54 buses. Driving to downtown is 15-20 minutes via 101 or 280.",
       noise: "Quiet inside the residential blocks. The freeway and the shipyard are the industrial soundtrack. The new development is denser, which will change this."
@@ -893,7 +893,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94124 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94124 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -904,7 +904,7 @@ window.NEIGHBORHOODS = {
       tag: "Industrial-edge, residential, working-class, foggy",
       story: "Visitacion Valley is the part of SF that\'s mostly unknown to people who don\'t live there: a residential pocket tucked between McLaren Park, the Cow Palace, and the bay-side industrial edge. The population is mostly working-class families, with a long-standing Asian and Latino community. The houses are mostly 1940s–1960s single-family homes. The neighborhood is one of the more affordable parts of SF, which has started to attract first-time buyers priced out of the rest of the city.",
       best_for: "First-time SF buyers, working families, anyone who wants a real house in the city on a real budget.",
-      schools: "SFUSD K-5: Visitacion Valley Elementary, others. Middle: by lottery, AP Giannini or others. High: Burton or by lottery.",
+      schools: "Public K-5: Visitacion Valley Elementary School (SFUSD, in the neighborhood), El Dorado Elementary School, San Miguel Early Education School, John McLaren Early Education School. Middle: Visitacion Valley Middle School (SFUSD). High: by lottery (Burton is in Portola, Lincoln in Parkside/Sunset, not technically in Visitacion).",
       parks: "McLaren Park (one of the city\'s largest, the closest big green space), the Cow Palace (the venue, technically), Candlestick Point State Recreation Area (the bayside park, with the new Candlestick Point development underway).",
       transit: "The T Third Street Muni Metro line ends nearby at Sunnydale. The 9, 44, 56 buses. Driving to downtown is 15-20 minutes via 101 or 280.",
       noise: "Quiet inside the residential blocks. Highway 101 and the Cow Palace events are audible but not constant."
@@ -921,7 +921,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94134 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94134 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -932,7 +932,7 @@ window.NEIGHBORHOODS = {
       tag: "Civic-spine, arts-dense, mid-rise, walk-to-everything",
       story: "Civic Center is the part of SF that runs from City Hall down Market Street, including the Asian Art Museum, the War Memorial Opera House, the Davies Symphony Hall, the Orpheum, the Strand, and the ballet. The residential blocks are mostly 1900s–1920s mid-rise apartments with a few new-build lofts. The population skews urban, design-literate, and a mix of long-time residents and the city-arts crowd. The Tenderloin borders it to the north; SoMa to the south; Mid-Market is the transitional strip in between.",
       best_for: "Arts-lovers, urban buyers who want a real neighborhood (not a financial-district vibe), people who work downtown.",
-      schools: "SFUSD K-5: by assignment, several local options. Middle: by lottery, Marina or AP Giannini.",
+      schools: "Public: Tenderloin Community Elementary School (SFUSD), Bessie Carmichael School PreK-8, Civic Center Secondary School, Commodore Stockton Early Education School, Edwin and Anita Lee Newcomer School, Gordon J. Lau Elementary School. Access SFUSD and Youth Chance High School for older students. Middle and high: by lottery, often Marina or Francisco.",
       parks: "Civic Center Plaza (the central green, with the new playground and the City Hall backdrop), the United Nations Plaza (the small park above the BART station), the Asian Art Museum's garden.",
       transit: "Civic Center BART and the Van Ness Muni Metro station. The 5, 6, 7, 9, 14, 19, 21, 31, 38, 47, 49 buses. Walking to FiDi in 10 minutes; walking to Hayes Valley in 5.",
       noise: "Medium-to-loud. Market Street, the UN Plaza, and the Tenderloin spillover are the dominant sounds. The residential pockets to the west (Hayes Valley, NOPA) are quieter."
@@ -949,7 +949,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94102 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94102 (median rent).",
-      "Vibe story, schools, transit, parks, noise: AI baseline from training data, not source-verified. To be replaced with SFUSD, Wikipedia, SF Planning citations in a future pass."
+      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   }
 };
