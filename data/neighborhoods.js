@@ -305,7 +305,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94118 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94118 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -333,7 +333,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94110 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94110 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -361,7 +361,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94110 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94110 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -389,7 +389,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94102 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94102 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -402,7 +402,7 @@ window.NEIGHBORHOODS = {
       best_for: "UCSF-affiliated buyers (faculty, staff, students), biotech workers, anyone who wants a new-build condo in a walk-to-everything location.",
       schools: "Public K-5: Mission Bay School (SFUSD, K-8, in the neighborhood). Bessie Carmichael School (PreK-8 Filipino Education Center) is also nearby. Middle: by lottery, Marina Middle or others.",
       parks: "Mission Bay Park (the central green, with the play area and the bay views), the UCSF campus green, the channel-side trails, the new Oracle Park waterfront (just to the north).",
-      transit: "The T Third Street Muni Metro runs through, with a stop at UCSF. The N Judah, BART, and Caltrain are walkable. The 280 is right at the south edge. Driving to downtown is 5 minutes.",
+      transit: "The T Third Street Muni Metro runs through Mission Bay with a stop at UCSF Medical Center. The N Judah has its southern terminus at 4th and King (Caltrain) on the Mission Bay border. BART ( Powell or 16th Street Mission) is walkable. Caltrain\'s SF station is at the south end of Mission Bay. The I-280 is at the south edge. Driving to downtown is 5-10 minutes outside of rush hour.",
       noise: "Medium. The new-build density and the UCSF activity make this busier than the typical SF neighborhood. The waterfront side is quieter."
     },
     market: {
@@ -417,7 +417,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94158 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94158 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -445,7 +445,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94105 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94105 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -473,7 +473,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94103 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94103 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -501,7 +501,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94107 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94107 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -529,7 +529,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94107 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94107 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -542,7 +542,7 @@ window.NEIGHBORHOODS = {
       best_for: "Families with kids, UCSF-connected buyers, anyone who wants the fog-and-quiet life with a more diverse commercial strip than the Inner Sunset.",
       schools: "Public K-5: Argonne Elementary School (SFUSD, Inner Richmond neighborhood), Alamo Elementary School (SFUSD, Richmond), Francis Scott Key Elementary, George Peabody Elementary, Lafayette Elementary, Robert Louis Stevenson Elementary, Sutro Elementary, Ulloa Elementary. Sherman Elementary is in the Marina. Middle: A.P. Giannini (Outer Sunset), Presidio Middle, Roosevelt Middle. High: George Washington High School (Outer Richmond), Lowell High School (lakeshore; by application), Abraham Lincoln High School (Parkside/Sunset; by lottery).",
       parks: "Golden Gate Park (the entire north end: the Murphy windmill, the polo field, the bison, Stow Lake, the AIDS Grove), Mountain Lake Park, the Presidio\'s east edge, Ocean Beach.",
-      transit: "The 1 California, 2 Clement, 38 Geary buses. The 5, 31, 38 cover the spine. The 38 Geary is one of the busiest bus lines in the city. No Muni Metro inside the neighborhood.",
+      transit: "Bus: 1 California, 2 Clement/Sutter, 5/5R Fulton (via Park Presidio), 18 46th Avenue, 31 Balboa, 38/38R Geary (one of the busiest lines in the city, east-west crosstown). No Muni Metro inside the neighborhood. The closest rail is the N Judah at Carl and Cole (Cole Valley) on the southern edge of the Richmond.",
       noise: "Very quiet inside the residential blocks. Geary is the exception — it\'s a major thoroughfare and gets loud."
     },
     market: {
@@ -557,7 +557,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94118 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94118 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -585,7 +585,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94116 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94116 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -613,7 +613,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94131 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94131 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -641,7 +641,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94117 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94117 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -669,7 +669,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94122 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94122 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -697,7 +697,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94109 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94109 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -725,7 +725,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94123 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94123 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -753,7 +753,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94109 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94109 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -781,7 +781,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94133 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94133 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -809,7 +809,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94102 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94102 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -821,7 +821,7 @@ window.NEIGHBORHOODS = {
       story: "Twin Peaks is the saddle of hills in the geographic center of SF, with the highest public viewpoints in the city (922 ft). The neighborhood wraps around the peaks, with streets climbing up from the Castro, Noe Valley, West Portal, and Glen Park. The houses are mostly 1920s–1940s single-family homes with views. The population skews long-term residents and design-trained buyers who want the views and the quiet. There\'s no commercial strip; the closest coffee shop is in one of the surrounding neighborhoods.",
       best_for: "Buyers who want view-block real estate, design-trained buyers who notice a good renovation, anyone who wants to be in the geographic center of the city with almost no through-traffic.",
       schools: "Public K-8: Rooftop School TK-8 (SFUSD, two campuses — main and Mayeda). Harvey Milk Civil Rights Academy (Castro/Upper Market). Clarendon Alternative Elementary. McKinley Elementary. Middle: James Lick Middle (SFUSD). High: Ruth Asawa San Francisco School of the Arts (SFUSD), Mission High School. Twin Peaks-area families use SFUSD lottery for elementary placement.",
-      parks: "Twin Peaks summit (the public viewpoint, with 360-degree views of the city), the Twin Peaks open space, the Sutro Tower open space, the surrounding canyon and hill trails.",
+      parks: "Twin Peaks summit (925 ft, second-highest natural point in SF after Mount Davidson; 360-degree views of the city from the public viewpoint), the Twin Peaks open space, the Sutro Tower open space, the surrounding canyon and hill trails.",
       transit: "The 37, 48, 52 buses. No Muni Metro or BART inside the neighborhood. Driving downtown is 15 minutes; the 280 is two blocks away.",
       noise: "Very quiet. The wind is the loudest thing on most days. Sutro Tower hum is the late-night sound for the closest blocks."
     },
@@ -837,7 +837,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94114 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94114 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -850,7 +850,7 @@ window.NEIGHBORHOODS = {
       best_for: "Families priced out of other SF neighborhoods, multi-generational buyers, anyone who wants a real house in SF under $1.5M.",
       schools: "Public K-5: Cleveland Elementary School (SFUSD, Excelsior), Guadalupe Elementary School, E.R. Taylor Elementary, Hillcrest Elementary, Monroe Elementary, Longfellow Elementary, June Jordan School for Equity. Middle: Dr. Martin Luther King Jr. Academic Middle School, James Denman Middle School. High: Balboa High School, Phillip and Sala Burton Academic High School, San Francisco Community School.",
       parks: "McLaren Park (one of the city\'s largest, mostly undeveloped), the Excelsior\'s neighborhood playgrounds, the edge of the Sunnyside Conservatory.",
-      transit: "The J Church, M Ocean View, and T Third Street Muni Metro lines run through or near the neighborhood. The 8, 9, 14, 43, 44, 54 buses cover the residential streets. BART is two stops away at Glen Park or Balboa Park.",
+      transit: "The M Ocean View Muni Metro line ends nearby at Balboa Park (SFUSD / City College area), and the J Church line runs to the same station. The T Third Street runs further south to Sunnydale. Bus: 8, 9, 14, 43, 44, 54. BART is two stops away at Glen Park (Civic Center) or Balboa Park (SFO/Millbrae).",
       noise: "Quiet. The fog absorbs the noise. Mission Street and Geneva Avenue are the exceptions — they\'re busy and loud."
     },
     market: {
@@ -865,7 +865,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94112 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94112 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -893,7 +893,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94124 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94124 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -906,7 +906,7 @@ window.NEIGHBORHOODS = {
       best_for: "First-time SF buyers, working families, anyone who wants a real house in the city on a real budget.",
       schools: "Public K-5: Visitacion Valley Elementary School (SFUSD, in the neighborhood), El Dorado Elementary School, San Miguel Early Education School, John McLaren Early Education School. Middle: Visitacion Valley Middle School (SFUSD). High: by lottery (Burton is in Portola, Lincoln in Parkside/Sunset, not technically in Visitacion).",
       parks: "McLaren Park (one of the city\'s largest, the closest big green space), the Cow Palace (the venue, technically), Candlestick Point State Recreation Area (the bayside park, with the new Candlestick Point development underway).",
-      transit: "The T Third Street Muni Metro line ends nearby at Sunnydale. The 9, 44, 56 buses. Driving to downtown is 15-20 minutes via 101 or 280.",
+      transit: "The T Third Street Muni Metro line ends at Sunnydale (the southern terminus, in Visitacion Valley). Bus: 9, 44, 56. Driving to downtown is 15-20 minutes via US-101 or I-280.",
       noise: "Quiet inside the residential blocks. Highway 101 and the Cow Palace events are audible but not constant."
     },
     market: {
@@ -921,7 +921,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94134 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94134 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
 
@@ -949,7 +949,7 @@ window.NEIGHBORHOODS = {
     },
     citations: [
       "Zillow ZHVI for ZIP 94102 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94102 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
+      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   }
 };
