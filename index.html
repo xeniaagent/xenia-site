@@ -302,7 +302,7 @@
       <div id="hood-panel" class="hood-panel" role="tabpanel" aria-live="polite" hidden></div>
 
       <p class="hoods__sources">
-        <strong>Data sources:</strong> Market stats: 25 of 31 neighborhoods computed from SF MLS data, 2-year period (Apr 2024 – May 2026), 9,256 total sales, downloaded 2026-06-21. The 6 neighborhoods that share a ZIP with another (noe_valley, diamond_hgts, glen_park, dogpatch, downtown, twin_peaks) show "—" because the underlying MLS data doesn't disambiguate them at the ZIP level. Per-property market stats include median sale price (condo and SFR), median price per bedroom, and % sold over asking. The dataset has no square-footage column and no listing-date column, so $/sqft and days-on-market are not reported. The 2-year sale/rent chart for every neighborhood is real Zillow ZHVI/ZORI per-ZIP data, downloaded 2026-06-21, with the same ZIP-level (not neighborhood-specific) caveat. Schools fact-checked against the SFUSD school directory (sfusd.edu/schools/directory, 2026-06-21). Vibe stories, transit, and parks are AI baseline with spot-checks against Wikipedia. Updated June 2026.
+        <strong>Data sources:</strong> Market stats: 25 of 31 neighborhoods computed from SF MLS data, 2-year period (Apr 2024 – May 2026), 9,209 unique closed sales (joined across two MLS export files), downloaded 2026-06-21. The 6 neighborhoods that share a ZIP with another (noe_valley, diamond_hgts, glen_park, dogpatch, downtown, twin_peaks) show "—" because the data doesn't disambiguate them at the ZIP level. Per-neighborhood stats include median sale price (condo and SFR), median days on market, and sale-to-list ratio (median of selling price / list price). The dataset has no square-footage column, so $/sqft is not reported. The 2-year sale/rent chart for every neighborhood is real Zillow ZHVI/ZORI per-ZIP data, downloaded 2026-06-21, with the same ZIP-level (not neighborhood-specific) caveat. Schools fact-checked against the SFUSD school directory (sfusd.edu/schools/directory, 2026-06-21). Vibe stories, transit, and parks are AI baseline with spot-checks against Wikipedia. Updated June 2026.
       </p>
     </div>
   </section>
@@ -600,9 +600,6 @@
       const saleChg = ((saleLatest / saleStart) - 1) * 100;
       const rentChg = hasRent ? ((rentLatest / rentStart) - 1) * 100 : null;
 
-      // Market stat display: show "—" if value is null
-      const statValue = (val, suffix='') => val == null ? '—' : (typeof val === 'number' ? val.toLocaleString('en-US') : val) + suffix;
-
       const panel = document.getElementById('hood-panel');
       panel.innerHTML = `
         <div class="hood-panel__header">
@@ -646,14 +643,14 @@
                 <p class="stat__sub">single-family homes</p>
               </div>
               <div class="stat">
-                <p class="stat__label">Median $/bedroom</p>
-                <p class="stat__value">${m.median_price_per_bedroom == null ? '—' : '$' + m.median_price_per_bedroom.toLocaleString('en-US')}</p>
-                <p class="stat__sub">all property types</p>
+                <p class="stat__label">Days on market</p>
+                <p class="stat__value">${m.median_dom == null ? '—' : m.median_dom}<small style="font-size:14px;color:var(--c-mute);">${m.median_dom == null ? '' : ' days'}</small></p>
+                <p class="stat__sub">median, all sales</p>
               </div>
               <div class="stat">
-                <p class="stat__label">Sold over asking</p>
-                <p class="stat__value">${m.over_asking_pct == null ? '—' : m.over_asking_pct + '%'}</p>
-                <p class="stat__sub">${m.over_asking_pct == null ? '—' : 'of closed sales'}</p>
+                <p class="stat__label">Sale-to-list</p>
+                <p class="stat__value">${m.sale_to_list_pct == null ? '—' : m.sale_to_list_pct + '%'}</p>
+                <p class="stat__sub">median, list to sold</p>
               </div>
             </div>
 
