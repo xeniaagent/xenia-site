@@ -471,6 +471,9 @@ em { font-style: italic; color: var(--c-gold); }
 .hoods__hint { text-align: center; margin-top: 18px; margin-bottom: 28px; opacity: .92; }
 
 /* ---- "Click for more" toggle button ---- */
+/* The [hidden] attribute on .hoods--more must beat the .hoods { display: grid }
+   rule above. Without this, the more section is visible on page load. */
+.hoods--more[hidden] { display: none; }
 .hoods-more__btn {
   display: inline-flex;
   align-items: center;
