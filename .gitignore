@@ -1,0 +1,23 @@
+# macOS clutter
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs / temp
+*.log
+npm-debug.log*
+.DS_Store?
+
+# Secrets / environment
+.env
+.env.local
+
+# Private tooling that is NOT part of the public site
+connect-to-mini.command
