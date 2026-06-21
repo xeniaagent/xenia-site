@@ -302,7 +302,7 @@
       <div id="hood-panel" class="hood-panel" role="tabpanel" aria-live="polite" hidden></div>
 
       <p class="hoods__sources">
-        <strong>Data sources:</strong> Market stats: 25 of 31 neighborhoods computed from SF MLS data, 2-year period (Apr 2024 – May 2026), 9,209 unique closed sales (joined across two MLS export files), downloaded 2026-06-21. The 6 neighborhoods that share a ZIP with another (noe_valley, diamond_hgts, glen_park, dogpatch, downtown, twin_peaks) show "—" because the data doesn't disambiguate them at the ZIP level. Per-neighborhood stats include median sale price (condo and SFR), median days on market, and sale-to-list ratio (median of selling price / list price). The dataset has no square-footage column, so $/sqft is not reported. The 2-year sale/rent chart for every neighborhood is real Zillow ZHVI/ZORI per-ZIP data, downloaded 2026-06-21, with the same ZIP-level (not neighborhood-specific) caveat. Schools fact-checked against the SFUSD school directory (sfusd.edu/schools/directory, 2026-06-21). Vibe stories, transit, and parks are AI baseline with spot-checks against Wikipedia. Updated June 2026.
+        <strong>Data sources:</strong> Market stats: 24-25 of 31 neighborhoods computed from SF MLS data, 2-year period (Apr 2024 – May 2026), 9,209 unique closed sales. Sqft joined from the SF Office of the Assessor-Recorder Secured Property Tax Roll (data.sfgov.org/d/wv5m-vpq2, 8,286 of 8,386 APNs matched at 98.8%, downloaded 2026-06-21). Per-neighborhood stats include median sale price (condo and SFR), median days on market, and median $/sqft (single-unit sales only). The 6 neighborhoods that share a ZIP with another (noe_valley, diamond_hgts, glen_park, dogpatch, downtown, twin_peaks) show "—" because the data doesn't disambiguate them at the ZIP level. The 2-year sale/rent chart is real Zillow ZHVI/ZORI per-ZIP data, downloaded 2026-06-21. Schools fact-checked against the SFUSD school directory. Vibe, transit, parks: AI baseline with spot-checks. Updated June 2026.
       </p>
     </div>
   </section>
@@ -648,9 +648,9 @@
                 <p class="stat__sub">median, all sales</p>
               </div>
               <div class="stat">
-                <p class="stat__label">Sale-to-list</p>
-                <p class="stat__value">${m.sale_to_list_pct == null ? '—' : m.sale_to_list_pct + '%'}</p>
-                <p class="stat__sub">median, list to sold</p>
+                <p class="stat__label">Median $/sqft</p>
+                <p class="stat__value">${m.median_psf == null ? '—' : '$' + m.median_psf.toLocaleString('en-US')}</p>
+                <p class="stat__sub">single-unit, all sales</p>
               </div>
             </div>
 

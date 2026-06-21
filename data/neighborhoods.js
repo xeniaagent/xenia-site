@@ -24,6 +24,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 2450000,
       median_dom: 13,
       sale_to_list_pct: 108.8,
+      median_psf: 1474,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 599 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -79,6 +80,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 3500000,
       median_dom: 21,
       sale_to_list_pct: 100.3,
+      median_psf: 1208,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 419 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -108,6 +110,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 1550000,
       median_dom: 18,
       sale_to_list_pct: 105.3,
+      median_psf: 1208,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 671 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -136,6 +139,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 1420000,
       median_dom: 25,
       sale_to_list_pct: 100.0,
+      median_psf: 1086,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 127 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -165,6 +169,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 4265000,
       median_dom: 16,
       sale_to_list_pct: 100.5,
+      median_psf: 1500,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 369 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -198,6 +203,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 1910000,
       median_dom: 14,
       sale_to_list_pct: 108.5,
+      median_psf: 1232,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 546 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -226,6 +232,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 3308425,
       median_dom: 13,
       sale_to_list_pct: 107.3,
+      median_psf: 1397,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 222 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -254,6 +261,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 2222500,
       median_dom: 13,
       sale_to_list_pct: 111.5,
+      median_psf: 1207,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 355 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -324,6 +332,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 2400000,
       median_dom: 13,
       sale_to_list_pct: 108.0,
+      median_psf: 1291,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 259 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -352,6 +361,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 1450000,
       median_dom: 22,
       sale_to_list_pct: 101.3,
+      median_psf: 1237,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 159 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -464,6 +474,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: null,
       median_dom: 45,
       sale_to_list_pct: 97.5,
+      median_psf: 904,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 425 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -492,6 +503,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 1542500,
       median_dom: 44,
       sale_to_list_pct: 98.8,
+      median_psf: 760,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 234 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -548,6 +560,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 1895000,
       median_dom: 33,
       sale_to_list_pct: 100.0,
+      median_psf: 913,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 616 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -576,6 +589,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 8113888,
       median_dom: 12,
       sale_to_list_pct: 101.5,
+      median_psf: 1600,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 64 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -604,6 +618,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 1655000,
       median_dom: 13,
       sale_to_list_pct: 119.3,
+      median_psf: 1169,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 423 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -660,6 +675,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 1620000,
       median_dom: 14,
       sale_to_list_pct: 107.8,
+      median_psf: 1114,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 194 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -688,6 +704,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 1660000,
       median_dom: 13,
       sale_to_list_pct: 121.1,
+      median_psf: 1166,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 482 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -716,6 +733,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 6015000,
       median_dom: 22,
       sale_to_list_pct: 100.0,
+      median_psf: 1121,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 121 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -772,6 +790,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 1125000,
       median_dom: 37,
       sale_to_list_pct: 100.0,
+      median_psf: 934,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 453 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -800,6 +819,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 1500000,
       median_dom: 24,
       sale_to_list_pct: 100.0,
+      median_psf: 1180,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 189 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -884,6 +904,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 1160000,
       median_dom: 14,
       sale_to_list_pct: 111.8,
+      median_psf: 915,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 557 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -912,6 +933,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 960000,
       median_dom: 32,
       sale_to_list_pct: 100.1,
+      median_psf: 717,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 268 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -940,6 +962,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 1120000,
       median_dom: 16,
       sale_to_list_pct: 107.4,
+      median_psf: 865,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 309 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
@@ -968,6 +991,7 @@ window.NEIGHBORHOODS = {
       median_sfr_sell: 670000,
       median_dom: 52,
       sale_to_list_pct: 99.5,
+      median_psf: 669,  // single-unit, $/sqft = sale_price / property_area
       note: "Median sale prices and days on market from 88 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
     },
     citations: [
