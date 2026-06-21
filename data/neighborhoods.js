@@ -25,7 +25,7 @@ window.NEIGHBORHOODS = {
       median_dom: 13,
       sale_to_list_pct: 108.8,
       median_psf: 1474,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 599 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       '"March median home price hit a record high of $2.15 million, according to Compass." — Emily Landes, SF Standard, Apr 8 2026 (sfstandard.com/2026/04/08/sf-luxury-market-is-back)',
@@ -81,7 +81,7 @@ window.NEIGHBORHOODS = {
       median_dom: 21,
       sale_to_list_pct: 100.3,
       median_psf: 1208,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 419 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       '"$25M Pac Heights Victorian trades after less than two weeks on market." — The Real Deal, Jun 16 2026',
@@ -111,7 +111,7 @@ window.NEIGHBORHOODS = {
       median_dom: 18,
       sale_to_list_pct: 105.3,
       median_psf: 1208,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 671 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       '"Condo prices are up by nearly 30% year over year but remain below the April 2022 peak of $1.375 million." — SF Standard, Apr 8 2026',
@@ -140,7 +140,7 @@ window.NEIGHBORHOODS = {
       median_dom: 25,
       sale_to_list_pct: 100.0,
       median_psf: 1086,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 127 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       'Zillow ZHVI for ZIP 94102: +0.5% over 2 years (essentially flat).',
@@ -170,7 +170,7 @@ window.NEIGHBORHOODS = {
       median_dom: 16,
       sale_to_list_pct: 100.5,
       median_psf: 1500,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 369 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       '"Sam Altman\'s house in Russian Hill." — The Guardian, Jun 11 2026 (referenced for context).',
@@ -204,7 +204,7 @@ window.NEIGHBORHOODS = {
       median_dom: 14,
       sale_to_list_pct: 108.5,
       median_psf: 1232,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 546 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       '"Median home sale price in San Francisco was more than $2m, an 18% increase from the previous year." — The Guardian, Jun 11 2026',
@@ -233,7 +233,7 @@ window.NEIGHBORHOODS = {
       median_dom: 13,
       sale_to_list_pct: 107.3,
       median_psf: 1397,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 222 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       '"Bidding wars and millions over asking continuing to be the norm." — SF Standard, May 31 2026',
@@ -262,7 +262,7 @@ window.NEIGHBORHOODS = {
       median_dom: 13,
       sale_to_list_pct: 111.5,
       median_psf: 1207,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 355 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       '"Median home price hit a record high of $2.15 million, according to Compass." — SF Standard, Apr 8 2026, citing Compass',
@@ -333,7 +333,7 @@ window.NEIGHBORHOODS = {
       median_dom: 13,
       sale_to_list_pct: 108.0,
       median_psf: 1291,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 259 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~259 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 13 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -362,7 +362,7 @@ window.NEIGHBORHOODS = {
       median_dom: 22,
       sale_to_list_pct: 101.3,
       median_psf: 1237,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 159 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~159 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 22 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -475,7 +475,7 @@ window.NEIGHBORHOODS = {
       median_dom: 45,
       sale_to_list_pct: 97.5,
       median_psf: 904,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 425 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~425 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 45 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -504,7 +504,7 @@ window.NEIGHBORHOODS = {
       median_dom: 44,
       sale_to_list_pct: 98.8,
       median_psf: 760,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 234 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~234 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 44 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -561,7 +561,7 @@ window.NEIGHBORHOODS = {
       median_dom: 33,
       sale_to_list_pct: 100.0,
       median_psf: 913,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 616 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~616 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 33 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -590,7 +590,7 @@ window.NEIGHBORHOODS = {
       median_dom: 12,
       sale_to_list_pct: 101.5,
       median_psf: 1600,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 64 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~64 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 12 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -619,7 +619,7 @@ window.NEIGHBORHOODS = {
       median_dom: 13,
       sale_to_list_pct: 119.3,
       median_psf: 1169,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 423 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~423 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 13 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -676,7 +676,7 @@ window.NEIGHBORHOODS = {
       median_dom: 14,
       sale_to_list_pct: 107.8,
       median_psf: 1114,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 194 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~194 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 14 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -705,7 +705,7 @@ window.NEIGHBORHOODS = {
       median_dom: 13,
       sale_to_list_pct: 121.1,
       median_psf: 1166,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 482 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~482 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 13 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -734,7 +734,7 @@ window.NEIGHBORHOODS = {
       median_dom: 22,
       sale_to_list_pct: 100.0,
       median_psf: 1121,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 121 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~121 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 22 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -791,7 +791,7 @@ window.NEIGHBORHOODS = {
       median_dom: 37,
       sale_to_list_pct: 100.0,
       median_psf: 934,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 453 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~453 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 37 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -820,7 +820,7 @@ window.NEIGHBORHOODS = {
       median_dom: 24,
       sale_to_list_pct: 100.0,
       median_psf: 1180,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 189 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~189 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 24 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -905,7 +905,7 @@ window.NEIGHBORHOODS = {
       median_dom: 14,
       sale_to_list_pct: 111.8,
       median_psf: 915,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 557 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~557 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 14 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -934,7 +934,7 @@ window.NEIGHBORHOODS = {
       median_dom: 32,
       sale_to_list_pct: 100.1,
       median_psf: 717,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 268 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~268 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 32 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -963,7 +963,7 @@ window.NEIGHBORHOODS = {
       median_dom: 16,
       sale_to_list_pct: 107.4,
       median_psf: 865,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 309 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~309 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 16 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -992,7 +992,7 @@ window.NEIGHBORHOODS = {
       median_dom: 52,
       sale_to_list_pct: 99.5,
       median_psf: 669,  // single-unit, $/sqft = sale_price / property_area
-      note: "Median sale prices and days on market from 88 SF MLS sales (2-year period Apr 2024-May 2026). Sale-to-list ratio is the median of (selling price / list price) across the same period."
+      note: "Median sale prices and $/sqft from SF MLS data, sqft joined from the SF Assessor-Recorder Secured Property Tax Roll. 2-year period Apr 2024 to May 2026."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~88 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 51 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
