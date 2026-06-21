@@ -692,10 +692,13 @@
       // Close handler
       document.getElementById('hood-close').addEventListener('click', closeHood);
 
-      // Scroll to panel on small screens so users see it
-      if (window.innerWidth < 880) {
-        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      // Scroll the panel header to the top of the viewport on every click,
+      // accounting for the fixed nav height. Slight delay so the panel has time
+      // to render before we scroll — otherwise scrollIntoView can target the
+      // old (empty) position.
+      const navHeight = window.innerWidth < 520 ? 60 : 67;
+      const top = panel.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
+      window.scrollTo({ top: Math.max(top, 0), behavior: 'smooth' });
     }
 
     function closeHood() {
