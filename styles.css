@@ -193,6 +193,7 @@ em { font-style: italic; color: var(--c-gold); }
   }
   .nav__links--open { transform: translateY(0); opacity: 1; pointer-events: auto; }
   .nav__burger { display: block; margin-left: 0; }
+  .nav__brand-text small { display: none; }
   .nav__cta {
     display: inline-block;
     padding: 7px 12px;
