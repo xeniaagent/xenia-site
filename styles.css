@@ -205,6 +205,42 @@ em { font-style: italic; color: var(--c-gold); }
   }
 }
 
+/* ===================== UNDER CONSTRUCTION BANNER ===================== */
+.uc-banner {
+  position: fixed;
+  top: 67px;                 /* sits below the fixed nav (which is ~67px tall) */
+  left: 0; right: 0;
+  z-index: 90;               /* below nav (z 100), above everything else */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: var(--c-ink);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(14,26,43,.15);
+}
+.uc-banner__pulse {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #ffb547;       /* warm gold, consistent with site accent */
+  box-shadow: 0 0 0 0 rgba(255,181,71,.7);
+  animation: uc-pulse 1.8s ease-out infinite;
+}
+@keyframes uc-pulse {
+  0%   { box-shadow: 0 0 0 0   rgba(255,181,71,.7); }
+  70%  { box-shadow: 0 0 0 10px rgba(255,181,71,0); }
+  100% { box-shadow: 0 0 0 0   rgba(255,181,71,0); }
+}
+@media (max-width: 520px) {
+  .uc-banner { font-size: 12px; padding: 9px 14px; }
+  .uc-banner { top: 60px; }  /* nav is shorter on small screens (no subtitle) */
+}
+
 /* ===================== HERO ===================== */
 .hero {
   position: relative;
