@@ -469,7 +469,51 @@ em { font-style: italic; color: var(--c-gold); }
 
 /* ---- Hood buttons (replaces flat cards) ---- */
 .hoods__hint { text-align: center; margin-top: 18px; margin-bottom: 28px; opacity: .92; }
-.hood--btn {
+
+/* ---- "Click for more" toggle button ---- */
+.hoods-more__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: var(--c-ink);
+  background: rgba(255,255,255,0.92);
+  border: 1px solid var(--c-line);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(14,26,43,0.08);
+}
+.hoods-more__btn:hover {
+  background: var(--c-gold);
+  color: #fff;
+  border-color: var(--c-gold);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(14,26,43,0.14);
+}
+.hoods-more__btn:focus-visible {
+  outline: 2px solid var(--c-gold);
+  outline-offset: 3px;
+}
+.hoods-more__chev {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.2s;
+}
+.hoods--more {
+  margin-top: 24px;
+  animation: hoods-fade-in 0.3s ease-out;
+}
+@keyframes hoods-fade-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hoods--btn {
   position: relative;
   font: inherit;
   color: inherit;
