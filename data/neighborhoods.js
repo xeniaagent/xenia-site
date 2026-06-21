@@ -17,12 +17,14 @@ window.NEIGHBORHOODS = {
       noise: "Medium-to-loud. The Castro street core is busy until 1am on weekends; the side streets (above 18th, toward Corona Hill) are noticeably quieter.",
     },
     market: {
-      // Median $ / sqft, last 30 days rolling. Sources cited inline.
-      condo_psf: 1180,           // San Francisco condo market overall; Castro skews 5-15% above city median (Compass, SF Standard Apr 2026).
-      sfr_psf: 1450,             // SFR median $2.15M citywide, March 2026 (Compass via SF Standard, Emily Landes, Apr 8 2026).
-      dom: 22,                   // Citywide DOM 29d in March 2026 (Compass); Castro typically a few days faster.
-      over_asking_pct: 38,       // Share of SF homes sold above list price, March 2026 (Compass via SF Standard).
-      note: "Castro inventory is dominated by 2-bed TICs and 1–2 bed condos; true single-family homes are scarce and trade in the $2.5M–$4M range. Bidding wars above ask remain the norm for well-priced listings."
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 1550000,
+      median_sfr_sell: 2750000,
+      median_price_per_bedroom: 761250,
+      dom: null,
+      over_asking_pct: 72,
+      note: "Median sale prices from 603 SF MLS sales; over-asking from 603 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
       '"March median home price hit a record high of $2.15 million, according to Compass." — Emily Landes, SF Standard, Apr 8 2026 (sfstandard.com/2026/04/08/sf-luxury-market-is-back)',
@@ -70,11 +72,14 @@ window.NEIGHBORHOODS = {
       noise: "Very quiet inside the blocks. Fillmore Street has the noise; Pacific, Broadway, and Vallejo do not.",
     },
     market: {
-      condo_psf: 1420,
-      sfr_psf: 1850,
-      dom: 14,
-      over_asking_pct: 46,
-      note: "Pacific Heights is where the AI-era bidding is loudest. Compass-cited luxury agents told the SF Standard in June 2026 that competition is fierce above $5M. Recent trades include a Pac Heights Victorian that moved in under two weeks, per The Real Deal."
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 1357000,
+      median_sfr_sell: 4542500,
+      median_price_per_bedroom: 784167,
+      dom: null,
+      over_asking_pct: 51,
+      note: "Median sale prices from 421 SF MLS sales; over-asking from 421 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
       '"$25M Pac Heights Victorian trades after less than two weeks on market." — The Real Deal, Jun 16 2026',
@@ -96,11 +101,14 @@ window.NEIGHBORHOODS = {
       noise: "Loud on weekends, moderate during the week. Construction noise is a constant; this is a neighborhood that rebuilds itself every decade.",
     },
     market: {
-      condo_psf: 1100,
-      sfr_psf: 1380,
-      dom: 26,
-      over_asking_pct: 34,
-      note: "Mission is the condo-friendlier end of central SF. TICs and tenancies-in-common still trade here. New-build condos along Mission Street are selling above 2019 prices but well below the 2022 peak. Expect concessions (rate buydowns, closing costs) on the right listings."
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 1080000,
+      median_sfr_sell: 1655000,
+      median_price_per_bedroom: 572500,
+      dom: null,
+      over_asking_pct: 66,
+      note: "Median sale prices from 675 SF MLS sales; over-asking from 675 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
       '"Condo prices are up by nearly 30% year over year but remain below the April 2022 peak of $1.375 million." — SF Standard, Apr 8 2026',
@@ -121,11 +129,14 @@ window.NEIGHBORHOODS = {
       noise: "Medium. Hayes Street can be busy; the cross streets are quiet. The freeway-stub re-development brought in some taller buildings but didn't change the noise profile noticeably.",
     },
     market: {
-      condo_psf: 1320,
-      sfr_psf: 1180,
-      dom: 31,
-      over_asking_pct: 24,
-      note: "Hayes Valley is mostly condo. Single-family homes are rare. Sale prices are essentially flat over the last two years while rents climbed 20%+ — meaning the buy-vs-rent math is unusually tight here. Expect condo sellers to offer rate buydowns rather than price cuts."
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 950000,
+      median_sfr_sell: 1727500,
+      median_price_per_bedroom: 596250,
+      dom: null,
+      over_asking_pct: 43,
+      note: "Median sale prices from 127 SF MLS sales; over-asking from 127 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
       'Zillow ZHVI for ZIP 94102: +0.5% over 2 years (essentially flat).',
@@ -147,11 +158,14 @@ window.NEIGHBORHOODS = {
       noise: "Quiet on weekends. The wind can be louder than the traffic. Russian Hill has the cable car; the Marina has the foghorn.",
     },
     market: {
-      condo_psf: 1380,
-      sfr_psf: 1680,
-      dom: 16,
-      over_asking_pct: 49,
-      note: "Marina/Russian Hill is one of the tightest markets in SF. ZHVI shows +14.8% over 2 years — outpacing Pacific Heights. Rent growth is the steepest in the city at +33%. Inventory is constrained because almost nobody leaves voluntarily."
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 1762500,
+      median_sfr_sell: 4950000,
+      median_price_per_bedroom: 990000,
+      dom: null,
+      over_asking_pct: 52,
+      note: "Median sale prices from 371 SF MLS sales; over-asking from 371 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
       '"Sam Altman\'s house in Russian Hill." — The Guardian, Jun 11 2026 (referenced for context).',
@@ -177,11 +191,14 @@ window.NEIGHBORHOODS = {
       noise: "Very quiet. Coyotes occasionally. Wind from the ocean sometimes. That's the noise."
     },
     market: {
-      condo_psf: 1050,
-      sfr_psf: 1320,
-      dom: 19,
-      over_asking_pct: 41,
-      note: "Miraloma is dominated by single-family homes — condos are rare. ZHVI shows steady appreciation (+7% over 2y) but slower than Pacific Heights. Inventory is thin because owners stay for decades. Note: the chart below uses ZIP 94131, which also covers Diamond Heights, Glen Park, and Sunnyside — so the trend is a neighborhood average, not Miraloma-specific."
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 911550,
+      median_sfr_sell: 1996000,
+      median_price_per_bedroom: 629667,
+      dom: null,
+      over_asking_pct: 72,
+      note: "Median sale prices from 550 SF MLS sales; over-asking from 550 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
       '"Median home sale price in San Francisco was more than $2m, an 18% increase from the previous year." — The Guardian, Jun 11 2026',
@@ -202,11 +219,14 @@ window.NEIGHBORHOODS = {
       noise: "Very quiet. The loudest thing you'll regularly hear is the Sutro Tower wind hum on foggy nights, which is the city's most underrated sound."
     },
     market: {
-      condo_psf: 1100,
-      sfr_psf: 1380,
-      dom: 21,
-      over_asking_pct: 36,
-      note: "Midtown Terrace is the rare SF neighborhood where prices have stayed grounded — +4% over 2 years, slower than the city median. Rent growth has been strong (+31%) because rentals are scarce. Good entry point for first-time single-family buyers. Note: ZIP 94117 also covers Cole Valley, Haight-Ashbury, and the Inner Sunset — the chart is a neighborhood average, not Midtown-specific."
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 1525000,
+      median_sfr_sell: 3772250,
+      median_price_per_bedroom: 779250,
+      dom: null,
+      over_asking_pct: 69,
+      note: "Median sale prices from 226 SF MLS sales; over-asking from 226 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
       '"Bidding wars and millions over asking continuing to be the norm." — SF Standard, May 31 2026',
@@ -227,11 +247,14 @@ window.NEIGHBORHOODS = {
       noise: "Quiet except for the Muni bell at the end of every line — which longtime residents find charming and newcomers find... character-building."
     },
     market: {
-      condo_psf: 1080,
-      sfr_psf: 1280,
-      dom: 24,
-      over_asking_pct: 31,
-      note: "West Portal is undervalued relative to comparable west-side neighborhoods — single-family homes at ~$1,300/ft² vs Pacific Heights at $1,850. The trade-off: less 'prestige' address, but a real community, walkable main street, and one-seat transit to downtown. Note: Zillow rent data for ZIP 94127 only started reporting in late 2025, so the chart below shows a shorter time series than the others — flagged in the chart label."
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 755000,
+      median_sfr_sell: 2220000,
+      median_price_per_bedroom: 666667,
+      dom: null,
+      over_asking_pct: 84,
+      note: "Median sale prices from 356 SF MLS sales; over-asking from 356 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
       '"Median home price hit a record high of $2.15 million, according to Compass." — SF Standard, Apr 8 2026, citing Compass',
@@ -294,17 +317,17 @@ window.NEIGHBORHOODS = {
       noise: "Very quiet. The closest thing to a sound is wind in the cypress trees and the Presidio\'s wildlife."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 1602500,
+      median_sfr_sell: 2850000,
+      median_price_per_bedroom: 716667,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 71,
+      note: "Median sale prices from 259 SF MLS sales; over-asking from 259 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94118 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94118 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~259 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -322,17 +345,17 @@ window.NEIGHBORHOODS = {
       noise: "Medium-to-quiet. The morning dog-park chatter from Bernal Heights Park is the neighborhood soundtrack; the Mission\'s weekend noise doesn\'t quite reach the top of the hill."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 1550000,
+      median_sfr_sell: 2250000,
+      median_price_per_bedroom: 605000,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 55,
+      note: "Median sale prices from 159 SF MLS sales; over-asking from 159 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94110 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94110 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~159 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -406,17 +429,17 @@ window.NEIGHBORHOODS = {
       noise: "Medium. The new-build density and the UCSF activity make this busier than the typical SF neighborhood. The waterfront side is quieter."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 1350000,
+      median_sfr_sell: null,
+      median_price_per_bedroom: 789400,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 23,
+      note: "Median sale prices from 107 SF MLS sales; over-asking from 107 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94158 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94158 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~107 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -434,17 +457,17 @@ window.NEIGHBORHOODS = {
       noise: "Medium-to-loud. The Bay Bridge and the Embarcadero are the dominant sounds. The cross streets are quieter."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 1163000,
+      median_sfr_sell: null,
+      median_price_per_bedroom: 797252,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 9,
+      note: "Median sale prices from 425 SF MLS sales; over-asking from 425 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94105 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94105 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~425 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -462,17 +485,17 @@ window.NEIGHBORHOODS = {
       noise: "Medium-to-loud. The downtown traffic, the convention center, the nightlife on Folsom and Harrison, the museum crowds. The cross streets and the residential pockets (Yerba Buena, South Park) are quieter."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 762000,
+      median_sfr_sell: 2350000,
+      median_price_per_bedroom: 525000,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 23,
+      note: "Median sale prices from 235 SF MLS sales; over-asking from 235 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94103 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94103 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~235 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -518,17 +541,17 @@ window.NEIGHBORHOODS = {
       noise: "Medium. The 280 is audible on the south edge; the rest of the hill is quiet. The dogs and kids at the Rec Center are the daily soundtrack."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 925000,
+      median_sfr_sell: 2000000,
+      median_price_per_bedroom: 640000,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 39,
+      note: "Median sale prices from 620 SF MLS sales; over-asking from 620 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94107 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94107 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~620 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -546,17 +569,17 @@ window.NEIGHBORHOODS = {
       noise: "Very quiet inside the residential blocks. Geary is the exception — it\'s a major thoroughfare and gets loud."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 2475000,
+      median_sfr_sell: 8200000,
+      median_price_per_bedroom: 1029167,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 55,
+      note: "Median sale prices from 64 SF MLS sales; over-asking from 64 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94118 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94118 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~64 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -574,17 +597,17 @@ window.NEIGHBORHOODS = {
       noise: "Very quiet inside the residential blocks. The fog absorbs more sound than the east side. The ocean roar is the soundtrack if you\'re close enough."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 1100000,
+      median_sfr_sell: 1655000,
+      median_price_per_bedroom: 568000,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 85,
+      note: "Median sale prices from 424 SF MLS sales; over-asking from 424 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94116 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94116 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~424 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -630,17 +653,17 @@ window.NEIGHBORHOODS = {
       noise: "Quiet. The N train is the loudest thing on most days, and longtime residents find its bell part of the rhythm."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 1390000,
+      median_sfr_sell: 3265000,
+      median_price_per_bedroom: 628500,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 72,
+      note: "Median sale prices from 197 SF MLS sales; over-asking from 197 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94117 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94117 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~197 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -658,17 +681,17 @@ window.NEIGHBORHOODS = {
       noise: "Quiet. The fog softens everything. The N train is the closest thing to a daily sound."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 1275000,
+      median_sfr_sell: 1700000,
+      median_price_per_bedroom: 604000,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 85,
+      note: "Median sale prices from 485 SF MLS sales; over-asking from 485 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94122 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94122 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~485 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -686,17 +709,17 @@ window.NEIGHBORHOODS = {
       noise: "Quiet inside the apartments; the cable car gong is the soundtrack on Hyde."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 1347500,
+      median_sfr_sell: 7554250,
+      median_price_per_bedroom: 756000,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 40,
+      note: "Median sale prices from 121 SF MLS sales; over-asking from 121 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94109 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94109 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~121 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -742,17 +765,17 @@ window.NEIGHBORHOODS = {
       noise: "Medium. Cable car bells, downtown traffic on California, and the occasional hotel event noise. The cross streets are quieter than the spine streets."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 970000,
+      median_sfr_sell: 3900000,
+      median_price_per_bedroom: 650000,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 35,
+      note: "Median sale prices from 454 SF MLS sales; over-asking from 454 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94109 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94109 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~454 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -770,17 +793,17 @@ window.NEIGHBORHOODS = {
       noise: "Loud on Columbus, especially on weekends; quieter on the side streets and the hill. The cafés spill onto the sidewalk until 1am."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 1250000,
+      median_sfr_sell: 3895000,
+      median_price_per_bedroom: 712500,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 42,
+      note: "Median sale prices from 192 SF MLS sales; over-asking from 192 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94133 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94133 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~192 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -854,17 +877,17 @@ window.NEIGHBORHOODS = {
       noise: "Quiet. The fog absorbs the noise. Mission Street and Geneva Avenue are the exceptions — they\'re busy and loud."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 749000,
+      median_sfr_sell: 1159000,
+      median_price_per_bedroom: 417500,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 78,
+      note: "Median sale prices from 561 SF MLS sales; over-asking from 561 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94112 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94112 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~561 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -882,17 +905,17 @@ window.NEIGHBORHOODS = {
       noise: "Quiet inside the residential blocks. The freeway and the shipyard are the industrial soundtrack. The new development is denser, which will change this."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 610000,
+      median_sfr_sell: 960000,
+      median_price_per_bedroom: 317083,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 53,
+      note: "Median sale prices from 268 SF MLS sales; over-asking from 268 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94124 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94124 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~268 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -910,17 +933,17 @@ window.NEIGHBORHOODS = {
       noise: "Quiet inside the residential blocks. Highway 101 and the Cow Palace events are audible but not constant."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 679000,
+      median_sfr_sell: 1115500,
+      median_price_per_bedroom: 371417,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 72,
+      note: "Median sale prices from 310 SF MLS sales; over-asking from 310 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94134 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94134 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~310 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   },
@@ -938,17 +961,17 @@ window.NEIGHBORHOODS = {
       noise: "Medium-to-loud. Market Street, the UN Plaza, and the Tenderloin spillover are the dominant sounds. The residential pockets to the west (Hayes Valley, NOPA) are quieter."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
+      // Per-property market stats from SF MLS data (no sqft or DOM in source CSV).
+      // Source: SF MLS, 2-year period (Apr 2024 – May 2026), downloaded 2026-06-21.
+      median_condo_sell: 490000,
+      median_sfr_sell: 670000,
+      median_price_per_bedroom: 460000,
       dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      over_asking_pct: 25,
+      note: "Median sale prices from 89 SF MLS sales; over-asking from 89 paired list/sale prices. Computed 2026-06-21."
     },
     citations: [
-      "Zillow ZHVI for ZIP 94102 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94102 (median rent).",
+      "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~89 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). Note: source CSV has no square-footage or listing-date columns, so per-sqft and days-on-market are not computed.",
       "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
     ]
   }

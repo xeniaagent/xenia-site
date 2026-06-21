@@ -302,7 +302,7 @@
       <div id="hood-panel" class="hood-panel" role="tabpanel" aria-live="polite" hidden></div>
 
       <p class="hoods__sources">
-        <strong>Data sources:</strong> The 10 top-section neighborhoods (Castro, Noe Valley, Pacific Heights, Mission, Hayes Valley, Marina &amp; Russian Hill, Miraloma Park, Midtown Terrace, West Portal, Diamond Heights) cite Compass SF market report (March 2026, via SF Standard, Apr 8 2026), The Guardian (Jun 11 2026), SF Standard (Apr 8 / May 31 2026), and Zillow ZHVI/ZORI per ZIP. The 21 additional neighborhoods under "Click for more" have schools fact-checked against the SFUSD school directory (sfusd.edu/schools/directory, 2026-06-21). Vibe stories, transit lines, and parks are AI baseline from training data — flagged inside each panel's citations. Per-property market stats are not yet source-verified and read as "—". The 2-year sale/rent chart for every neighborhood is real Zillow ZHVI/ZORI per-ZIP data, downloaded 2026-06-21, with the same ZIP-level (not neighborhood-specific) caveat the existing 10 carry. Updated June 2026.
+        <strong>Data sources:</strong> Market stats: 25 of 31 neighborhoods computed from SF MLS data, 2-year period (Apr 2024 – May 2026), 9,256 total sales, downloaded 2026-06-21. The 6 neighborhoods that share a ZIP with another (noe_valley, diamond_hgts, glen_park, dogpatch, downtown, twin_peaks) show "—" because the underlying MLS data doesn't disambiguate them at the ZIP level. Per-property market stats include median sale price (condo and SFR), median price per bedroom, and % sold over asking. The dataset has no square-footage column and no listing-date column, so $/sqft and days-on-market are not reported. The 2-year sale/rent chart for every neighborhood is real Zillow ZHVI/ZORI per-ZIP data, downloaded 2026-06-21, with the same ZIP-level (not neighborhood-specific) caveat. Schools fact-checked against the SFUSD school directory (sfusd.edu/schools/directory, 2026-06-21). Vibe stories, transit, and parks are AI baseline with spot-checks against Wikipedia. Updated June 2026.
       </p>
     </div>
   </section>
@@ -602,7 +602,6 @@
 
       // Market stat display: show "—" if value is null
       const statValue = (val, suffix='') => val == null ? '—' : (typeof val === 'number' ? val.toLocaleString('en-US') : val) + suffix;
-      const domSub = m.dom == null ? '—' : (m.dom <= 20 ? 'Hot — multiple-offer territory.' : m.dom <= 28 ? 'Still moving fast.' : 'Normal SF pace.');
 
       const panel = document.getElementById('hood-panel');
       panel.innerHTML = `
@@ -637,19 +636,19 @@
             <h4>Right now, in this neighborhood</h4>
             <div class="market__stats">
               <div class="stat">
-                <p class="stat__label">Median condo $/ft²</p>
-                <p class="stat__value">${fmt$psf(m.condo_psf)}</p>
-                <p class="stat__sub">rolling 30-day median</p>
+                <p class="stat__label">Median condo price</p>
+                <p class="stat__value">${m.median_condo_sell == null ? '—' : '$' + m.median_condo_sell.toLocaleString('en-US')}</p>
+                <p class="stat__sub">condominiums, all sales</p>
               </div>
               <div class="stat">
-                <p class="stat__label">Median SFR $/ft²</p>
-                <p class="stat__value">${fmt$psf(m.sfr_psf)}</p>
+                <p class="stat__label">Median SFR price</p>
+                <p class="stat__value">${m.median_sfr_sell == null ? '—' : '$' + m.median_sfr_sell.toLocaleString('en-US')}</p>
                 <p class="stat__sub">single-family homes</p>
               </div>
               <div class="stat">
-                <p class="stat__label">Avg. days on market</p>
-                <p class="stat__value">${m.dom == null ? '—' : m.dom}<small style="font-size:14px;color:var(--c-mute);">${m.dom == null ? '' : ' days'}</small></p>
-                <p class="stat__sub">${domSub}</p>
+                <p class="stat__label">Median $/bedroom</p>
+                <p class="stat__value">${m.median_price_per_bedroom == null ? '—' : '$' + m.median_price_per_bedroom.toLocaleString('en-US')}</p>
+                <p class="stat__sub">all property types</p>
               </div>
               <div class="stat">
                 <p class="stat__label">Sold over asking</p>
