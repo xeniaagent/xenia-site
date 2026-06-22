@@ -750,9 +750,13 @@ em { font-style: italic; color: var(--c-gold); }
 /* ---- Market stats cards ---- */
 .market__stats {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   margin-bottom: 18px;
+}
+@media (max-width: 520px) {
+  .market__stats { grid-template-columns: 1fr; gap: 12px; }
+  .stat__value { font-size: 22px; }
 }
 .stat {
   background: var(--c-bg);
@@ -776,6 +780,8 @@ em { font-style: italic; color: var(--c-gold); }
   color: var(--c-ink);
   line-height: 1.05;
   margin: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .stat__sub {
   font-size: 12px;
