@@ -825,6 +825,38 @@ em { font-style: italic; color: var(--c-gold); }
 .chart__legend { display: flex; gap: 14px; font-size: 12px; color: var(--c-mute); }
 .chart__legend span { display: inline-flex; align-items: center; gap: 6px; }
 .chart__swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+.chart__toggle {
+  display: inline-flex;
+  border: 1px solid var(--c-line);
+  border-radius: 999px;
+  padding: 3px;
+  background: rgba(255,255,255,.7);
+  gap: 0;
+}
+.chart__toggle-btn {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--c-mute);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+  letter-spacing: .02em;
+}
+.chart__toggle-btn:hover { color: var(--c-ink); }
+.chart__toggle-btn.is-active {
+  background: var(--c-ink);
+  color: #fff;
+}
+.chart__toggle-btn.is-active:hover { color: #fff; }
+.chart__metric-label { color: var(--c-ink-2); }
+@media (max-width: 520px) {
+  .chart__toggle-btn { padding: 6px 10px; font-size: 11px; }
+  .chart__legend { gap: 8px; }
+}
 .chart svg { width: 100%; height: auto; display: block; }
 .chart__axis-label {
   font-family: var(--sans);

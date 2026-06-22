@@ -475,53 +475,69 @@
       return '$' + Math.round(n);
     }
 
-    function buildChartSVG(s, zip) {
-      // Sale-only chart, last 24 months, with quarter labels on x-axis.
+    // Metric config: { dataKey, label, shortLabel, color, fillId }
+    const CHART_METRICS = {
+      sale: { dataKey: 'sale', label: 'Median sale price', shortLabel: 'Sale price', color: '#d96b27', fillId: 'saleFill' },
+      psf:  { dataKey: 'psf',  label: 'Median price per sq ft', shortLabel: 'Price per sq ft', color: '#1c5d6e', fillId: 'psfFill' },
+      dom:  { dataKey: 'dom',  label: 'Median days on market', shortLabel: 'Days on market', color: '#c84a52', fillId: 'domFill' },
+    };
+
+    let currentHoodKey = null;
+    function setChartMetric(metric) {
+      window.__chartMetric = metric;
+      if (currentHoodKey) renderHood(currentHoodKey);
+    }
+
+    function buildChartSVG(s, zip, metric) {
+      // Multi-metric chart (sale / psf / dom), last 24 months, quarterly x-axis labels.
+      const m = CHART_METRICS[metric] || CHART_METRICS.sale;
+      const data = (s && s[m.dataKey]) || [];
       const W = 600, H = 220, PAD_L = 70, PAD_R = 24, PAD_T = 14, PAD_B = 28;
       const innerW = W - PAD_L - PAD_R, innerH = H - PAD_T - PAD_B;
-      // Filter out nulls to compute y-axis range
-      const validValues = s.sale.filter(v => v !== null && !isNaN(v));
+      const validValues = data.filter(v => v !== null && !isNaN(v));
       if (validValues.length === 0) {
-        return `<svg viewBox="0 0 ${W} ${H}"><text x="${W/2}" y="${H/2}" text-anchor="middle" class="chart__axis-label">No data</text></svg>`;
+        return '<svg viewBox="0 0 ' + W + ' ' + H + '"><text x="' + (W/2) + '" y="' + (H/2) + '" text-anchor="middle" class="chart__axis-label">No data for ' + m.shortLabel + '</text></svg>';
       }
-      const n = s.sale.length;
-      const sMin = Math.min(...validValues), sMax = Math.max(...validValues);
+      const n = data.length;
+      const sMin = Math.min.apply(null, validValues);
+      const sMax = Math.max.apply(null, validValues);
       const xs = i => PAD_L + (i / Math.max(n - 1, 1)) * innerW;
       const ys = v => PAD_T + innerH - ((v - sMin) / Math.max(sMax - sMin, 1)) * innerH;
 
-      // Path: skip nulls by breaking the path into segments
+      const fmtTick = (v) => {
+        if (metric === 'dom') return Math.round(v) + 'd';
+        if (metric === 'psf') return '$' + Math.round(v);
+        return fmtMoneyShort(v);
+      };
+
       let pathSegments = [];
       let currentSegment = [];
       for (let i = 0; i < n; i++) {
-        if (s.sale[i] !== null && !isNaN(s.sale[i])) {
-          currentSegment.push(`${currentSegment.length ? 'L' : 'M'}${xs(i).toFixed(1)},${ys(s.sale[i]).toFixed(1)}`);
+        if (data[i] !== null && !isNaN(data[i])) {
+          currentSegment.push((currentSegment.length ? 'L' : 'M') + xs(i).toFixed(1) + ',' + ys(data[i]).toFixed(1));
         } else {
           if (currentSegment.length > 1) pathSegments.push(currentSegment.join(' '));
           currentSegment = [];
         }
       }
       if (currentSegment.length > 1) pathSegments.push(currentSegment.join(' '));
-      const salePath = pathSegments.join(' ');
-      // For the area fill, build a closed area from the line
+      const linePath = pathSegments.join(' ');
       let areaPath = '';
       let firstFilled = -1, lastFilled = -1;
       for (let i = 0; i < n; i++) {
-        if (s.sale[i] !== null && !isNaN(s.sale[i])) { if (firstFilled < 0) firstFilled = i; lastFilled = i; }
+        if (data[i] !== null && !isNaN(data[i])) { if (firstFilled < 0) firstFilled = i; lastFilled = i; }
       }
-      if (firstFilled >= 0) {
-        areaPath = `M${xs(firstFilled).toFixed(1)},${(PAD_T + innerH).toFixed(1)} `;
+      if (firstFilled >= 0 && pathSegments[0]) {
+        areaPath = 'M' + xs(firstFilled).toFixed(1) + ',' + (PAD_T + innerH).toFixed(1) + ' ';
         areaPath += pathSegments[0].replace(/^M/, 'L');
-        areaPath += ` L${xs(lastFilled).toFixed(1)},${(PAD_T + innerH).toFixed(1)} Z`;
+        areaPath += ' L' + xs(lastFilled).toFixed(1) + ',' + (PAD_T + innerH).toFixed(1) + ' Z';
       }
 
-      const sTicks = [sMin, sMin + (sMax - sMin) * 0.5, sMax].map(v => ({ v, y: ys(v), label: fmtMoneyShort(v) }));
-      // X-axis labels: only iterate displayLabels (quarter labels), skip monthly fall-through
+      const sTicks = [sMin, sMin + (sMax - sMin) * 0.5, sMax].map(v => ({ v: v, y: ys(v), label: fmtTick(v) }));
       const displayLabels = s.display_labels || [];
-      const xTickIndices = [];
-      // Find indices where the display_label changes (first occurrence of each quarter)
-      // Walk through labels[] and check the quarter label at each position
       const labels = s.labels || [];
-      const maxI = Math.min(labels.length, displayLabels.length * 3 + 1); // safety: don't go beyond labels
+      const maxI = Math.min(labels.length, displayLabels.length * 3 + 1);
+      const xTickIndices = [];
       let prevLabel = null;
       for (let i = 0; i < maxI; i++) {
         const dl = displayLabels[Math.floor(i / 3)] || displayLabels[displayLabels.length - 1] || labels[i];
@@ -531,32 +547,27 @@
         }
       }
 
-      return `
-        <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Sale price trend for ${zip}, last 24 months">
-          <defs>
-            <linearGradient id="saleFill-${zip}" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stop-color="#d96b27" stop-opacity="0.22"/>
-              <stop offset="100%" stop-color="#d96b27" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          ${sTicks.map(t => `
-            <line x1="${PAD_L}" x2="${W - PAD_R}" y1="${t.y.toFixed(1)}" y2="${t.y.toFixed(1)}" stroke="#e3dccf" stroke-width="1"/>
-            <text x="${PAD_L - 8}" y="${(t.y + 3).toFixed(1)}" text-anchor="end" class="chart__axis-label">${t.label}</text>
-          `).join('')}
-          ${xTickIndices.map(t => `
-            <text x="${xs(t.idx).toFixed(1)}" y="${(H - 8).toFixed(1)}" text-anchor="middle" class="chart__axis-label">${t.label}</text>
-          `).join('')}
-          ${areaPath ? `<path d="${areaPath}" fill="url(#saleFill-${zip})"/>` : ''}
-          ${salePath ? `<path d="${salePath}" fill="none" stroke="#d96b27" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>` : ''}
-          ${s.sale.map((v, i) => v !== null && !isNaN(v) ? `<circle cx="${xs(i).toFixed(1)}" cy="${ys(v).toFixed(1)}" r="2" fill="#d96b27"/>` : '').join('')}
-        </svg>
-      `;
+      const gradId = m.fillId + '-' + zip + '-' + metric;
+
+      return '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + m.label + ' trend for ' + zip + ', last 24 months">'
+        + '<defs><linearGradient id="' + gradId + '" x1="0" x2="0" y1="0" y2="1">'
+        + '<stop offset="0%" stop-color="' + m.color + '" stop-opacity="0.22"/>'
+        + '<stop offset="100%" stop-color="' + m.color + '" stop-opacity="0"/>'
+        + '</linearGradient></defs>'
+        + sTicks.map(t => '<line x1="' + PAD_L + '" x2="' + (W - PAD_R) + '" y1="' + t.y.toFixed(1) + '" y2="' + t.y.toFixed(1) + '" stroke="#e3dccf" stroke-width="1"/>'
+          + '<text x="' + (PAD_L - 8) + '" y="' + (t.y + 3).toFixed(1) + '" text-anchor="end" class="chart__axis-label">' + t.label + '</text>').join('')
+        + xTickIndices.map(t => '<text x="' + xs(t.idx).toFixed(1) + '" y="' + (H - 8).toFixed(1) + '" text-anchor="middle" class="chart__axis-label">' + t.label + '</text>').join('')
+        + (areaPath ? '<path d="' + areaPath + '" fill="url(#' + gradId + ')"/>' : '')
+        + (linePath ? '<path d="' + linePath + '" fill="none" stroke="' + m.color + '" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>' : '')
+        + data.map((v, i) => v !== null && !isNaN(v) ? '<circle cx="' + xs(i).toFixed(1) + '" cy="' + ys(v).toFixed(1) + '" r="2" fill="' + m.color + '"/>' : '').join('')
+        + '</svg>';
     }
     function buildFactCell(label, value) {
       return `<div class="factgrid__cell"><small>${label}</small><span>${value}</span></div>`;
     }
 
     function renderHood(key) {
+      currentHoodKey = key;
       const data = window.NEIGHBORHOODS[key];
       const wrap = window.NEIGHBORHOOD_SERIES[key];
       if (!data || !wrap) return;
@@ -624,12 +635,16 @@
 
             <div class="chart">
               <div class="chart__title">
-                <h5>Median sale price — ${series.labels.length} months (quarterly)</h5>
+                <h5><span class="chart__metric-label">${CHART_METRICS[window.__chartMetric || 'sale'].label}</span> — ${series.labels.length} months (quarterly)</h5>
                 <div class="chart__legend">
-                  <span><span class="chart__swatch" style="background:#d96b27;"></span>Monthly median sale price</span>
+                  <div class="chart__toggle" role="tablist" aria-label="Chart metric">
+                    <button type="button" class="chart__toggle-btn" data-metric="sale" role="tab" aria-selected="false">Sale price</button>
+                    <button type="button" class="chart__toggle-btn" data-metric="psf" role="tab" aria-selected="false">$/sqft</button>
+                    <button type="button" class="chart__toggle-btn" data-metric="dom" role="tab" aria-selected="false">Days on market</button>
+                  </div>
                 </div>
               </div>
-              ${buildChartSVG(series, data.zip)}
+              ${buildChartSVG(series, data.zip, window.__chartMetric || "sale")}
               <p class="chart__source">
 
                 Source: SF MLS closed sales, monthly median per ZIP ${data.zip}, geocoded to this neighborhood. Last 24 months through ${series.labels[series.labels.length - 1]}. 2-year change: <strong>${fmtPct(saleChg)}</strong>.
