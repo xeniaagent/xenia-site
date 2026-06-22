@@ -35,6 +35,7 @@ body {
   line-height: 1.65;
   color: var(--c-ink-2);
   background: var(--c-bg);
+  overflow-x: hidden; /* safety net: prevent horizontal scroll on any rogue element */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -177,6 +178,23 @@ em { font-style: italic; color: var(--c-gold); }
   color: var(--c-ink);
   cursor: pointer;
 }
+
+/* Prevent grid/flex items from forcing min-content sizing */
+.hood-panel__body,
+.hood-panel__market,
+.contact__grid,
+.hood-panel__factgrid,
+.hood-panel__cites,
+.about__grid,
+.approach__grid {
+  min-width: 0;
+}
+.hood-panel__body > *,
+.contact__grid > *,
+.about__grid > *,
+.approach__grid > * {
+  min-width: 0;
+}
 @media (max-width: 880px) {
   .nav__links {
     position: absolute;
@@ -257,6 +275,8 @@ em { font-style: italic; color: var(--c-gold); }
   background-position: center;
   transform: scale(1.05);
   filter: saturate(1.05);
+  width: 100%;
+  max-width: 100vw;
 }
 .hero__overlay {
   position: absolute; inset: 0;
@@ -272,7 +292,7 @@ em { font-style: italic; color: var(--c-gold); }
 }
 @keyframes fogDrift {
   from { transform: translate(0, 0) scale(1); opacity: .8; }
-  to   { transform: translate(2%, -2%) scale(1.05); opacity: 1; }
+  to   { transform: translate(1.5%, -1.5%) scale(1.05); opacity: 1; }
 }
 .hero__inner {
   position: relative;
@@ -952,11 +972,17 @@ em { font-style: italic; color: var(--c-gold); }
 .contact__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
 .contact__list li {
   display: grid;
-  grid-template-columns: 90px 1fr;
+  grid-template-columns: 90px minmax(0, 1fr);
   gap: 16px;
   align-items: baseline;
   padding-bottom: 14px;
   border-bottom: 1px solid var(--c-line);
+}
+.contact__list li > a,
+.contact__list li > span {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  min-width: 0;
 }
 .contact__list li:last-child { border-bottom: 0; }
 .contact__label {
@@ -1000,6 +1026,10 @@ em { font-style: italic; color: var(--c-gold); }
   background: #fff;
   color: var(--c-ink);
   transition: border-color .15s, box-shadow .15s;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 .contact__form input:focus,
 .contact__form select:focus,
