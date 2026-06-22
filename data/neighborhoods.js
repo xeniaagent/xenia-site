@@ -23,7 +23,7 @@ window.NEIGHBORHOODS = {
       // 27 sales in the last 30 days (13 condo, 14 SFR).
       median_condo_sell: 1800000,
       median_sfr_sell: 2418000,
-      median_psf: 1474,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 2028,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 12,  // median days on market, last 30 days (27 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 27 sales (13 condo, 14 SFR). DOM is median from the last 30 days where reported (27 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -54,7 +54,7 @@ window.NEIGHBORHOODS = {
       // 23 sales in the last 30 days (8 condo, 15 SFR).
       median_condo_sell: 1200000,
       median_sfr_sell: 3212500,
-      median_psf: null,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 2196,  // $/sqft from SF Assessor parcel join (single-unit only)
       median_dom: 13,  // median days on market, last 30 days (23 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 23 sales (8 condo, 15 SFR). DOM is median from the last 30 days where reported (23 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -85,7 +85,7 @@ window.NEIGHBORHOODS = {
       // 25 sales in the last 30 days (17 condo, 8 SFR).
       median_condo_sell: 1425000,
       median_sfr_sell: 7225000,
-      median_psf: 1208,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1193,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 12,  // median days on market, last 30 days (25 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 25 sales (17 condo, 8 SFR). DOM is median from the last 30 days where reported (25 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -148,7 +148,7 @@ window.NEIGHBORHOODS = {
       // 19 sales in the last 30 days (15 condo, 4 SFR).
       median_condo_sell: 1498000,
       median_sfr_sell: 3800000,
-      median_psf: 1397,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1243,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 14,  // median days on market, last 30 days (19 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 19 sales (15 condo, 4 SFR). DOM is median from the last 30 days where reported (19 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -178,7 +178,7 @@ window.NEIGHBORHOODS = {
       // 40 sales in the last 30 days (1 condo, 39 SFR).
       median_condo_sell: 847000,
       median_sfr_sell: 2400000,
-      median_psf: 1207,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1337,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 11,  // median days on market, last 30 days (40 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 40 sales (1 condo, 39 SFR). DOM is median from the last 30 days where reported (40 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -225,7 +225,7 @@ window.NEIGHBORHOODS = {
       // 3 sales in the last 30 days (1 condo, 2 SFR).
       median_condo_sell: 1700000,
       median_sfr_sell: 4679444,
-      median_psf: 1291,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 2025,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 13,  // median days on market, last 30 days (3 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 3 sales (1 condo, 2 SFR). DOM is median from the last 30 days where reported (3 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -255,7 +255,7 @@ window.NEIGHBORHOODS = {
       // 16 sales in the last 30 days (1 condo, 15 SFR).
       median_condo_sell: 1300000,
       median_sfr_sell: 1855000,
-      median_psf: 1237,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1538,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 14,  // median days on market, last 30 days (16 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 16 sales (1 condo, 15 SFR). DOM is median from the last 30 days where reported (16 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -285,7 +285,7 @@ window.NEIGHBORHOODS = {
       // 31 sales in the last 30 days (19 condo, 12 SFR).
       median_condo_sell: 955000,
       median_sfr_sell: 2500000,
-      median_psf: null,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1268,  // $/sqft from SF Assessor parcel join (single-unit only)
       median_dom: 16,  // median days on market, last 30 days (31 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 31 sales (19 condo, 12 SFR). DOM is median from the last 30 days where reported (31 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -315,7 +315,7 @@ window.NEIGHBORHOODS = {
       // 12 sales in the last 30 days (8 condo, 4 SFR).
       median_condo_sell: 1372500,
       median_sfr_sell: 2700000,
-      median_psf: null,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1471,  // $/sqft from SF Assessor parcel join (single-unit only)
       median_dom: 17,  // median days on market, last 30 days (12 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 12 sales (8 condo, 4 SFR). DOM is median from the last 30 days where reported (12 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -345,7 +345,7 @@ window.NEIGHBORHOODS = {
       // 15 sales in the last 30 days (15 condo, 0 SFR).
       median_condo_sell: 845000,
       median_sfr_sell: null,
-      median_psf: null,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 925,  // $/sqft from SF Assessor parcel join (single-unit only)
       median_dom: 13,  // median days on market, last 30 days (15 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 15 sales (15 condo, 0 SFR). DOM is median from the last 30 days where reported (15 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -375,7 +375,7 @@ window.NEIGHBORHOODS = {
       // 42 sales in the last 30 days (42 condo, 0 SFR).
       median_condo_sell: 1498500,
       median_sfr_sell: null,
-      median_psf: 904,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1155,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 30,  // median days on market, last 30 days (42 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 42 sales (42 condo, 0 SFR). DOM is median from the last 30 days where reported (42 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -405,7 +405,7 @@ window.NEIGHBORHOODS = {
       // 14 sales in the last 30 days (14 condo, 0 SFR).
       median_condo_sell: 871500,
       median_sfr_sell: null,
-      median_psf: 760,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 620,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 60,  // median days on market, last 30 days (14 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 14 sales (14 condo, 0 SFR). DOM is median from the last 30 days where reported (14 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -436,7 +436,7 @@ window.NEIGHBORHOODS = {
       // 13 sales in the last 30 days (8 condo, 5 SFR).
       median_condo_sell: 1057500,
       median_sfr_sell: 2553525,
-      median_psf: 913,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1440,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 12,  // median days on market, last 30 days (13 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 13 sales (8 condo, 5 SFR). DOM is median from the last 30 days where reported (13 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -466,7 +466,7 @@ window.NEIGHBORHOODS = {
       // 29 sales in the last 30 days (4 condo, 25 SFR).
       median_condo_sell: 1757500,
       median_sfr_sell: 2510000,
-      median_psf: 1600,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1467,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 11,  // median days on market, last 30 days (29 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 29 sales (4 condo, 25 SFR). DOM is median from the last 30 days where reported (29 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -496,7 +496,7 @@ window.NEIGHBORHOODS = {
       // 35 sales in the last 30 days (0 condo, 35 SFR).
       median_condo_sell: null,
       median_sfr_sell: 1955000,
-      median_psf: 1169,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1384,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 12,  // median days on market, last 30 days (35 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 35 sales (0 condo, 35 SFR). DOM is median from the last 30 days where reported (35 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -526,7 +526,7 @@ window.NEIGHBORHOODS = {
       // 9 sales in the last 30 days (4 condo, 5 SFR).
       median_condo_sell: 1405000,
       median_sfr_sell: 2400000,
-      median_psf: null,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1453,  // $/sqft from SF Assessor parcel join (single-unit only)
       median_dom: 12,  // median days on market, last 30 days (9 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 9 sales (4 condo, 5 SFR). DOM is median from the last 30 days where reported (9 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -556,7 +556,7 @@ window.NEIGHBORHOODS = {
       // 12 sales in the last 30 days (10 condo, 2 SFR).
       median_condo_sell: 1724688,
       median_sfr_sell: 3442500,
-      median_psf: 1114,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1795,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 12,  // median days on market, last 30 days (12 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 12 sales (10 condo, 2 SFR). DOM is median from the last 30 days where reported (12 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -586,7 +586,7 @@ window.NEIGHBORHOODS = {
       // 9 sales in the last 30 days (5 condo, 4 SFR).
       median_condo_sell: 1375000,
       median_sfr_sell: 2357500,
-      median_psf: 1166,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1433,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 13,  // median days on market, last 30 days (9 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 9 sales (5 condo, 4 SFR). DOM is median from the last 30 days where reported (9 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -616,7 +616,7 @@ window.NEIGHBORHOODS = {
       // 16 sales in the last 30 days (11 condo, 5 SFR).
       median_condo_sell: 1510000,
       median_sfr_sell: 2350000,
-      median_psf: 1121,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1312,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 16,  // median days on market, last 30 days (16 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 16 sales (11 condo, 5 SFR). DOM is median from the last 30 days where reported (16 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -646,7 +646,7 @@ window.NEIGHBORHOODS = {
       // 12 sales in the last 30 days (7 condo, 5 SFR).
       median_condo_sell: 1750000,
       median_sfr_sell: 4995000,
-      median_psf: null,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1930,  // $/sqft from SF Assessor parcel join (single-unit only)
       median_dom: 12,  // median days on market, last 30 days (12 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 12 sales (7 condo, 5 SFR). DOM is median from the last 30 days where reported (12 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -676,7 +676,7 @@ window.NEIGHBORHOODS = {
       // 14 sales in the last 30 days (13 condo, 1 SFR).
       median_condo_sell: 915000,
       median_sfr_sell: 1700000,
-      median_psf: 934,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1111,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 40,  // median days on market, last 30 days (14 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 14 sales (13 condo, 1 SFR). DOM is median from the last 30 days where reported (14 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -706,7 +706,7 @@ window.NEIGHBORHOODS = {
       // 6 sales in the last 30 days (4 condo, 2 SFR).
       median_condo_sell: 1000000,
       median_sfr_sell: 5226250,
-      median_psf: 1180,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1534,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 12,  // median days on market, last 30 days (6 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 6 sales (4 condo, 2 SFR). DOM is median from the last 30 days where reported (6 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -737,7 +737,7 @@ window.NEIGHBORHOODS = {
       // 6 sales in the last 30 days (2 condo, 4 SFR).
       median_condo_sell: 2457500,
       median_sfr_sell: 1819000,
-      median_psf: null,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 1419,  // $/sqft from SF Assessor parcel join (single-unit only)
       median_dom: 16,  // median days on market, last 30 days (6 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 6 sales (2 condo, 4 SFR). DOM is median from the last 30 days where reported (6 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -767,7 +767,7 @@ window.NEIGHBORHOODS = {
       // 27 sales in the last 30 days (0 condo, 27 SFR).
       median_condo_sell: null,
       median_sfr_sell: 1385000,
-      median_psf: 915,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 958,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 12,  // median days on market, last 30 days (27 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 27 sales (0 condo, 27 SFR). DOM is median from the last 30 days where reported (27 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -797,7 +797,7 @@ window.NEIGHBORHOODS = {
       // 14 sales in the last 30 days (4 condo, 10 SFR).
       median_condo_sell: 667000,
       median_sfr_sell: 963500,
-      median_psf: 717,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 879,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 18,  // median days on market, last 30 days (14 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 14 sales (4 condo, 10 SFR). DOM is median from the last 30 days where reported (14 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -827,7 +827,7 @@ window.NEIGHBORHOODS = {
       // 25 sales in the last 30 days (0 condo, 25 SFR).
       median_condo_sell: null,
       median_sfr_sell: 1320000,
-      median_psf: 865,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 922,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 13,  // median days on market, last 30 days (25 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 25 sales (0 condo, 25 SFR). DOM is median from the last 30 days where reported (25 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
@@ -857,7 +857,7 @@ window.NEIGHBORHOODS = {
       // 6 sales in the last 30 days (5 condo, 1 SFR).
       median_condo_sell: 398000,
       median_sfr_sell: 625000,
-      median_psf: 669,  // $/sqft from SF Assessor parcel join (separate source)
+      median_psf: 625,  // $/sqft from SF Assessor parcel join (separate source)
       median_dom: 41,  // median days on market, last 30 days (6 sales with DOM data)
       sale_to_list_pct: null,
       note: "Last 30 days of SF MLS data (since recent). 6 sales (5 condo, 1 SFR). DOM is median from the last 30 days where reported (6 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
