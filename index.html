@@ -180,7 +180,7 @@
 
       <div class="hoods-more__wrap" style="text-align:center;margin:32px 0 8px;">
         <button type="button" class="hoods-more__btn" id="hoods-more-btn" aria-expanded="false" aria-controls="hoods-more">
-          Click for 18 more neighborhoods
+          Click for 19 more neighborhoods
           <span class="hoods-more__chev" aria-hidden="true">↓</span>
         </button>
       </div>
@@ -515,15 +515,16 @@
       }
 
       const sTicks = [sMin, sMin + (sMax - sMin) * 0.5, sMax].map(v => ({ v, y: ys(v), label: fmtMoneyShort(v) }));
-      // X-axis labels: use quarter labels. Show only when the value changes.
-      // Labels: ["2024-07", "2024-08", ..., "2026-06"], display_labels: ["Q3 2024", "Q3 2024", "Q3 2024", "Q4 2024", ...]
-      const labels = s.labels || [];
+      // X-axis labels: only iterate displayLabels (quarter labels), skip monthly fall-through
       const displayLabels = s.display_labels || [];
-      // Find indices where the display_label changes (first occurrence of each quarter)
       const xTickIndices = [];
+      // Find indices where the display_label changes (first occurrence of each quarter)
+      // Walk through labels[] and check the quarter label at each position
+      const labels = s.labels || [];
+      const maxI = Math.min(labels.length, displayLabels.length * 3 + 1); // safety: don't go beyond labels
       let prevLabel = null;
-      for (let i = 0; i < labels.length; i++) {
-        const dl = displayLabels[i] || labels[i];
+      for (let i = 0; i < maxI; i++) {
+        const dl = displayLabels[Math.floor(i / 3)] || displayLabels[displayLabels.length - 1] || labels[i];
         if (dl !== prevLabel) {
           xTickIndices.push({ idx: i, label: dl });
           prevLabel = dl;
@@ -691,7 +692,7 @@
         moreSection.hidden = isOpen;
         moreBtn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
         moreBtn.querySelector('.hoods-more__chev').textContent = isOpen ? '↓' : '↑';
-        moreBtn.firstChild.textContent = isOpen ? 'Click for 18 more neighborhoods ' : 'Hide the additional neighborhoods ';
+        moreBtn.firstChild.textContent = isOpen ? 'Click for 19 more neighborhoods ' : 'Hide the additional neighborhoods ';
       });
     }
   </script>
