@@ -561,6 +561,47 @@
     function buildFactCell(label, value) {
       return `<div class="factgrid__cell"><small>${label}</small><span>${value}</span></div>`;
     }
+    function escHtml(s) {
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+    function renderSchoolsCell(s) {
+      if (!s || typeof s !== 'object') return buildFactCell('Schools', '');
+      const groups = [
+        ['Elementary', s.elementary || []],
+        ['Middle',     s.middle     || []],
+        ['High',       s.high       || []],
+      ];
+      const allEmpty = groups.every(([, arr]) => !arr || arr.length === 0);
+      let body;
+      if (allEmpty) {
+        body = `<p class="factgrid__none">No SFUSD schools explicitly tagged to this neighborhood in the SFUSD directory; nearby schools listed in adjacent neighborhoods.</p>`;
+      } else {
+        body = groups.map(([label, arr]) => {
+          if (!arr || arr.length === 0) return '';
+          const items = arr.map(x => `<li>${escHtml(x)}</li>`).join('');
+          return `<div class="factgrid__grp"><h5>${label}</h5><ul>${items}</ul></div>`;
+        }).join('');
+      }
+      return `<div class="factgrid__cell factgrid__cell--schools"><small>Schools</small>${body}</div>`;
+    }
+    function renderParksCell(p) {
+      const list = (p && Array.isArray(p.list)) ? p.list : [];
+      const items = list.map(x => `<li>${escHtml(x)}</li>`).join('');
+      return `<div class="factgrid__cell factgrid__cell--parks"><small>Parks &amp; outdoors</small><ul>${items}</ul></div>`;
+    }
+    function renderTransitCell(t) {
+      if (!t || typeof t !== 'object') return buildFactCell('Transit', '');
+      const rows = [
+        ['BART',     t.bart],
+        ['Muni Metro / Rail', t.muni],
+        ['Bus',      t.bus],
+        ['Cable car', t.cable_car],
+      ].filter(([, v]) => v && String(v).trim() !== '');
+      const groups = rows.map(([label, v]) => `<div class="factgrid__grp"><h5>${escHtml(label)}</h5><p>${escHtml(v)}</p></div>`).join('');
+      return `<div class="factgrid__cell factgrid__cell--transit"><small>Transit</small>${groups}</div>`;
+    }
 
     function renderHood(key) {
       currentHoodKey = key;
@@ -594,9 +635,9 @@
             <p>${v.best_for}</p>
 
             <div class="hood-panel__factgrid">
-              ${buildFactCell('Schools', v.schools)}
-              ${buildFactCell('Parks &amp; outdoors', v.parks)}
-              ${buildFactCell('Transit', v.transit)}
+              ${renderSchoolsCell(v.schools)}
+              ${renderParksCell(v.parks)}
+              ${renderTransitCell(v.transit)}
               ${buildFactCell('Noise &amp; pace', v.noise)}
             </div>
           </div>
