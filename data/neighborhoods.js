@@ -4,7 +4,7 @@
 // of the page and the citations printed inside each panel.
 
 window.NEIGHBORHOODS = {
-  castro: {
+  castro_upper_market: {
     name: "The Castro",
     zip: "94114",
     vibe: {
@@ -94,100 +94,12 @@ window.NEIGHBORHOODS = {
     ]
   },
 
-  mission: {
-    name: "Mission",
-    zip: "94110",
-    vibe: {
-      tag: "Dense, design-forward, loud in every direction",
-      story: "The Mission is SF's most compressed neighborhood — almost every block has a mural, a taqueria, a coffee roaster, and a converted-Victorian-turned-office. Valencia Street is boutique density at its peak: independent shops, design-forward restaurants, and a population that skews single and creative. Mission Street is busier, more working-class, more Latin, and more visually chaotic. Dolores Park on a sunny weekend is the city's living room. Bernal Heights to the south is the quieter, sunnier stepchild; this is the part where the rent climbs.",
-      best_for: "Singles, young couples, anyone who wants density and design over square footage.",
-      schools: "Public: Mission Dolores Academy (K–8), Everett Middle, and the SFUSD lottery for high schools. Charter and language-immersion options in surrounding ZIPs.",
-      parks: "Mission Dolores Park (the most-used park in SF), Bernal Heights Park (technically next door), the wiggle through to the Castro.",
-      transit: "16th Street BART, 24th Street BART, plus the J, M, BART connections. The most transit-rich neighborhood in SF after SoMa.",
-      noise: "Loud on weekends, moderate during the week. Construction noise is a constant; this is a neighborhood that rebuilds itself every decade.",
-    },
-    market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 460 actual sales.
-      median_condo_sell: 1100000,
-      median_sfr_sell: 1362500,
-      median_psf: 1208,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
-      sale_to_list_pct: null,
-      note: "Median sale prices from 460 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
-    },
-    citations: [
-      '"Condo prices are up by nearly 30% year over year but remain below the April 2022 peak of $1.375 million." — SF Standard, Apr 8 2026',
-      'Zillow ZHVI for ZIP 94110, monthly through May 2026.',
-    ]
-  },
-
-  hayes_valley: {
-    name: "Hayes Valley",
-    zip: "94102",
-    vibe: {
-      tag: "Boutique-lined, design-aware, transit-tight",
-      story: "Hayes Valley didn't exist as a neighborhood until the 1990s, when the Central Freeway came down. What replaced it is now one of SF's most consistently photographed six blocks: a tight grid of independent boutiques, design shops, Michelin-noticed restaurants, and the small public space at Patricia's Green. The residential streets around Hayes are mostly mid-rise condos from the 2000s–2010s, plus a few converted Victorians. Population skews young, design-literate, and transit-dependent.",
-      best_for: "Buyers who want a lock-and-leave condo, walkable to every kind of transit, design-forward without Pacific Heights prices.",
-      schools: "SFUSD assignments are mixed; many families lottery out to neighboring schools. SFUSD middle schools (Lilienthal, Marina) reachable via the city's assignment system.",
-      parks: "Patricia's Green, and the path through to the new SF park at the former freeway ramp. The Fell-Oak bike corridor is two blocks south.",
-      transit: "The Hayes Valley freeway-deck park sits over the Central Freeway stub. Civic Center BART is six blocks north; the J, N, K, M, L, T Muni Metro lines are all within four blocks.",
-      noise: "Medium. Hayes Street can be busy; the cross streets are quiet. The freeway-stub re-development brought in some taller buildings but didn't change the noise profile noticeably.",
-    },
-    market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 213 actual sales.
-      median_condo_sell: 1095000,
-      median_sfr_sell: 1500000,
-      median_psf: 1086,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
-      sale_to_list_pct: null,
-      note: "Median sale prices from 213 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
-    },
-    citations: [
-      'Zillow ZHVI for ZIP 94102: +0.5% over 2 years (essentially flat).',
-      'Zillow ZORI for ZIP 94102: +20.4% rent growth over 2 years.',
-      '"Condo prices are up by nearly 30% year over year but remain below the April 2022 peak." — SF Standard, Apr 8 2026',
-    ]
-  },
-
-  marina: {
-    name: "Marina & Russian Hill",
-    zip: "94123",
-    vibe: {
-      tag: "Bay light, classic Victorians, weekend running paths",
-      story: "The Marina is the part of SF where the city pretends to be a Mediterranean resort: flat, sunnier than it has any right to be, and bookended by the Golden Gate Bridge, the Presidio, and a yacht harbor. Chestnut and Union Streets are the commercial core (boutique fitness, brunch spots, a Whole Foods with a wine bar). Streets are mostly 1920s–1940s Mediterranean and Spanish Revival — replaced or rebuilt after the 1989 earthquake. Russian Hill, just south, climbs again: smaller streets, polished lobbies, the cable car clanging past on Hyde. The whole area reads as polished and slightly quieter than the rest of north-central SF.",
-      best_for: "Couples, families with school-age kids, design-trained buyers who notice a good renovation.",
-      schools: "Highly rated public: Sherman, Marina Middle, AP Giannini. The Marina Middle lottery is competitive. Private: Town, Convent, Lick-Wilmerding options are a short drive.",
-      parks: "Marina Green (the windiest picnic spot in SF), Crissy Field, the Lyon Street stairs to the top of Pacific Heights, the Fort Mason trails.",
-      transit: "30, 30X, 43 buses. The T-Third and F-Market lines reach the eastern edge. Car ownership is more common than transit here.",
-      noise: "Quiet on weekends. The wind can be louder than the traffic. Russian Hill has the cable car; the Marina has the foghorn.",
-    },
-    market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 335 actual sales.
-      median_condo_sell: 1775000,
-      median_sfr_sell: 3650000,
-      median_psf: 1500,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
-      sale_to_list_pct: null,
-      note: "Median sale prices from 335 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
-    },
-    citations: [
-      '"Sam Altman\'s house in Russian Hill." — The Guardian, Jun 11 2026 (referenced for context).',
-      '"A house spent 29 days on the market before being sold, the fastest sale rate observed since spring 2022." — The Guardian, Jun 11 2026, citing Compass',
-      'Zillow ZHVI for ZIP 94123: +14.8% over 2 years; ZORI: +32.7% over 2 years.',
-    ]
-  },
 
   // ============================================================
   // 4 new neighborhoods — quieter / residential SF, west and south
   // ============================================================
 
-  miraloma: {
+  twin_peaks_glen_park: {
     name: "Miraloma Park",
     zip: "94131",
     vibe: {
@@ -216,7 +128,7 @@ window.NEIGHBORHOODS = {
     ]
   },
 
-  midtown: {
+  lone_mountain_usf: {
     name: "Midtown Terrace",
     zip: "94117",
     vibe: {
@@ -274,35 +186,6 @@ window.NEIGHBORHOODS = {
     ]
   },
 
-  diamond_hgts: {
-    name: "Diamond Heights",
-    zip: "94131",
-    vibe: {
-      tag: "Mid-century moderns, redwoods, sky in every direction",
-      story: "Diamond Heights is a deliberate anomaly in SF's housing stock. Most of the neighborhood was built in the 1960s–70s on land the city had to grade flat — hence 'Diamond Heights,' the area that used to be a quarry and is now one of the most architecturally interesting residential zones in the city. The houses are mid-century modern: low-slung, glass-walled, often built into the hillside. Redwoods and oaks frame the streets. The architecture alone is worth a Saturday drive, even if you're not buying.",
-      best_for: "Architecturally curious buyers, anyone who wants a single-level home with light from three sides, design-trained clients who notice when a kitchen is from the 1970s and love it anyway.",
-      schools: "Public: Glen Park Elementary (SFUSD K-5) and the SFUSD lottery for middle and high school. The closest middle school is Aptos (in 94127, West Portal) or, by SFUSD assignment, sometimes AP Giannini (Sunset). Private options within a 15-minute drive.",
-      parks: "Diamond Heights Park (small, top of Diamond and Sussex), Glen Canyon Park (70 acres, the same canyon wilderness that borders Miraloma), Walter Haas Playground, and the Glen Park commercial strip is a 5-minute drive.",
-      transit: "The 35 bus on Diamond and the 52 bus on Diamond Heights Boulevard are the local lines. Glen Park BART (Civic Center to Dublin/Pleasanton) is a 10-minute walk from the south end of the neighborhood. Car ownership is normal here.",
-      noise: "Very quiet. The wind through the redwoods is the soundtrack. The Sutro Tower is visible from many blocks and is, objectively, beautiful at sunset."
-    },
-    market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 0 actual sales.
-      median_condo_sell: null,
-      median_sfr_sell: null,
-      median_psf: null,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
-      sale_to_list_pct: null,
-      note: "Median sale prices from 0 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
-    },
-    citations: [
-      '"24 luxury condominiums sold for more than $3 million, nearly four times as many as in March 2025." — SF Standard, Apr 8 2026',
-      'Zillow ZHVI for ZIP 94131: +7.0% over 2 years; ZORI: +31.4% over 2 years.',
-    ]
-  }
-,
 
 // ============================================================================
 // 24 new neighborhoods (added 2026-06-21) — top 8 stays as the original 10,
@@ -463,7 +346,7 @@ window.NEIGHBORHOODS = {
     ]
   },
 
-  south_beach: {
+  financial_district_south_beach: {
     name: "South Beach",
     zip: "94105",
     vibe: {
@@ -492,7 +375,7 @@ window.NEIGHBORHOODS = {
     ]
   },
 
-  soma: {
+  south_of_market: {
     name: "SoMa",
     zip: "94103",
     vibe: {
@@ -521,34 +404,6 @@ window.NEIGHBORHOODS = {
     ]
   },
 
-  dogpatch: {
-    name: "Dogpatch",
-    zip: "94107",
-    vibe: {
-      tag: "Industrial-turned-residential, design-warehouse, third street",
-      story: "The Dogpatch is the part of SF that\'s been re-invented in the last 20 years: an old industrial waterfront (rail yards, warehouses, the shipyard to the south) that\'s been replaced, block by block, with new condos, design offices, and a few small restaurants. The population skews younger, design-trained, and tech-adjacent (UCSF Mission Bay is across the channel). The architecture is mostly 2000s–2020s new-builds with a few surviving 19th-century brick warehouses.",
-      best_for: "Buyers who want a new-build condo with character, design-literate buyers, anyone who works at UCSF Mission Bay and wants to walk to work.",
-      schools: "Public K-5: by SFUSD lottery, the closest options are Mission Bay School (SOMA/Mission Bay boundary, K-8) and Daniel Webster (Potrero Hill). Most Dogpatch families use SFUSD lottery for elementary placement outside the immediate area. Middle and high: by lottery.",
-      parks: "Crane Cove Park (newer, on the waterfront, with a beach and the historic crane), the Third Street corridor\'s new plazas, the bay-side trails at the end of Illinois Street.",
-      transit: "The T Third Street Muni Metro line runs through the neighborhood, connecting to downtown in 15 minutes. The 19, 22, 48 buses. The 280 is right at the south edge.",
-      noise: "Medium. The 280 is audible on the south edge; the waterfront side is quieter. The new development is denser and getting busier."
-    },
-    market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 0 actual sales.
-      median_condo_sell: null,
-      median_sfr_sell: null,
-      median_psf: null,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
-      sale_to_list_pct: null,
-      note: "Median sale prices from 0 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
-    },
-    citations: [
-      "Zillow ZHVI for ZIP 94107 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94107 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
-    ]
-  },
 
   potrero_hill: {
     name: "Potrero Hill",
@@ -579,7 +434,7 @@ window.NEIGHBORHOODS = {
     ]
   },
 
-  richmond_district: {
+  inner_outer_richmond: {
     name: "Richmond District",
     zip: "94118",
     vibe: {
@@ -608,7 +463,7 @@ window.NEIGHBORHOODS = {
     ]
   },
 
-  sunset_district: {
+  sunset_parkside: {
     name: "Sunset District",
     zip: "94116",
     vibe: {
@@ -666,7 +521,7 @@ window.NEIGHBORHOODS = {
     ]
   },
 
-  cole_valley: {
+  haight_ashbury: {
     name: "Cole Valley",
     zip: "94117",
     vibe: {
@@ -839,34 +694,6 @@ window.NEIGHBORHOODS = {
     ]
   },
 
-  downtown: {
-    name: "Downtown",
-    zip: "94104",
-    vibe: {
-      tag: "High-rise, financial, transit-tight, weekend-quiet",
-      story: "Downtown is the part of SF that\'s all office towers, hotels, and Union Square. The Financial District is the north end; Union Square is the shopping core; the south end bleeds into SoMa. The residential population is mostly renters in 1990s–2020s high-rise new-builds, with a small contingent of long-time loft owners in the few surviving historic buildings. Weekdays are crowded; weekends are quiet, which locals like and businesses struggle with.",
-      best_for: "Buyers who want walking distance to everything, weekend-empty streets, and the densest transit in the city.",
-      schools: "Public: Bessie Carmichael School PreK-8 Filipino Education Center (SFUSD, South of Market), Civic Center Secondary School, Tenderloin Community Elementary School. Access SFUSD programs for older students. High: Youth Chance High School, Civic Center Secondary.",
-      parks: "Union Square (the central plaza, with the Dewey Monument and the holiday ice rink), the Yerba Buena Gardens two blocks south, the Transamerica Redwood Park (the small redwood grove at the base of the Transamerica pyramid).",
-      transit: "Embarcadero, Montgomery, Powell, Civic Center BART — four stations in the downtown core. The F-Market, all six Muni Metro lines, the cable cars. The 1, 5, 6, 7, 9, 14, 19, 21, 30, 38, 45 buses.",
-      noise: "Loud on weekdays (financial-district traffic, the cable car bells, the office workers), quiet on weekends. The Financial District is the loudest; the Yerba Buena and Union Square edges are quieter."
-    },
-    market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 0 actual sales.
-      median_condo_sell: null,
-      median_sfr_sell: null,
-      median_psf: null,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
-      sale_to_list_pct: null,
-      note: "Median sale prices from 0 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
-    },
-    citations: [
-      "Zillow ZHVI for ZIP 94102 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94102 (median rent).",
-      "Vibe story, transit, parks, noise: AI baseline from training data, with spot-checks against Wikipedia. Schools: SFUSD school directory (sfusd.edu/schools/directory), fact-checked 2026-06-21."
-    ]
-  },
 
   twin_peaks: {
     name: "Twin Peaks",
@@ -984,7 +811,7 @@ window.NEIGHBORHOODS = {
     ]
   },
 
-  civic_center: {
+  tenderloin: {
     name: "Civic Center",
     zip: "94102",
     vibe: {
