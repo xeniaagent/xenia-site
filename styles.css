@@ -816,11 +816,14 @@ em { font-style: italic; color: var(--c-gold); }
   padding: 16px 16px 12px;
 }
 .chart__title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
+  position: relative;
   margin: 0 0 8px;
+  /* Reserve space for the absolutely-positioned toggle on the right */
+  min-height: 56px;
+  padding-right: 290px; /* leaves room for the 280px toggle + 10px gap */
 }
+.chart__title h5 { margin-right: 0; }
 .chart__title h5 {
   font-family: var(--serif);
   font-weight: 500;
@@ -830,31 +833,24 @@ em { font-style: italic; color: var(--c-gold); }
   letter-spacing: -.01em;
 }
 .chart__legend {
-  margin-top: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 18px;
-  font-size: 12px;
-  color: var(--c-mute);
-  flex-wrap: wrap;
-  /* Reserve space so the toggle doesn't move when chart title text changes */
-  min-height: 32px;
+  /* No styling needed - the toggle inside is now absolutely positioned */
+  display: contents;
 }
 .chart__legend span { display: inline-flex; align-items: center; gap: 6px; }
 .chart__swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
 .chart__toggle {
   display: inline-flex;
-  /* Lock the width so the pill doesn't resize when active label changes */
-  min-width: 280px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* Fixed width so the pill doesn't resize when active label changes */
+  width: 280px;
   justify-content: center;
   border: 1px solid var(--c-line);
   border-radius: 999px;
   padding: 3px;
   background: rgba(255,255,255,.7);
   gap: 0;
-  /* Prevent any layout shift on click */
-  flex-shrink: 0;
 }
 .chart__toggle-btn {
   font-family: var(--sans);
