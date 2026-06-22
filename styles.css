@@ -652,10 +652,10 @@ em { font-style: italic; color: var(--c-gold); }
   .hood-panel__period { display: block; margin-left: 0; margin-top: 2px; font-size: 14px; }
 }
 .hood-panel__disclaimer {
-  margin-top: 28px;
-  padding-top: 20px;
+  margin-top: 24px;
+  padding-top: 16px;
   border-top: 1px solid var(--c-line);
-  font-size: 10px;
+  font-size: 9.5px;
   line-height: 1.5;
   color: var(--c-mute);
   font-style: italic;
@@ -829,16 +829,32 @@ em { font-style: italic; color: var(--c-gold); }
   margin: 0;
   letter-spacing: -.01em;
 }
-.chart__legend { display: flex; gap: 14px; font-size: 12px; color: var(--c-mute); }
+.chart__legend {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  font-size: 12px;
+  color: var(--c-mute);
+  flex-wrap: wrap;
+  /* Reserve space so the toggle doesn't move when chart title text changes */
+  min-height: 32px;
+}
 .chart__legend span { display: inline-flex; align-items: center; gap: 6px; }
 .chart__swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
 .chart__toggle {
   display: inline-flex;
+  /* Lock the width so the pill doesn't resize when active label changes */
+  min-width: 280px;
+  justify-content: center;
   border: 1px solid var(--c-line);
   border-radius: 999px;
   padding: 3px;
   background: rgba(255,255,255,.7);
   gap: 0;
+  /* Prevent any layout shift on click */
+  flex-shrink: 0;
 }
 .chart__toggle-btn {
   font-family: var(--sans);
@@ -901,17 +917,17 @@ em { font-style: italic; color: var(--c-gold); }
   border-radius: var(--r-sm);
 }
 .hood-panel__cites h6 {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--c-mute);
   font-weight: 700;
-  margin: 0 0 8px;
+  margin: 0 0 6px;
 }
 .hood-panel__cites ul {
   margin: 0;
-  padding-left: 18px;
-  font-size: 12.5px;
+  padding-left: 16px;
+  font-size: 11px;
   color: var(--c-ink-2);
   line-height: 1.55;
 }
