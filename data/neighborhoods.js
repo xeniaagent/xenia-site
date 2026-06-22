@@ -102,32 +102,6 @@ window.NEIGHBORHOODS = {
   // 4 new neighborhoods — quieter / residential SF, west and south
   // ============================================================
 
-  twin_peaks_glen_park: {
-    name: "Miraloma Park",
-    zip: "94131",
-    vibe: {
-      tag: "Hillside calm, mid-century homes, big sky",
-      story: "Miraloma Park sits on the south slope of Mount Davidson like a quiet cousin to the Castro — geographically close, atmospherically a world away. The streets are residential, the houses are mostly 1920s–1940s stucco and shingle with the occasional Eichler or post-war modern tucked in, and the views back toward downtown and the bay are the kind that sell the listing on the second photo. There's no commercial strip to speak of; the closest coffee shop is technically Glen Park or Bernal. What you get in exchange is one of the best weekday-evening sunsets in the city and almost no through-traffic.",
-      best_for: "Families and design-trained buyers who want a single-family home, a yard, and a neighborhood that empties out at night.",
-      schools: "Public K-5: Miraloma Elementary School (SFUSD, Miraloma, the local public option). For middle and high school, the SFUSD lottery is the path; Ruth Asawa San Francisco School of the Arts is a multi-neighborhood high school option (Diamond Heights, Forest Hill, Miraloma, Twin Peaks, West Portal).",
-      parks: "Mount Davidson (the city's highest natural point, 928 ft, with the large Easter cross), Glen Canyon Park (70 acres of canyon wilderness, with the only undeveloped creek in SF), and Billy Goat Hill is just over the hill in Noe Valley.",
-      transit: "The 44 bus is the spine. Glen Park BART (with a parking lot, if you ever need it) is a 5-minute drive. Driving is honestly the most common commute.",
-      noise: "Very quiet. Coyotes occasionally. Wind from the ocean sometimes. That's the noise."
-    },
-    market: {
-      // Last-30-day stats from SF MLS data. 0 sales in the last 30 days for this neighborhood.
-      median_condo_sell: null,
-      median_sfr_sell: null,
-      median_psf: 1232,
-      median_dom: null,
-      sale_to_list_pct: null,
-      note: "No SF MLS sales in this neighborhood in the last 30 days. Sqft joined separately from SF Assessor-Recorder parcel roll."
-    },
-    citations: [
-      '"Median home sale price in San Francisco was more than $2m, an 18% increase from the previous year." — The Guardian, Jun 11 2026',
-      'Zillow ZHVI for ZIP 94131: +7.0% over 2 years; ZORI: +31.4% over 2 years.',
-    ]
-  },
 
   lone_mountain_usf: {
     name: "Midtown Terrace",

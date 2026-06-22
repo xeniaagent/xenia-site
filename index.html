@@ -180,7 +180,7 @@
 
       <div class="hoods-more__wrap" style="text-align:center;margin:32px 0 8px;">
         <button type="button" class="hoods-more__btn" id="hoods-more-btn" aria-expanded="false" aria-controls="hoods-more">
-          Click for 19 more neighborhoods
+          Click for 18 more neighborhoods
           <span class="hoods-more__chev" aria-hidden="true">↓</span>
         </button>
       </div>
@@ -275,11 +275,6 @@
         <button type="button" class="hood hood--btn" data-hood="lone_mountain_usf" role="tab" aria-selected="false" aria-controls="hood-panel">
           <span class="hood__name">Lone Mountain / USF</span>
           <span class="hood__tag">Forested hilltop, USF campus, fog-soft tucked-away.</span>
-          <span class="hood__chev" aria-hidden="true">→</span>
-        </button>
-        <button type="button" class="hood hood--btn" data-hood="twin_peaks_glen_park" role="tab" aria-selected="false" aria-controls="hood-panel">
-          <span class="hood__name">Miraloma Park</span>
-          <span class="hood__tag">Mount Davidson's south slope, mid-century calm.</span>
           <span class="hood__chev" aria-hidden="true">→</span>
         </button>
       </div></div>
@@ -723,7 +718,7 @@
         moreSection.hidden = isOpen;
         moreBtn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
         moreBtn.querySelector('.hoods-more__chev').textContent = isOpen ? '↓' : '↑';
-        moreBtn.firstChild.textContent = isOpen ? 'Click for 19 more neighborhoods ' : 'Hide the additional neighborhoods ';
+        moreBtn.firstChild.textContent = isOpen ? 'Click for 18 more neighborhoods ' : 'Hide the additional neighborhoods ';
       });
     }
   </script>
