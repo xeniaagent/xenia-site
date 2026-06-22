@@ -283,7 +283,7 @@
       <div id="hood-panel" class="hood-panel" role="tabpanel" aria-live="polite" hidden></div>
 
       <p class="hoods__sources">
-        <strong>Data sources:</strong> Market stats: last 30 days of SF MLS closed sales (since 2026-05-20) for 28 of 28 neighborhoods on this page. Each sale geocoded via the US Census Bureau geocoder (8,410/9,056 addresses = 92.9%) and assigned to exactly one SF Planning Analysis Neighborhood via point-in-polygon (data.sfgov.org/d/j2bu-swwd). Sqft joined from the SF Office of the Assessor-Recorder Secured Property Tax Roll (data.sfgov.org/d/wv5m-vpq2, 8,286 of 8,386 APNs matched at 98.8%, downloaded 2026-06-21) for the 24 neighborhoods with sqft data. The 24-month chart shows monthly median sale prices per ZIP, binned into quarters on the x-axis (Q3 2024 to Q2 2026). Schools fact-checked against the SFUSD school directory. Vibe, transit, parks: AI baseline with spot-checks. Updated June 2026.
+        <strong>Data sources:</strong> Market stats: last 30 days of SF MLS closed sales (since 2026-05-20) for 27 of 27 neighborhoods on this page. Each sale geocoded via the US Census Bureau geocoder (8,410/9,056 addresses = 92.9%) and assigned to exactly one SF Planning Analysis Neighborhood via point-in-polygon (data.sfgov.org/d/j2bu-swwd). Sqft joined from the SF Office of the Assessor-Recorder Secured Property Tax Roll (data.sfgov.org/d/wv5m-vpq2, 8,286 of 8,386 APNs matched at 98.8%, downloaded 2026-06-21) for the 24 neighborhoods with sqft data. The 24-month chart shows monthly median sale prices per ZIP, binned into quarters on the x-axis (Q3 2024 to Q2 2026). Schools fact-checked against the SFUSD school directory. Vibe, transit, parks: AI baseline with spot-checks. Updated June 2026.
       </p>
     </div>
   </section>
@@ -685,11 +685,6 @@
 
                 Source: SF MLS closed sales, monthly median per ZIP ${data.zip}, geocoded to this neighborhood. Last 24 months through ${series.labels[series.labels.length - 1]}. 2-year change: <strong>${fmtPct(saleChg)}</strong>.
               </p>
-            </div>
-
-            <div class="hood-panel__cites">
-              <h6>Sources for this panel</h6>
-              <ul>${(data.citations || []).map(c => `<li>${c}</li>`).join('')}</ul>
             </div>
 
             <p class="hood-panel__disclaimer">All figures shown here are based on independent research using publicly available sources (SF MLS, SF Planning, SF Assessor-Recorder, Zillow ZHVI). The data is provided "as is" and may not reflect current market conditions. Neighborhood boundaries, prices, and statistics can vary from day to day and street to street. Nothing on this site constitutes a guarantee, warranty, or representation by Xenia Brown or her affiliated brokerage. Buyers and sellers should verify all information independently before making any decision.</p>

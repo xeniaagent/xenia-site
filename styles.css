@@ -749,9 +749,9 @@ em { font-style: italic; color: var(--c-gold); }
   margin-bottom: 4px;
 }
 .factgrid__cell span {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--c-ink);
-  line-height: 1.5;
+  line-height: 1.45;
 }
 .factgrid__cell--schools,
 .factgrid__cell--parks,
@@ -784,6 +784,24 @@ em { font-style: italic; color: var(--c-gold); }
   line-height: 1.45;
   color: var(--c-ink);
 }
+.factgrid__cell--parks ul {
+  list-style: disc;
+  margin: 4px 0 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--c-ink);
+}
+.factgrid__cell--parks ul li { margin-bottom: 2px; }
+.factgrid__cell--schools ul {
+  list-style: disc;
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--c-ink);
+}
+.factgrid__cell--schools ul li { margin-bottom: 2px; }
 .factgrid__none {
   margin: 4px 0 0;
   font-size: 12.5px;
