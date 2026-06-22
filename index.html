@@ -630,7 +630,7 @@
               </div>
               ${buildChartSVG(series, data.zip)}
               <p class="chart__source">
-                Sale series: Zillow ZHVI for ZIP ${data.zip} (typical home value, monthly through ${series.labels[series.labels.length - 1]}) ·
+
                 Source: SF MLS closed sales, monthly median per ZIP ${data.zip}, geocoded to this neighborhood. Last 24 months through ${series.labels[series.labels.length - 1]}. 2-year change: <strong>${fmtPct(saleChg)}</strong>.
               </p>
             </div>
