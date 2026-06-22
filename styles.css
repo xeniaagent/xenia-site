@@ -616,6 +616,27 @@ em { font-style: italic; color: var(--c-gold); }
   color: var(--c-mute);
   font-size: 16px;
 }
+
+.hood-panel__period {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--c-mute);
+  font-size: 16px;
+  margin-left: 4px;
+}
+.hood-panel__disclaimer {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--c-line);
+  font-size: 11px;
+  line-height: 1.55;
+  color: var(--c-mute);
+  font-style: italic;
+}
+@media (max-width: 880px) {
+  .hood-panel__period { font-size: 14px; }
+  .hood-panel__disclaimer { font-size: 10.5px; line-height: 1.5; }
+}
 .hood-panel__zip {
   font-family: var(--serif);
   font-size: 13px;

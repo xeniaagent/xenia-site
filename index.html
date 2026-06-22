@@ -128,7 +128,7 @@
         A few of the neighborhoods I work in. Click any to see what the market is doing right now — and if yours isn't here, just ask.
       </p>
       <p class="hoods__hint section__lede section__lede--light" style="margin-left:auto;margin-right:auto;">
-        Ten areas to start. I work across all of San Francisco — fill out the form at the bottom or call if you want a deep dive on a specific block.
+        Nine areas to start. I work across all of San Francisco — fill out the form at the bottom or call if you want a deep dive on a specific block.
       </p>
       <div class="hoods" role="tablist" aria-label="San Francisco neighborhoods">
         <button type="button" class="hood hood--btn" data-hood="castro_upper_market"      role="tab" aria-selected="false" aria-controls="hood-panel">
@@ -161,9 +161,14 @@
           <span class="hood__tag">Bay light, classic Victorians, views that pay for themselves at resale.</span>
           <span class="hood__chev" aria-hidden="true">→</span>
         </button>
-        <button type="button" class="hood hood--btn" data-hood="lone_mountain_usf"     role="tab" aria-selected="false" aria-controls="hood-panel">
-          <span class="hood__name">Lone Mountain / USF</span>
-          <span class="hood__tag">Forested, tucked-away, the kind of neighbors who know your dog's name.</span>
+        <button type="button" class="hood hood--btn" data-hood="twin_peaks" role="tab" aria-selected="false" aria-controls="hood-panel">
+          <span class="hood__name">Twin Peaks</span>
+          <span class="hood__tag">Hillside calm, mid-century homes, big sky over the city.</span>
+          <span class="hood__chev" aria-hidden="true">→</span>
+        </button>
+        <button type="button" class="hood hood--btn" data-hood="glen_park" role="tab" aria-selected="false" aria-controls="hood-panel">
+          <span class="hood__name">Glen Park</span>
+          <span class="hood__tag">Quiet village feel, canyon trails, BART-connected.</span>
           <span class="hood__chev" aria-hidden="true">→</span>
         </button>
         <button type="button" class="hood hood--btn" data-hood="west_portal" role="tab" aria-selected="false" aria-controls="hood-panel">
@@ -175,7 +180,7 @@
 
       <div class="hoods-more__wrap" style="text-align:center;margin:32px 0 8px;">
         <button type="button" class="hoods-more__btn" id="hoods-more-btn" aria-expanded="false" aria-controls="hoods-more">
-          Click for 21 more neighborhoods
+          Click for 18 more neighborhoods
           <span class="hoods-more__chev" aria-hidden="true">↓</span>
         </button>
       </div>
@@ -330,8 +335,8 @@
       <p class="pullquote__mark">&ldquo;</p>
       <blockquote>
         <p>
-          San Francisco real estate is a competitive sport played on hills
-          with Victorian trim. I help clients play it smarter.
+          San Francisco has a distinct soul. My favorite part of the work
+          is simply matching it with yours.
         </p>
         <cite>— Xenia Brown</cite>
       </blockquote>
@@ -590,7 +595,7 @@
           </div>
 
           <div class="hood-panel__market">
-            <h4>Right now, in this neighborhood</h4>
+            <h4>Right now, in this neighborhood <span class="hood-panel__period">— June 2026</span></h4>
             <div class="market__stats">
               <div class="stat">
                 <p class="stat__label">Median condo price</p>
@@ -634,6 +639,8 @@
               <h6>Sources for this panel</h6>
               <ul>${(data.citations || []).map(c => `<li>${c}</li>`).join('')}</ul>
             </div>
+
+            <p class="hood-panel__disclaimer">All figures shown here are based on independent research using publicly available sources (SF MLS, SF Planning, SF Assessor-Recorder, Zillow ZHVI). The data is provided "as is" and may not reflect current market conditions. Neighborhood boundaries, prices, and statistics can vary from day to day and street to street. Nothing on this site constitutes a guarantee, warranty, or representation by Xenia Brown or her affiliated brokerage. Buyers and sellers should verify all information independently before making any decision.</p>
           </div>
         </div>
       `;
@@ -684,7 +691,7 @@
         moreSection.hidden = isOpen;
         moreBtn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
         moreBtn.querySelector('.hoods-more__chev').textContent = isOpen ? '↓' : '↑';
-        moreBtn.firstChild.textContent = isOpen ? 'Click for 21 more neighborhoods ' : 'Hide the additional neighborhoods ';
+        moreBtn.firstChild.textContent = isOpen ? 'Click for 18 more neighborhoods ' : 'Hide the additional neighborhoods ';
       });
     }
   </script>
