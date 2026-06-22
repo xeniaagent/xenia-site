@@ -642,7 +642,14 @@ em { font-style: italic; color: var(--c-gold); }
   font-style: italic;
   color: var(--c-mute);
   font-size: 16px;
-  margin-left: 4px;
+  /* Allow it to wrap to a new line cleanly without a dangling hyphen.
+     The em-dash is removed in markup; here we just let it wrap if needed. */
+  display: inline;
+}
+@media (max-width: 520px) {
+  /* On small screens, let "Right now, in this neighborhood" + "June 2026"
+     split naturally to two lines by allowing the period to start its own line. */
+  .hood-panel__period { display: block; margin-left: 0; margin-top: 2px; font-size: 14px; }
 }
 .hood-panel__disclaimer {
   margin-top: 28px;
@@ -852,7 +859,10 @@ em { font-style: italic; color: var(--c-gold); }
   color: #fff;
 }
 .chart__toggle-btn.is-active:hover { color: #fff; }
-.chart__metric-label { color: var(--c-ink-2); }
+.chart__metric-label {
+  color: var(--c-ink-2);
+  white-space: nowrap; /* never split "Median price per sq ft" or "Median days on market" */
+}
 .chart__period {
   display: block;
   font-size: 11px;
@@ -862,6 +872,7 @@ em { font-style: italic; color: var(--c-gold); }
   letter-spacing: .04em;
   margin-top: 4px;
   text-transform: uppercase;
+  white-space: nowrap; /* "24 months" - never split */
 }
 @media (max-width: 520px) {
   .chart__toggle-btn { padding: 6px 10px; font-size: 11px; }
