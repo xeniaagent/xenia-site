@@ -695,10 +695,11 @@ em { font-style: italic; color: var(--c-gold); }
     "vibe  market"
     "disc  disc";
   gap: 40px;
+  color: var(--c-ink-2); /* override the white text set on the dark .neighborhoods section */
 }
-.hood-panel__story   { grid-area: story; }
-.hood-panel__market  { grid-area: market; }
-.hood-panel__vibe    { grid-area: vibe; }
+.hood-panel__story   { grid-area: story; color: var(--c-ink-2); }
+.hood-panel__market  { grid-area: market; color: var(--c-ink-2); }
+.hood-panel__vibe    { grid-area: vibe; color: var(--c-ink-2); }
 .hood-panel__disclaimer { grid-area: disc; }
 @media (max-width: 880px) {
   .hood-panel__body {
