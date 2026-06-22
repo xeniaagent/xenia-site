@@ -635,10 +635,10 @@
             <p>${v.best_for}</p>
 
             <div class="hood-panel__factgrid">
-              ${renderSchoolsCell(v.schools)}
+              ${buildFactCell('Noise &amp; pace', v.noise)}
               ${renderParksCell(v.parks)}
               ${renderTransitCell(v.transit)}
-              ${buildFactCell('Noise &amp; pace', v.noise)}
+              ${renderSchoolsCell(v.schools)}
             </div>
           </div>
 
