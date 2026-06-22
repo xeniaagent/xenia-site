@@ -633,9 +633,9 @@
                 <h5><span class="chart__metric-label">${CHART_METRICS[window.__chartMetric || 'sale'].label}</span> <small class="chart__period">${series.labels.length} months</small></h5>
                 <div class="chart__legend">
                   <div class="chart__toggle" role="tablist" aria-label="Chart metric">
-                    <button type="button" class="chart__toggle-btn" data-metric="sale" role="tab" aria-selected="false">Sale price</button>
-                    <button type="button" class="chart__toggle-btn" data-metric="psf" role="tab" aria-selected="false">$/sqft</button>
-                    <button type="button" class="chart__toggle-btn" data-metric="dom" role="tab" aria-selected="false">Days on market</button>
+                    <button type="button" class="chart__toggle-btn" data-metric="sale" role="tab" aria-selected="false" title="Median sale price">Sale</button>
+                    <button type="button" class="chart__toggle-btn" data-metric="psf" role="tab" aria-selected="false" title="Median price per sq ft">$/sqft</button>
+                    <button type="button" class="chart__toggle-btn" data-metric="dom" role="tab" aria-selected="false" title="Median days on market">DOM</button>
                   </div>
                 </div>
               </div>
