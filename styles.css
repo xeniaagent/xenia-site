@@ -712,6 +712,7 @@ em { font-style: italic; color: var(--c-gold); }
 }
 
 .hood-panel__story h4,
+.hood-panel__vibe h4,
 .hood-panel__market h4 {
   font-family: var(--serif);
   font-weight: 500;
@@ -721,8 +722,11 @@ em { font-style: italic; color: var(--c-gold); }
   margin: 22px 0 8px;
 }
 .hood-panel__story h4:first-child,
+.hood-panel__vibe h4:first-child,
 .hood-panel__market h4:first-child { margin-top: 0; }
-.hood-panel__story p {
+.hood-panel__vibe h4 { margin-top: 0; }
+.hood-panel__story p,
+.hood-panel__vibe p {
   margin: 0 0 12px;
   color: var(--c-ink-2);
   font-size: 15px;
