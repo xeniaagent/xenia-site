@@ -630,16 +630,6 @@
         <div class="hood-panel__body">
           <div class="hood-panel__story">
             <p class="story__lede">${v.story}</p>
-
-            <h4>What it's like</h4>
-            <p>${v.best_for}</p>
-
-            <div class="hood-panel__factgrid">
-              ${buildFactCell('Noise &amp; pace', v.noise)}
-              ${renderParksCell(v.parks)}
-              ${renderTransitCell(v.transit)}
-              ${renderSchoolsCell(v.schools)}
-            </div>
           </div>
 
           <div class="hood-panel__market">
@@ -686,9 +676,21 @@
                 Source: SF MLS closed sales, monthly median per ZIP ${data.zip}, geocoded to this neighborhood. Last 24 months through ${series.labels[series.labels.length - 1]}. 2-year change: <strong>${fmtPct(saleChg)}</strong>.
               </p>
             </div>
-
-            <p class="hood-panel__disclaimer">All figures shown here are based on independent research using publicly available sources (SF MLS, SF Planning, SF Assessor-Recorder, Zillow ZHVI). The data is provided "as is" and may not reflect current market conditions. Neighborhood boundaries, prices, and statistics can vary from day to day and street to street. Nothing on this site constitutes a guarantee, warranty, or representation by Xenia Brown or her affiliated brokerage. Buyers and sellers should verify all information independently before making any decision.</p>
           </div>
+
+          <div class="hood-panel__vibe">
+            <h4>What it's like</h4>
+            <p>${v.best_for}</p>
+
+            <div class="hood-panel__factgrid">
+              ${buildFactCell('Noise &amp; pace', v.noise)}
+              ${renderParksCell(v.parks)}
+              ${renderTransitCell(v.transit)}
+              ${renderSchoolsCell(v.schools)}
+            </div>
+          </div>
+
+          <p class="hood-panel__disclaimer">All figures shown here are based on independent research using publicly available sources (SF MLS, SF Planning, SF Assessor-Recorder, Zillow ZHVI). The data is provided "as is" and may not reflect current market conditions. Neighborhood boundaries, prices, and statistics can vary from day to day and street to street. Nothing on this site constitutes a guarantee, warranty, or representation by Xenia Brown or her affiliated brokerage. Buyers and sellers should verify all information independently before making any decision.</p>
         </div>
       `;
       panel.hidden = false;

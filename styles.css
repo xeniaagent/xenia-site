@@ -690,10 +690,23 @@ em { font-style: italic; color: var(--c-gold); }
   padding: 32px 36px 40px;
   display: grid;
   grid-template-columns: 1.15fr .85fr;
+  grid-template-areas:
+    "story market"
+    "vibe  market"
+    "disc  disc";
   gap: 40px;
 }
+.hood-panel__story   { grid-area: story; }
+.hood-panel__market  { grid-area: market; }
+.hood-panel__vibe    { grid-area: vibe; }
+.hood-panel__disclaimer { grid-area: disc; }
 @media (max-width: 880px) {
-  .hood-panel__body { grid-template-columns: 1fr; gap: 28px; padding: 24px 22px 32px; }
+  .hood-panel__body {
+    grid-template-columns: 1fr;
+    grid-template-areas: "story" "market" "vibe" "disc";
+    gap: 28px;
+    padding: 24px 22px 32px;
+  }
   .hood-panel__header { padding: 22px 22px 18px; grid-template-columns: 1fr; }
   .hood-panel__zip { text-align: left; }
 }
