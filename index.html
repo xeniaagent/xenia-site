@@ -559,7 +559,7 @@
       const data = window.NEIGHBORHOODS[key];
       const wrap = window.NEIGHBORHOOD_SERIES[key];
       if (!data || !wrap) return;
-      const series = wrap.series;
+      const series = wrap;
       const v = data.vibe, m = data.market;
       const saleLatest = series.sale[series.sale.length - 1];
       const saleStart  = series.sale[0];
