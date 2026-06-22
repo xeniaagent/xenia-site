@@ -853,6 +853,16 @@ em { font-style: italic; color: var(--c-gold); }
 }
 .chart__toggle-btn.is-active:hover { color: #fff; }
 .chart__metric-label { color: var(--c-ink-2); }
+.chart__period {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  font-family: var(--sans);
+  color: var(--c-mute);
+  letter-spacing: .04em;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
 @media (max-width: 520px) {
   .chart__toggle-btn { padding: 6px 10px; font-size: 11px; }
   .chart__legend { gap: 8px; }
