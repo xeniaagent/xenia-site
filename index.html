@@ -226,11 +226,6 @@
           <span class="hood__tag">Foggy, residential, mid-century single-family.</span>
           <span class="hood__chev" aria-hidden="true">→</span>
         </button>
-        <button type="button" class="hood hood--btn" data-hood="glen_park" role="tab" aria-selected="false" aria-controls="hood-panel">
-          <span class="hood__name">Glen Park</span>
-          <span class="hood__tag">Small-town village, canyon-edge, BART-direct.</span>
-          <span class="hood__chev" aria-hidden="true">→</span>
-        </button>
         <button type="button" class="hood hood--btn" data-hood="haight_ashbury" role="tab" aria-selected="false" aria-controls="hood-panel">
           <span class="hood__name">Haight Ashbury</span>
           <span class="hood__tag">Tiny main street, family-friendly, fog-soft.</span>
@@ -261,11 +256,6 @@
           <span class="hood__tag">Civic-spine, arts-dense, mid-rise, walk-to-everything.</span>
           <span class="hood__chev" aria-hidden="true">→</span>
         </button>
-        <button type="button" class="hood hood--btn" data-hood="twin_peaks" role="tab" aria-selected="false" aria-controls="hood-panel">
-          <span class="hood__name">Twin Peaks</span>
-          <span class="hood__tag">Hilltop, view-blessed, quiet, residential.</span>
-          <span class="hood__chev" aria-hidden="true">→</span>
-        </button>
         <button type="button" class="hood hood--btn" data-hood="excelsior" role="tab" aria-selected="false" aria-controls="hood-panel">
           <span class="hood__name">Excelsior</span>
           <span class="hood__tag">Multicultural, working-class, foggy, residential.</span>
@@ -281,7 +271,18 @@
           <span class="hood__tag">Industrial-edge, residential, working-class, foggy.</span>
           <span class="hood__chev" aria-hidden="true">→</span>
         </button>
-      </div>
+      
+        <button type="button" class="hood hood--btn" data-hood="lone_mountain_usf" role="tab" aria-selected="false" aria-controls="hood-panel">
+          <span class="hood__name">Lone Mountain / USF</span>
+          <span class="hood__tag">Forested hilltop, USF campus, fog-soft tucked-away.</span>
+          <span class="hood__chev" aria-hidden="true">→</span>
+        </button>
+        <button type="button" class="hood hood--btn" data-hood="twin_peaks_glen_park" role="tab" aria-selected="false" aria-controls="hood-panel">
+          <span class="hood__name">Miraloma Park</span>
+          <span class="hood__tag">Mount Davidson's south slope, mid-century calm.</span>
+          <span class="hood__chev" aria-hidden="true">→</span>
+        </button>
+      </div></div>
 
       <!-- Detail panel: filled in by JS when a hood is selected -->
       <div id="hood-panel" class="hood-panel" role="tabpanel" aria-live="polite" hidden></div>
@@ -587,8 +588,7 @@
           </div>
           <div>
             <div class="hood-panel__zip">ZIP ${data.zip}</div>
-            <button type="button" class="hood-panel__close" id="hood-close">Close ✕</button>
-          </div>
+            <button type="button" class="hood-panel__close" id="hood-close">Close ✕</button></div>
         </div>
 
         <div class="hood-panel__body">
