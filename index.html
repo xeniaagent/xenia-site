@@ -476,77 +476,62 @@
     }
 
     function buildChartSVG(s, zip) {
-      // Dual-axis chart: sale (left) and rent (right). Both normalized to its own min/max
-      // so both lines stay readable despite the rent values being ~1/400th of sale values.
-      const W = 600, H = 220, PAD_L = 46, PAD_R = 46, PAD_T = 14, PAD_B = 28;
-      const innerW = W - PAD_L - PAD_R, innerH = H - PAD_T - PAD_B;
-      const n = s.sale.length;
-
-      // Sale scale
-      const sMin = Math.min(...s.sale), sMax = Math.max(...s.sale);
-      const rMin = Math.min(...s.rent), rMax = Math.max(...s.rent);
-      const xs = i => PAD_L + (i / (n - 1)) * innerW;
-      const ys = v => PAD_T + innerH - ((v - sMin) / (sMax - sMin || 1)) * innerH;
-      const yr = v => PAD_T + innerH - ((v - rMin) / (rMax - rMin || 1)) * innerH;
-
-      // Path builders
-      const salePath = s.sale.map((v, i) => `${i ? 'L' : 'M'}${xs(i).toFixed(1)},${ys(v).toFixed(1)}`).join(' ');
-      const rentPath = s.rent.map((v, i) => `${i ? 'L' : 'M'}${xs(i).toFixed(1)},${yr(v).toFixed(1)}`).join(' ');
-      const saleArea = `${salePath} L${xs(n - 1).toFixed(1)},${(PAD_T + innerH).toFixed(1)} L${xs(0).toFixed(1)},${(PAD_T + innerH).toFixed(1)} Z`;
-
-      // Y-axis ticks (sale, left)
-      const sTicks = [sMin, sMin + (sMax - sMin) * 0.5, sMax].map(v => ({
-        v, y: ys(v),
-        label: fmtMoneyShort(v)
-      }));
-      // Y-axis ticks (rent, right)
-      const rTicks = [rMin, rMin + (rMax - rMin) * 0.5, rMax].map(v => ({
-        v, y: yr(v),
-        label: fmtMoneyShort(v)
-      }));
-      // X-axis ticks — every ~4th month
-      const xTickIdxs = [0, Math.floor((n - 1) / 2), n - 1];
-
-      return `
-        <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Sale and rent price trend for ZIP ${zip}, last 24 months">
-          <defs>
-            <linearGradient id="saleFill-${zip}" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stop-color="#d96b27" stop-opacity="0.22"/>
-              <stop offset="100%" stop-color="#d96b27" stop-opacity="0"/>
-            </linearGradient>
-          </defs>
-          ${sTicks.map(t => `
-            <line x1="${PAD_L}" x2="${W - PAD_R}" y1="${t.y.toFixed(1)}" y2="${t.y.toFixed(1)}" stroke="#e3dccf" stroke-width="1"/>
-            <text x="${PAD_L - 8}" y="${(t.y + 3).toFixed(1)}" text-anchor="end" class="chart__axis-label">${t.label}</text>
-          `).join('')}
-          ${rTicks.map(t => `
-            <text x="${W - PAD_R + 8}" y="${(t.y + 3).toFixed(1)}" text-anchor="start" class="chart__axis-label">${t.label}</text>
-          `).join('')}
-          ${xTickIdxs.map(i => `
-            <text x="${xs(i).toFixed(1)}" y="${(H - 8).toFixed(1)}" text-anchor="middle" class="chart__axis-label">${s.labels[i]}</text>
-          `).join('')}
-          <path d="${saleArea}" fill="url(#saleFill-${zip})"/>
-          <path d="${salePath}" fill="none" stroke="#d96b27" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="${rentPath}" fill="none" stroke="#1c5d6e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0"/>
-          ${s.sale.map((v, i) => `<circle cx="${xs(i).toFixed(1)}" cy="${ys(v).toFixed(1)}" r="2" fill="#d96b27"/>`).join('')}
-        </svg>
-      `;
-    }
-
-    function buildSaleOnlyChartSVG(s, zip) {
-      // Sale-only chart (no rent data, e.g. Downtown 94104). Single-axis, sale line only.
+      // Sale-only chart, last 24 months, with quarter labels on x-axis.
       const W = 600, H = 220, PAD_L = 70, PAD_R = 24, PAD_T = 14, PAD_B = 28;
       const innerW = W - PAD_L - PAD_R, innerH = H - PAD_T - PAD_B;
+      // Filter out nulls to compute y-axis range
+      const validValues = s.sale.filter(v => v !== null && !isNaN(v));
+      if (validValues.length === 0) {
+        return `<svg viewBox="0 0 ${W} ${H}"><text x="${W/2}" y="${H/2}" text-anchor="middle" class="chart__axis-label">No data</text></svg>`;
+      }
       const n = s.sale.length;
-      const sMin = Math.min(...s.sale), sMax = Math.max(...s.sale);
-      const xs = i => PAD_L + (i / (n - 1)) * innerW;
-      const ys = v => PAD_T + innerH - ((v - sMin) / (sMax - sMin || 1)) * innerH;
-      const salePath = s.sale.map((v, i) => `${i ? 'L' : 'M'}${xs(i).toFixed(1)},${ys(v).toFixed(1)}`).join(' ');
-      const saleArea = `${salePath} L${xs(n - 1).toFixed(1)},${(PAD_T + innerH).toFixed(1)} L${xs(0).toFixed(1)},${(PAD_T + innerH).toFixed(1)} Z`;
+      const sMin = Math.min(...validValues), sMax = Math.max(...validValues);
+      const xs = i => PAD_L + (i / Math.max(n - 1, 1)) * innerW;
+      const ys = v => PAD_T + innerH - ((v - sMin) / Math.max(sMax - sMin, 1)) * innerH;
+
+      // Path: skip nulls by breaking the path into segments
+      let pathSegments = [];
+      let currentSegment = [];
+      for (let i = 0; i < n; i++) {
+        if (s.sale[i] !== null && !isNaN(s.sale[i])) {
+          currentSegment.push(`${currentSegment.length ? 'L' : 'M'}${xs(i).toFixed(1)},${ys(s.sale[i]).toFixed(1)}`);
+        } else {
+          if (currentSegment.length > 1) pathSegments.push(currentSegment.join(' '));
+          currentSegment = [];
+        }
+      }
+      if (currentSegment.length > 1) pathSegments.push(currentSegment.join(' '));
+      const salePath = pathSegments.join(' ');
+      // For the area fill, build a closed area from the line
+      let areaPath = '';
+      let firstFilled = -1, lastFilled = -1;
+      for (let i = 0; i < n; i++) {
+        if (s.sale[i] !== null && !isNaN(s.sale[i])) { if (firstFilled < 0) firstFilled = i; lastFilled = i; }
+      }
+      if (firstFilled >= 0) {
+        areaPath = `M${xs(firstFilled).toFixed(1)},${(PAD_T + innerH).toFixed(1)} `;
+        areaPath += pathSegments[0].replace(/^M/, 'L');
+        areaPath += ` L${xs(lastFilled).toFixed(1)},${(PAD_T + innerH).toFixed(1)} Z`;
+      }
+
       const sTicks = [sMin, sMin + (sMax - sMin) * 0.5, sMax].map(v => ({ v, y: ys(v), label: fmtMoneyShort(v) }));
-      const xTickIdxs = [0, Math.floor((n - 1) / 2), n - 1];
+      // X-axis labels: use quarter labels. Show only when the value changes.
+      // Labels: ["2024-07", "2024-08", ..., "2026-06"], display_labels: ["Q3 2024", "Q3 2024", "Q3 2024", "Q4 2024", ...]
+      const labels = s.labels || [];
+      const displayLabels = s.display_labels || [];
+      // Find indices where the display_label changes (first occurrence of each quarter)
+      const xTickIndices = [];
+      let prevLabel = null;
+      for (let i = 0; i < labels.length; i++) {
+        const dl = displayLabels[i] || labels[i];
+        if (dl !== prevLabel) {
+          xTickIndices.push({ idx: i, label: dl });
+          prevLabel = dl;
+        }
+      }
+
       return `
-        <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Sale price trend for ZIP ${zip}, last 24 months (rent data not available)">
+        <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Sale price trend for ${zip}, last 24 months">
           <defs>
             <linearGradient id="saleFill-${zip}" x1="0" x2="0" y1="0" y2="1">
               <stop offset="0%" stop-color="#d96b27" stop-opacity="0.22"/>
@@ -557,16 +542,15 @@
             <line x1="${PAD_L}" x2="${W - PAD_R}" y1="${t.y.toFixed(1)}" y2="${t.y.toFixed(1)}" stroke="#e3dccf" stroke-width="1"/>
             <text x="${PAD_L - 8}" y="${(t.y + 3).toFixed(1)}" text-anchor="end" class="chart__axis-label">${t.label}</text>
           `).join('')}
-          ${xTickIdxs.map(i => `
-            <text x="${xs(i).toFixed(1)}" y="${(H - 8).toFixed(1)}" text-anchor="middle" class="chart__axis-label">${s.labels[i]}</text>
+          ${xTickIndices.map(t => `
+            <text x="${xs(t.idx).toFixed(1)}" y="${(H - 8).toFixed(1)}" text-anchor="middle" class="chart__axis-label">${t.label}</text>
           `).join('')}
-          <path d="${saleArea}" fill="url(#saleFill-${zip})"/>
-          <path d="${salePath}" fill="none" stroke="#d96b27" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-          ${s.sale.map((v, i) => `<circle cx="${xs(i).toFixed(1)}" cy="${ys(v).toFixed(1)}" r="2" fill="#d96b27"/>`).join('')}
+          ${areaPath ? `<path d="${areaPath}" fill="url(#saleFill-${zip})"/>` : ''}
+          ${salePath ? `<path d="${salePath}" fill="none" stroke="#d96b27" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>` : ''}
+          ${s.sale.map((v, i) => v !== null && !isNaN(v) ? `<circle cx="${xs(i).toFixed(1)}" cy="${ys(v).toFixed(1)}" r="2" fill="#d96b27"/>` : '').join('')}
         </svg>
       `;
     }
-
     function buildFactCell(label, value) {
       return `<div class="factgrid__cell"><small>${label}</small><span>${value}</span></div>`;
     }
@@ -577,13 +561,9 @@
       if (!data || !wrap) return;
       const series = wrap.series;
       const v = data.vibe, m = data.market;
-      const hasRent = Array.isArray(series.rent) && series.rent.length > 0;
       const saleLatest = series.sale[series.sale.length - 1];
-      const rentLatest = hasRent ? series.rent[series.rent.length - 1] : null;
       const saleStart  = series.sale[0];
-      const rentStart  = hasRent ? series.rent[0] : null;
-      const saleChg = ((saleLatest / saleStart) - 1) * 100;
-      const rentChg = hasRent ? ((rentLatest / rentStart) - 1) * 100 : null;
+      const saleChg = saleLatest && saleStart ? ((saleLatest / saleStart) - 1) * 100 : null;
 
       const panel = document.getElementById('hood-panel');
       panel.innerHTML = `
@@ -643,16 +623,15 @@
 
             <div class="chart">
               <div class="chart__title">
-                <h5>Sale &amp; rent price — ${series.labels.length} months</h5>
+                <h5>Median sale price — ${series.labels.length} months (quarterly)</h5>
                 <div class="chart__legend">
-                  <span><span class="chart__swatch" style="background:#d96b27;"></span>Median sale (${fmtMoneyShort(saleLatest)})</span>
-                  ${hasRent ? `<span><span class="chart__swatch" style="background:#1c5d6e;"></span>Median rent (${fmtMoneyShort(rentLatest)})</span>` : `<span><span class="chart__swatch" style="background:#1c5d6e;opacity:0.4;"></span>Rent data not available for this ZIP</span>`}
+                  <span><span class="chart__swatch" style="background:#d96b27;"></span>Monthly median sale price</span>
                 </div>
               </div>
-              ${hasRent ? buildChartSVG(series, data.zip) : buildSaleOnlyChartSVG(series, data.zip)}
+              ${buildChartSVG(series, data.zip)}
               <p class="chart__source">
                 Sale series: Zillow ZHVI for ZIP ${data.zip} (typical home value, monthly through ${series.labels[series.labels.length - 1]}) ·
-                ${hasRent ? `Rent series: Zillow ZORI for ZIP ${data.zip} · 2y change: sale <strong>${fmtPct(saleChg)}</strong>, rent <strong>${fmtPct(rentChg)}</strong>.` : `No ZORI rent data reported for ZIP ${data.zip} (mostly commercial/downtown). 2y change in sale: <strong>${fmtPct(saleChg)}</strong>.`}
+                Source: SF MLS closed sales, monthly median per ZIP ${data.zip}, geocoded to this neighborhood. Last 24 months through ${series.labels[series.labels.length - 1]}. 2-year change: <strong>${fmtPct(saleChg)}</strong>.
               </p>
             </div>
 

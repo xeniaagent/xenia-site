@@ -17,15 +17,16 @@ window.NEIGHBORHOODS = {
       noise: "Medium-to-loud. The Castro street core is busy until 1am on weekends; the side streets (above 18th, toward Corona Hill) are noticeably quieter.",
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 342 actual sales.
-      median_condo_sell: 1500000,
-      median_sfr_sell: 2310500,
-      median_psf: 1474,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 27 sales in the last 30 days (13 condo, 14 SFR).
+      median_condo_sell: 1800000,
+      median_sfr_sell: 2418000,
+      median_psf: 1474,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 12,  // median days on market, last 30 days (27 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 342 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 27 sales (13 condo, 14 SFR). DOM is median from the last 30 days where reported (27 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       '"March median home price hit a record high of $2.15 million, according to Compass." — Emily Landes, SF Standard, Apr 8 2026 (sfstandard.com/2026/04/08/sf-luxury-market-is-back)',
@@ -47,15 +48,16 @@ window.NEIGHBORHOODS = {
       noise: "Quiet. The loudest thing you'll hear on most evenings is someone's wind chime.",
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 400 actual sales.
-      median_condo_sell: 1395000,
-      median_sfr_sell: 2521500,
-      median_psf: null,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 23 sales in the last 30 days (8 condo, 15 SFR).
+      median_condo_sell: 1200000,
+      median_sfr_sell: 3212500,
+      median_psf: null,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 13,  // median days on market, last 30 days (23 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 400 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 23 sales (8 condo, 15 SFR). DOM is median from the last 30 days where reported (23 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       '"As of March 2026, the median home sale price in San Francisco was more than $2m, an 18% increase from the previous year." — The Guardian, Jun 11 2026',
@@ -77,15 +79,16 @@ window.NEIGHBORHOODS = {
       noise: "Very quiet inside the blocks. Fillmore Street has the noise; Pacific, Broadway, and Vallejo do not.",
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 405 actual sales.
-      median_condo_sell: 1450000,
-      median_sfr_sell: 4672500,
-      median_psf: 1208,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 25 sales in the last 30 days (17 condo, 8 SFR).
+      median_condo_sell: 1425000,
+      median_sfr_sell: 7225000,
+      median_psf: 1208,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 12,  // median days on market, last 30 days (25 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 405 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 25 sales (17 condo, 8 SFR). DOM is median from the last 30 days where reported (25 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       '"$25M Pac Heights Victorian trades after less than two weeks on market." — The Real Deal, Jun 16 2026',
@@ -112,15 +115,13 @@ window.NEIGHBORHOODS = {
       noise: "Very quiet. Coyotes occasionally. Wind from the ocean sometimes. That's the noise."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 223 actual sales.
-      median_condo_sell: 1050000,
-      median_sfr_sell: 1782500,
-      median_psf: 1232,  // sqft joined from SF Assessor (see sqft_cache.json)
+      // Last-30-day stats from SF MLS data. 0 sales in the last 30 days for this neighborhood.
+      median_condo_sell: null,
+      median_sfr_sell: null,
+      median_psf: 1232,
       median_dom: null,
       sale_to_list_pct: null,
-      note: "Median sale prices from 223 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "No SF MLS sales in this neighborhood in the last 30 days. Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       '"Median home sale price in San Francisco was more than $2m, an 18% increase from the previous year." — The Guardian, Jun 11 2026',
@@ -141,15 +142,16 @@ window.NEIGHBORHOODS = {
       noise: "Very quiet. The loudest thing you'll regularly hear is the Sutro Tower wind hum on foggy nights, which is the city's most underrated sound."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 357 actual sales.
-      median_condo_sell: 940000,
-      median_sfr_sell: 1825000,
-      median_psf: 1397,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 19 sales in the last 30 days (15 condo, 4 SFR).
+      median_condo_sell: 1498000,
+      median_sfr_sell: 3800000,
+      median_psf: 1397,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 14,  // median days on market, last 30 days (19 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 357 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 19 sales (15 condo, 4 SFR). DOM is median from the last 30 days where reported (19 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       '"Bidding wars and millions over asking continuing to be the norm." — SF Standard, May 31 2026',
@@ -170,15 +172,16 @@ window.NEIGHBORHOODS = {
       noise: "Quiet except for the Muni bell at the end of every line — which longtime residents find charming and newcomers find... character-building."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 490 actual sales.
-      median_condo_sell: 901000,
-      median_sfr_sell: 2139250,
-      median_psf: 1207,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 40 sales in the last 30 days (1 condo, 39 SFR).
+      median_condo_sell: 847000,
+      median_sfr_sell: 2400000,
+      median_psf: 1207,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 11,  // median days on market, last 30 days (40 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 490 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 40 sales (1 condo, 39 SFR). DOM is median from the last 30 days where reported (40 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       '"Median home price hit a record high of $2.15 million, according to Compass." — SF Standard, Apr 8 2026, citing Compass',
@@ -216,15 +219,16 @@ window.NEIGHBORHOODS = {
       noise: "Very quiet. The closest thing to a sound is wind in the cypress trees and the Presidio\'s wildlife."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 135 actual sales.
-      median_condo_sell: 1800000,
-      median_sfr_sell: 4550000,
-      median_psf: 1291,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 3 sales in the last 30 days (1 condo, 2 SFR).
+      median_condo_sell: 1700000,
+      median_sfr_sell: 4679444,
+      median_psf: 1291,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 13,  // median days on market, last 30 days (3 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 135 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 3 sales (1 condo, 2 SFR). DOM is median from the last 30 days where reported (3 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~259 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 13 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -245,15 +249,16 @@ window.NEIGHBORHOODS = {
       noise: "Medium-to-quiet. The morning dog-park chatter from Bernal Heights Park is the neighborhood soundtrack; the Mission\'s weekend noise doesn\'t quite reach the top of the hill."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 361 actual sales.
-      median_condo_sell: 1107500,
-      median_sfr_sell: 1605005,
-      median_psf: 1237,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 16 sales in the last 30 days (1 condo, 15 SFR).
+      median_condo_sell: 1300000,
+      median_sfr_sell: 1855000,
+      median_psf: 1237,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 14,  // median days on market, last 30 days (16 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 361 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 16 sales (1 condo, 15 SFR). DOM is median from the last 30 days where reported (16 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~159 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 22 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -274,14 +279,16 @@ window.NEIGHBORHOODS = {
       noise: "Loud on weekends, moderate during the week. Construction noise is a constant; this is a neighborhood that rebuilds itself every decade."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
-      dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 31 sales in the last 30 days (19 condo, 12 SFR).
+      median_condo_sell: 955000,
+      median_sfr_sell: 2500000,
+      median_psf: null,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 16,  // median days on market, last 30 days (31 sales with DOM data)
+      sale_to_list_pct: null,
+      note: "Last 30 days of SF MLS data (since recent). 31 sales (19 condo, 12 SFR). DOM is median from the last 30 days where reported (31 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "Zillow ZHVI for ZIP 94110 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94110 (median rent).",
@@ -302,14 +309,16 @@ window.NEIGHBORHOODS = {
       noise: "Medium. Hayes Street can be busy; the cross streets are quiet."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
-      dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 12 sales in the last 30 days (8 condo, 4 SFR).
+      median_condo_sell: 1372500,
+      median_sfr_sell: 2700000,
+      median_psf: null,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 17,  // median days on market, last 30 days (12 sales with DOM data)
+      sale_to_list_pct: null,
+      note: "Last 30 days of SF MLS data (since recent). 12 sales (8 condo, 4 SFR). DOM is median from the last 30 days where reported (12 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "Zillow ZHVI for ZIP 94102 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94102 (median rent).",
@@ -330,15 +339,16 @@ window.NEIGHBORHOODS = {
       noise: "Medium. The new-build density and the UCSF activity make this busier than the typical SF neighborhood. The waterfront side is quieter."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 229 actual sales.
-      median_condo_sell: 970000,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 15 sales in the last 30 days (15 condo, 0 SFR).
+      median_condo_sell: 845000,
       median_sfr_sell: null,
-      median_psf: null,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      median_psf: null,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 13,  // median days on market, last 30 days (15 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 229 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 15 sales (15 condo, 0 SFR). DOM is median from the last 30 days where reported (15 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~107 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 25 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -359,15 +369,16 @@ window.NEIGHBORHOODS = {
       noise: "Medium-to-loud. The Bay Bridge and the Embarcadero are the dominant sounds. The cross streets are quieter."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 562 actual sales.
-      median_condo_sell: 1220000,
-      median_sfr_sell: 3900000,
-      median_psf: 904,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 42 sales in the last 30 days (42 condo, 0 SFR).
+      median_condo_sell: 1498500,
+      median_sfr_sell: null,
+      median_psf: 904,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 30,  // median days on market, last 30 days (42 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 562 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 42 sales (42 condo, 0 SFR). DOM is median from the last 30 days where reported (42 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~425 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 45 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -388,15 +399,16 @@ window.NEIGHBORHOODS = {
       noise: "Medium-to-loud. The downtown traffic, the convention center, the nightlife on Folsom and Harrison, the museum crowds. The cross streets and the residential pockets (Yerba Buena, South Park) are quieter."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 257 actual sales.
-      median_condo_sell: 725000,
-      median_sfr_sell: 1900000,
-      median_psf: 760,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 14 sales in the last 30 days (14 condo, 0 SFR).
+      median_condo_sell: 871500,
+      median_sfr_sell: null,
+      median_psf: 760,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 60,  // median days on market, last 30 days (14 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 257 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 14 sales (14 condo, 0 SFR). DOM is median from the last 30 days where reported (14 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~234 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 44 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -418,15 +430,16 @@ window.NEIGHBORHOODS = {
       noise: "Medium. The 280 is audible on the south edge; the rest of the hill is quiet. The dogs and kids at the Rec Center are the daily soundtrack."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 284 actual sales.
-      median_condo_sell: 1100000,
-      median_sfr_sell: 1895000,
-      median_psf: 913,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 13 sales in the last 30 days (8 condo, 5 SFR).
+      median_condo_sell: 1057500,
+      median_sfr_sell: 2553525,
+      median_psf: 913,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 12,  // median days on market, last 30 days (13 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 284 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 13 sales (8 condo, 5 SFR). DOM is median from the last 30 days where reported (13 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~616 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 33 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -447,15 +460,16 @@ window.NEIGHBORHOODS = {
       noise: "Very quiet inside the residential blocks. Geary is the exception — it\'s a major thoroughfare and gets loud."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 419 actual sales.
-      median_condo_sell: 1335500,
-      median_sfr_sell: 2010000,
-      median_psf: 1600,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 29 sales in the last 30 days (4 condo, 25 SFR).
+      median_condo_sell: 1757500,
+      median_sfr_sell: 2510000,
+      median_psf: 1600,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 11,  // median days on market, last 30 days (29 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 419 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 29 sales (4 condo, 25 SFR). DOM is median from the last 30 days where reported (29 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~64 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 12 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -476,15 +490,16 @@ window.NEIGHBORHOODS = {
       noise: "Very quiet inside the residential blocks. The fog absorbs more sound than the east side. The ocean roar is the soundtrack if you\'re close enough."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 668 actual sales.
-      median_condo_sell: 1175000,
-      median_sfr_sell: 1610000,
-      median_psf: 1169,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 35 sales in the last 30 days (0 condo, 35 SFR).
+      median_condo_sell: null,
+      median_sfr_sell: 1955000,
+      median_psf: 1169,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 12,  // median days on market, last 30 days (35 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 668 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 35 sales (0 condo, 35 SFR). DOM is median from the last 30 days where reported (35 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~423 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 13 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -505,15 +520,16 @@ window.NEIGHBORHOODS = {
       noise: "Quiet. The canyon absorbs sound; the BART rumble is the closest thing to a daily sound, and longtime residents stop noticing it."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 150 actual sales.
-      median_condo_sell: 952000,
-      median_sfr_sell: 2200000,
-      median_psf: null,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 9 sales in the last 30 days (4 condo, 5 SFR).
+      median_condo_sell: 1405000,
+      median_sfr_sell: 2400000,
+      median_psf: null,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 12,  // median days on market, last 30 days (9 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 150 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 9 sales (4 condo, 5 SFR). DOM is median from the last 30 days where reported (9 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "Zillow ZHVI for ZIP 94131 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94131 (median rent).",
@@ -534,15 +550,16 @@ window.NEIGHBORHOODS = {
       noise: "Quiet. The N train is the loudest thing on most days, and longtime residents find its bell part of the rhythm."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 193 actual sales.
-      median_condo_sell: 1525000,
-      median_sfr_sell: 2915000,
-      median_psf: 1114,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 12 sales in the last 30 days (10 condo, 2 SFR).
+      median_condo_sell: 1724688,
+      median_sfr_sell: 3442500,
+      median_psf: 1114,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 12,  // median days on market, last 30 days (12 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 193 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 12 sales (10 condo, 2 SFR). DOM is median from the last 30 days where reported (12 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~194 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 14 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -563,15 +580,16 @@ window.NEIGHBORHOODS = {
       noise: "Quiet. The fog softens everything. The N train is the closest thing to a daily sound."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 215 actual sales.
-      median_condo_sell: 1275000,
-      median_sfr_sell: 2125000,
-      median_psf: 1166,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 9 sales in the last 30 days (5 condo, 4 SFR).
+      median_condo_sell: 1375000,
+      median_sfr_sell: 2357500,
+      median_psf: 1166,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 13,  // median days on market, last 30 days (9 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 215 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 9 sales (5 condo, 4 SFR). DOM is median from the last 30 days where reported (9 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~482 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 13 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -592,15 +610,16 @@ window.NEIGHBORHOODS = {
       noise: "Quiet inside the apartments; the cable car gong is the soundtrack on Hyde."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 263 actual sales.
-      median_condo_sell: 1250000,
-      median_sfr_sell: 1400000,
-      median_psf: 1121,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 16 sales in the last 30 days (11 condo, 5 SFR).
+      median_condo_sell: 1510000,
+      median_sfr_sell: 2350000,
+      median_psf: 1121,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 16,  // median days on market, last 30 days (16 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 263 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 16 sales (11 condo, 5 SFR). DOM is median from the last 30 days where reported (16 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~121 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 22 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -621,14 +640,16 @@ window.NEIGHBORHOODS = {
       noise: "Quiet on weekends. The wind can be louder than the traffic. The foghorn is the early-morning sound."
     },
     market: {
-      // Per-property market stats (condo $/sq ft, SFR $/sq ft, days on market, % over
-      // asking) are AI baseline estimates and not source-verified for these neighborhoods.
-      // See the panel's "Sources" section for the per-ZIP chart and citations.
-      condo_psf: null,
-      sfr_psf: null,
-      dom: null,
-      over_asking_pct: null,
-      note: "Per-property market data coming soon. The 2-year chart below shows the ZIP-level trend from Zillow ZHVI (sale) and ZORI (rent). The chart reflects the entire ZIP, not just this neighborhood."
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 12 sales in the last 30 days (7 condo, 5 SFR).
+      median_condo_sell: 1750000,
+      median_sfr_sell: 4995000,
+      median_psf: null,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 12,  // median days on market, last 30 days (12 sales with DOM data)
+      sale_to_list_pct: null,
+      note: "Last 30 days of SF MLS data (since recent). 12 sales (7 condo, 5 SFR). DOM is median from the last 30 days where reported (12 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "Zillow ZHVI for ZIP 94123 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94123 (median rent).",
@@ -649,15 +670,16 @@ window.NEIGHBORHOODS = {
       noise: "Medium. Cable car bells, downtown traffic on California, and the occasional hotel event noise. The cross streets are quieter than the spine streets."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 203 actual sales.
-      median_condo_sell: 1028750,
-      median_sfr_sell: 1200000,
-      median_psf: 934,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 14 sales in the last 30 days (13 condo, 1 SFR).
+      median_condo_sell: 915000,
+      median_sfr_sell: 1700000,
+      median_psf: 934,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 40,  // median days on market, last 30 days (14 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 203 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 14 sales (13 condo, 1 SFR). DOM is median from the last 30 days where reported (14 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~453 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 37 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -678,15 +700,16 @@ window.NEIGHBORHOODS = {
       noise: "Loud on Columbus, especially on weekends; quieter on the side streets and the hill. The cafés spill onto the sidewalk until 1am."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 107 actual sales.
-      median_condo_sell: 1030000,
-      median_sfr_sell: 1425000,
-      median_psf: 1180,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 6 sales in the last 30 days (4 condo, 2 SFR).
+      median_condo_sell: 1000000,
+      median_sfr_sell: 5226250,
+      median_psf: 1180,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 12,  // median days on market, last 30 days (6 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 107 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 6 sales (4 condo, 2 SFR). DOM is median from the last 30 days where reported (6 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~189 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 24 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -708,15 +731,16 @@ window.NEIGHBORHOODS = {
       noise: "Very quiet. The wind is the loudest thing on most days. Sutro Tower hum is the late-night sound for the closest blocks."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 115 actual sales.
-      median_condo_sell: 1205000,
-      median_sfr_sell: 1812500,
-      median_psf: null,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 6 sales in the last 30 days (2 condo, 4 SFR).
+      median_condo_sell: 2457500,
+      median_sfr_sell: 1819000,
+      median_psf: null,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 16,  // median days on market, last 30 days (6 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 115 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 6 sales (2 condo, 4 SFR). DOM is median from the last 30 days where reported (6 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "Zillow ZHVI for ZIP 94114 (typical home value, monthly, 2-year series). Also ZORI for ZIP 94114 (median rent).",
@@ -737,15 +761,16 @@ window.NEIGHBORHOODS = {
       noise: "Quiet. The fog absorbs the noise. Mission Street and Geneva Avenue are the exceptions — they\'re busy and loud."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 480 actual sales.
-      median_condo_sell: 718000,
-      median_sfr_sell: 1175000,
-      median_psf: 915,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 27 sales in the last 30 days (0 condo, 27 SFR).
+      median_condo_sell: null,
+      median_sfr_sell: 1385000,
+      median_psf: 915,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 12,  // median days on market, last 30 days (27 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 480 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 27 sales (0 condo, 27 SFR). DOM is median from the last 30 days where reported (27 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~557 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 14 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -766,15 +791,16 @@ window.NEIGHBORHOODS = {
       noise: "Quiet inside the residential blocks. The freeway and the shipyard are the industrial soundtrack. The new development is denser, which will change this."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 296 actual sales.
-      median_condo_sell: 700000,
-      median_sfr_sell: 980000,
-      median_psf: 717,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 14 sales in the last 30 days (4 condo, 10 SFR).
+      median_condo_sell: 667000,
+      median_sfr_sell: 963500,
+      median_psf: 717,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 18,  // median days on market, last 30 days (14 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 296 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 14 sales (4 condo, 10 SFR). DOM is median from the last 30 days where reported (14 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~268 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 32 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -795,15 +821,16 @@ window.NEIGHBORHOODS = {
       noise: "Quiet inside the residential blocks. Highway 101 and the Cow Palace events are audible but not constant."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 424 actual sales.
-      median_condo_sell: 670000,
-      median_sfr_sell: 1125562,
-      median_psf: 865,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 25 sales in the last 30 days (0 condo, 25 SFR).
+      median_condo_sell: null,
+      median_sfr_sell: 1320000,
+      median_psf: 865,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 13,  // median days on market, last 30 days (25 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 424 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 25 sales (0 condo, 25 SFR). DOM is median from the last 30 days where reported (25 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~309 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 16 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
@@ -824,15 +851,16 @@ window.NEIGHBORHOODS = {
       noise: "Medium-to-loud. Market Street, the UN Plaza, and the Tenderloin spillover are the dominant sounds. The residential pockets to the west (Hayes Valley, NOPA) are quieter."
     },
     market: {
-      // Per-property market stats from geocoded MLS data (address -> lat/lng -> SF Planning polygon).
-      // Source: SF MLS data geocoded via US Census geocoder + SF Planning Analysis Neighborhoods.
-      // 2-year period Apr 2024 to May 2026. Real per-neighborhood median from 59 actual sales.
-      median_condo_sell: 490000,
-      median_sfr_sell: 622500,
-      median_psf: 669,  // sqft joined from SF Assessor (see sqft_cache.json)
-      median_dom: null,
+      // Last-30-day stats from SF MLS data, geocoded to this neighborhood via SF Planning polygons.
+      // Source: SF MLS exports (Schema A for sell_price, Schema B for DOM, joined on ML Number),
+      // 2-year period Apr 2024 - May 2026, with the last 30 days as the primary window.
+      // 6 sales in the last 30 days (5 condo, 1 SFR).
+      median_condo_sell: 398000,
+      median_sfr_sell: 625000,
+      median_psf: 669,  // $/sqft from SF Assessor parcel join (separate source)
+      median_dom: 41,  // median days on market, last 30 days (6 sales with DOM data)
       sale_to_list_pct: null,
-      note: "Median sale prices from 59 SF MLS sales (2-year period Apr 2024-May 2026), each assigned to this neighborhood via address geocoding + SF Planning neighborhood polygons."
+      note: "Last 30 days of SF MLS data (since recent). 6 sales (5 condo, 1 SFR). DOM is median from the last 30 days where reported (6 sales). Sqft joined separately from SF Assessor-Recorder parcel roll."
     },
     citations: [
       "SF MLS, 2-year period (Apr 2024 to May 2026), downloaded 2026-06-21. ~88 total sales in this neighborhood. Real per-neighborhood data (not citywide medians). DOM (median 51 days), median sale prices, and sale-to-list ratio are computed from the merged SF MLS export. Note: source CSV has no square-footage column, so per-sqft is not reported.",
