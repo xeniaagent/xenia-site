@@ -816,14 +816,18 @@ em { font-style: italic; color: var(--c-gold); }
   padding: 16px 16px 12px;
 }
 .chart__title {
-  display: block;
   position: relative;
   margin: 0 0 8px;
-  /* Reserve space for the absolutely-positioned toggle on the right */
-  min-height: 56px;
-  padding-right: 290px; /* leaves room for the 280px toggle + 10px gap */
+  min-height: 32px;
 }
-.chart__title h5 { margin-right: 0; }
+.chart__title h5 { margin-right: 0; margin-top: 0; }
+/* On wider screens, reserve space for the absolutely-positioned toggle */
+@media (min-width: 720px) {
+  .chart__title {
+    min-height: 56px;
+    padding-right: 290px;
+  }
+}
 .chart__title h5 {
   font-family: var(--serif);
   font-weight: 500;
@@ -839,18 +843,25 @@ em { font-style: italic; color: var(--c-gold); }
 .chart__legend span { display: inline-flex; align-items: center; gap: 6px; }
 .chart__swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
 .chart__toggle {
-  display: inline-flex;
-  position: absolute;
-  top: 0;
-  right: 0;
-  /* Fixed width so the pill doesn't resize when active label changes */
-  width: 280px;
-  justify-content: center;
+  display: flex;
+  width: 100%;
+  justify-content: stretch;
   border: 1px solid var(--c-line);
   border-radius: 999px;
   padding: 3px;
   background: rgba(255,255,255,.7);
   gap: 0;
+  margin-top: 8px;
+  box-sizing: border-box;
+}
+@media (min-width: 720px) {
+  .chart__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 280px;
+    margin-top: 0;
+  }
 }
 .chart__toggle-btn {
   font-family: var(--sans);
@@ -864,6 +875,11 @@ em { font-style: italic; color: var(--c-gold); }
   cursor: pointer;
   transition: background .15s, color .15s;
   letter-spacing: .02em;
+  /* Fill the available space on mobile so all 3 buttons fit */
+  flex: 1 1 0;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 0;
 }
 .chart__toggle-btn:hover { color: var(--c-ink); }
 .chart__toggle-btn.is-active {
@@ -887,8 +903,7 @@ em { font-style: italic; color: var(--c-gold); }
   white-space: nowrap; /* "24 months" - never split */
 }
 @media (max-width: 520px) {
-  .chart__toggle-btn { padding: 6px 10px; font-size: 11px; }
-  .chart__legend { gap: 8px; }
+  .chart__toggle-btn { padding: 8px 6px; font-size: 11px; }
 }
 .chart svg { width: 100%; height: auto; display: block; }
 .chart__axis-label {
