@@ -610,8 +610,8 @@
       const slider = document.querySelector('.chart__slider-input');
       if (!slider) return;
       const svg = document.querySelector('.hood-panel__chart svg');
-      const monthEl = document.querySelector('.chart__slider-month');
-      const valueEl = document.querySelector('.chart__slider-value');
+      const monthEl = document.querySelector('.chart__readout-month');
+      const valueEl = document.querySelector('.chart__readout-value');
       if (!svg || !monthEl || !valueEl) return;
 
       const onInput = () => {
@@ -848,6 +848,11 @@
               <div class="chart">
                 <div class="chart__title">
                   <h5><span class="chart__metric-label">${CHART_METRICS[window.__chartMetric || 'sale'].label}</span> <small class="chart__period">${series.labels.length} months</small></h5>
+                  <div class="chart__readout">
+                    <span class="chart__readout-month">${fmtMonthLabel(series.labels[series.labels.length - 1])}</span>
+                    <span class="chart__readout-sep"> · </span>
+                    <span class="chart__readout-value">${fmtTickForMetric(window.__chartMetric || 'sale', (series[CHART_METRICS[window.__chartMetric || 'sale'].dataKey] || [])[series.labels.length - 1])}</span>
+                  </div>
                   <div class="chart__legend">
                     <div class="chart__toggle" role="tablist" aria-label="Chart metric">
                       <button type="button" class="chart__toggle-btn" data-metric="sale" role="tab" aria-selected="false" title="Median sale price">Sale</button>
@@ -859,11 +864,6 @@
                 ${buildChartSVG(series, data.zip, window.__chartMetric || "sale")}
                 <div class="chart__slider">
                   <input type="range" class="chart__slider-input" min="0" max="${series.labels.length - 1}" value="${series.labels.length - 1}" step="1" aria-label="Select month" />
-                  <div class="chart__slider-readout">
-                    <span class="chart__slider-month">${fmtMonthLabel(series.labels[series.labels.length - 1])}</span>
-                    <span class="chart__slider-sep"> · </span>
-                    <span class="chart__slider-value">${fmtTickForMetric(window.__chartMetric || 'sale', (series[CHART_METRICS[window.__chartMetric || 'sale'].dataKey] || [])[series.labels.length - 1])}</span>
-                  </div>
                 </div>
                 <p class="chart__source">
 
