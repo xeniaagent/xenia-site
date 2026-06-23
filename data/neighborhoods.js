@@ -104,7 +104,7 @@ window.NEIGHBORHOODS = {
 
 
   lone_mountain_usf: {
-    name: "Midtown Terrace",
+    name: "Lone Mountain/USF",
     zip: "94117",
     vibe: {
       tag: "Forested, tucked-away, dog-park central",

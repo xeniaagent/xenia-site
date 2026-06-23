@@ -47,7 +47,7 @@
     <text class="hood-map__label" data-hood="castro_upper_market" x="517.7" y="444.9" text-anchor="middle" dominant-baseline="middle">The Castro</text>
     <text class="hood-map__label" data-hood="noe_valley" x="507.9" y="524.2" text-anchor="middle" dominant-baseline="middle">Noe Valley</text>
     <text class="hood-map__label" data-hood="pacific_hgts" x="512.9" y="274.4" text-anchor="middle" dominant-baseline="middle">Pacific Heights</text>
-    <text class="hood-map__label" data-hood="lone_mountain_usf" x="425.5" y="354.3" text-anchor="middle" dominant-baseline="middle">Midtown Terrace</text>
+    <text class="hood-map__label" data-hood="lone_mountain_usf" x="425.5" y="354.3" text-anchor="middle" dominant-baseline="middle">Lone Mountain/USF</text>
     <text class="hood-map__label" data-hood="west_portal" x="330.3" y="603.8" text-anchor="middle" dominant-baseline="middle">West Portal</text>
     <text class="hood-map__label" data-hood="presidio_hgts" x="393.0" y="301.5" text-anchor="middle" dominant-baseline="middle">Presidio Heights</text>
     <text class="hood-map__label" data-hood="bernal_heights" x="623.2" y="580.5" text-anchor="middle" dominant-baseline="middle">Bernal Heights</text>
