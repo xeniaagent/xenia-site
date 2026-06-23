@@ -386,7 +386,7 @@ em { font-style: italic; color: var(--c-gold); }
   bottom: 24px; right: 24px;
   width: 340px; max-width: 32vw;
   z-index: 3;                /* above the hero (z=2) and hero content */
-  opacity: 0.4;              /* baseline 40% transparency */
+  opacity: 0.5;              /* baseline 50% transparency */
   /* opacity does NOT change on hover — the wrap stays at the same opacity
      and only the targeted polygon's border + label get highlighted */
   pointer-events: auto;
@@ -1343,6 +1343,50 @@ em { font-style: italic; color: var(--c-gold); }
   text-transform: uppercase;
   color: var(--c-mute);
   font-weight: 600;
+}
+
+.contact__link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  color: var(--c-ink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.contact__link:hover,
+.contact__link:focus-visible {
+  color: var(--c-gold);
+  border-bottom-color: var(--c-gold);
+}
+.contact__link [aria-hidden="true"] {
+  font-size: 0.85em;
+  transition: transform 0.15s;
+}
+.contact__link:hover [aria-hidden="true"] {
+  transform: translate(2px, -2px);
+}
+
+/* Profile photo overlay becomes a clickable link to Google Maps */
+.about__photo-link {
+  display: block;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.about__photo-link:hover .about__photo-tag,
+.about__photo-link:focus-visible .about__photo-tag {
+  background: rgba(14, 26, 43, 0.92);
+}
+.about__photo-link:hover .about__photo,
+.about__photo-link:focus-visible .about__photo {
+  transform: scale(1.02);
+}
+.about__photo {
+  transition: transform 0.3s ease;
 }
 
 .contact__form {
