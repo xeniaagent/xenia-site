@@ -382,20 +382,21 @@ em { font-style: italic; color: var(--c-gold); }
 
 /* ---- SF Neighborhood Map (bottom-right of hero) ---- */
 .hood-map-wrap {
-  position: fixed;
+  position: absolute;       /* relative to .hero, scrolls away */
   bottom: 24px; right: 24px;
   width: 340px; max-width: 32vw;
   z-index: 3;                /* above the hero (z=2) and hero content */
-  /* opacity: 0.5  — disabled; map is fully opaque for now */
+  opacity: 0.5;              /* 50% transparent as requested */
   transition: opacity 0.3s;
-  pointer-events: auto;     /* keep interactive even when transparent */
-  background: rgba(14, 26, 43, 0.55);  /* deep navy, semi-transparent so it sits over the hero image */
-  border: 1px solid rgba(201, 168, 106, 0.5);  /* subtle gold border */
+  pointer-events: auto;
+  /* boxed area around the map */
+  background: rgba(14, 26, 43, 0.85);
+  border: 1.5px solid var(--c-gold, #c9a86a);
   border-radius: 14px;
-  padding: 10px 10px 6px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  padding: 12px 12px 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
-.hood-map-wrap:hover { opacity: 0.95; }
+.hood-map-wrap:hover { opacity: 1; }
 .hood-map-wrap svg { width: 100%; height: auto; display: block; }
 .hood-map-wrap .hood-map__poly {
   transition: fill-opacity 0.2s, stroke-width 0.2s, stroke 0.2s;
