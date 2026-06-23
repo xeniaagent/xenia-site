@@ -380,6 +380,46 @@ em { font-style: italic; color: var(--c-gold); }
   100% { transform: translateY(14px); opacity: 0; }
 }
 
+/* ---- SF Neighborhood Map (bottom-right of hero) ---- */
+.hood-map-wrap {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  width: 340px; max-width: 32vw;
+  z-index: 3;                /* above the hero (z=2) and hero content */
+  /* opacity: 0.5  — disabled; map is fully opaque for now */
+  transition: opacity 0.3s;
+  pointer-events: auto;     /* keep interactive even when transparent */
+  background: rgba(14, 26, 43, 0.55);  /* deep navy, semi-transparent so it sits over the hero image */
+  border: 1px solid rgba(201, 168, 106, 0.5);  /* subtle gold border */
+  border-radius: 14px;
+  padding: 10px 10px 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+.hood-map-wrap:hover { opacity: 0.95; }
+.hood-map-wrap svg { width: 100%; height: auto; display: block; }
+.hood-map-wrap .hood-map__poly {
+  transition: fill-opacity 0.2s, stroke-width 0.2s, stroke 0.2s;
+}
+.hood-map-wrap .hood-map__poly--clickable { cursor: pointer; }
+.hood-map-wrap .hood-map__poly.is-active,
+.hood-map-wrap .hood-map__poly--clickable:hover {
+  fill-opacity: 0.95;
+  stroke-width: 2.4;
+  stroke: #c9a86a; /* gold border on hover */
+}
+.hood-map-wrap .hood-map__label {
+  cursor: pointer;
+  transition: font-size 0.15s, fill 0.15s;
+}
+.hood-map-wrap .hood-map__label:hover {
+  font-size: 12.5px;
+  font-weight: 800;
+  fill: #c9a86a;
+}
+@media (max-width: 880px) {
+  .hood-map-wrap { display: none; } /* hide on mobile; the buttons + section below cover it */
+}
+
 /* ===================== ABOUT ===================== */
 .about { padding: 110px 0 90px; background: var(--c-bg); }
 .about__grid {
