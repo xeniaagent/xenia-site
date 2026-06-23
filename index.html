@@ -871,10 +871,10 @@
       // so the hover effect works regardless of whether the CSS class
       // selector applies. The CSS rules are still present as a fallback
       // for browsers that handle SVG class-based hover correctly.
-      const LABEL_REST  = { fontSize: '13px', fontWeight: '800', fill: '#0e1a2b', stroke: 'rgba(255,255,255,0.6)', strokeWidth: '3.5' };
-      const LABEL_HOVER = { fontSize: '26px', fontWeight: '900', fill: '#d96b27', stroke: 'rgba(255,255,255,0.85)', strokeWidth: '5' };
+      const LABEL_REST  = { fontSize: '13px', fontWeight: '800', fill: '#e8e0d0', stroke: 'rgba(14,26,43,0.7)', strokeWidth: '3.5' };
+      const LABEL_HOVER = { fontSize: '26px', fontWeight: '900', fill: '#d96b27', stroke: 'rgba(14,26,43,0.5)', strokeWidth: '5', opacity: '0.7' };
       const POLY_REST   = { fillOpacity: '0.7', stroke: '#0e1a2b', strokeWidth: '2' };
-      const POLY_HOVER  = { fillOpacity: '0.95', stroke: '#d96b27', strokeWidth: '4' };
+      const POLY_HOVER  = { fillOpacity: '0.95', stroke: '#d96b27', strokeWidth: '4', opacity: '0.7' };
 
       function applyStyles(el, styles) {
         // Build the full style attribute string. SVG elements in some
