@@ -554,6 +554,83 @@
       return '$' + Math.round(n);
     }
 
+    // "2026-06" -> "Jun 2026"
+    function fmtMonthLabel(yyyymm) {
+      if (!yyyymm) return '';
+      const m = yyyymm.split('-');
+      if (m.length < 2) return yyyymm;
+      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      const mi = parseInt(m[1], 10) - 1;
+      return months[mi] + ' ' + m[0];
+    }
+
+    // Format a single chart value according to its metric type
+    function fmtTickForMetric(metric, v) {
+      if (v == null || isNaN(v)) return '—';
+      if (metric === 'dom') return Math.round(v) + 'd';
+      if (metric === 'psf') return '$' + Math.round(v);
+      return fmtMoneyShort(v);
+    }
+
+    // Move the indicator (line + dot) on the chart SVG to a given month index.
+    // Uses the same projection math as buildChartSVG.
+    function setChartIndicator(svg, series, metric, idx) {
+      const m = CHART_METRICS[metric] || CHART_METRICS.sale;
+      const data = (series && series[m.dataKey]) || [];
+      const n = data.length;
+      if (n === 0) return;
+      const i = Math.max(0, Math.min(idx, n - 1));
+      const W = 600, PAD_L = 70, PAD_R = 24, PAD_T = 14, PAD_B = 28;
+      const innerW = W - PAD_L - PAD_R;
+      const x = PAD_L + (i / Math.max(n - 1, 1)) * innerW;
+      const valid = data.filter(v => v !== null && !isNaN(v));
+      const sMin = Math.min.apply(null, valid);
+      const sMax = Math.max.apply(null, valid);
+      const innerH = 220 - PAD_T - PAD_B;
+      const y = PAD_T + innerH - ((data[i] - sMin) / Math.max(sMax - sMin, 1)) * innerH;
+
+      const g = svg.querySelector('.chart__indicator');
+      if (!g) return;
+      const line = g.querySelector('.chart__indicator-line');
+      const dot  = g.querySelector('.chart__indicator-dot');
+      if (line) {
+        line.setAttribute('x1', x.toFixed(1));
+        line.setAttribute('x2', x.toFixed(1));
+      }
+      if (dot && data[i] !== null && !isNaN(data[i])) {
+        dot.setAttribute('cx', x.toFixed(1));
+        dot.setAttribute('cy', y.toFixed(1));
+      }
+      g.setAttribute('data-idx', i);
+    }
+
+    // Wire the slider input to update the chart indicator + readout.
+    // Called after renderHood() so the chart DOM exists.
+    function wireChartSlider(series, metric) {
+      const slider = document.querySelector('.chart__slider-input');
+      if (!slider) return;
+      const svg = document.querySelector('.hood-panel__chart svg');
+      const monthEl = document.querySelector('.chart__slider-month');
+      const valueEl = document.querySelector('.chart__slider-value');
+      if (!svg || !monthEl || !valueEl) return;
+
+      const onInput = () => {
+        const idx = parseInt(slider.value, 10);
+        const label = series.labels[idx] || '';
+        monthEl.textContent = fmtMonthLabel(label);
+        valueEl.textContent = fmtTickForMetric(metric, (series[CHART_METRICS[metric].dataKey] || [])[idx]);
+        setChartIndicator(svg, series, metric, idx);
+      };
+      slider.addEventListener('input', onInput);
+      // Keyboard: ArrowLeft/Right step by 1 month, Home/End jump to start/end.
+      slider.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowRight' || e.key === 'Home' || e.key === 'End') {
+          // default range behavior handles the value change; re-render via the next input event
+          requestAnimationFrame(onInput);
+        }
+      });
+    }
+
     // Metric config: { dataKey, label, shortLabel, color, fillId }
     const CHART_METRICS = {
       sale: { dataKey: 'sale', label: 'Median sale price', shortLabel: 'Sale price', color: '#d96b27', fillId: 'saleFill' },
@@ -627,8 +704,11 @@
       }
 
       const gradId = m.fillId + '-' + zip + '-' + metric;
+      const initialIdx = n - 1; // most recent month
+      const xv = xs(initialIdx);
+      const yv = data[initialIdx];
 
-      return '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + m.label + ' trend for ' + zip + ', last 24 months">'
+      return '<svg viewBox="0 0 ' + W + ' ' + H + '" data-chart-zip="' + zip + '" data-chart-metric="' + metric + '" role="img" aria-label="' + m.label + ' trend for ' + zip + ', last 24 months">'
         + '<defs><linearGradient id="' + gradId + '" x1="0" x2="0" y1="0" y2="1">'
         + '<stop offset="0%" stop-color="' + m.color + '" stop-opacity="0.22"/>'
         + '<stop offset="100%" stop-color="' + m.color + '" stop-opacity="0"/>'
@@ -639,6 +719,13 @@
         + (areaPath ? '<path d="' + areaPath + '" fill="url(#' + gradId + ')"/>' : '')
         + (linePath ? '<path d="' + linePath + '" fill="none" stroke="' + m.color + '" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>' : '')
         + data.map((v, i) => v !== null && !isNaN(v) ? '<circle cx="' + xs(i).toFixed(1) + '" cy="' + ys(v).toFixed(1) + '" r="2" fill="' + m.color + '"/>' : '').join('')
+        // Interactive indicator: vertical guide line + dot at selected month
+        + (yv !== null && !isNaN(yv)
+          ? '<g class="chart__indicator" data-idx="' + initialIdx + '">'
+            + '<line class="chart__indicator-line" x1="' + xv.toFixed(1) + '" x2="' + xv.toFixed(1) + '" y1="' + PAD_T + '" y2="' + (H - PAD_B) + '" stroke="' + m.color + '" stroke-width="1" stroke-dasharray="3 3" opacity="0.55"/>'
+            + '<circle class="chart__indicator-dot" cx="' + xv.toFixed(1) + '" cy="' + ys(yv).toFixed(1) + '" r="5" fill="#fff" stroke="' + m.color + '" stroke-width="2.5"/>'
+            + '</g>'
+          : '')
         + '</svg>';
     }
     function buildFactCell(label, value) {
@@ -770,6 +857,14 @@
                   </div>
                 </div>
                 ${buildChartSVG(series, data.zip, window.__chartMetric || "sale")}
+                <div class="chart__slider">
+                  <input type="range" class="chart__slider-input" min="0" max="${series.labels.length - 1}" value="${series.labels.length - 1}" step="1" aria-label="Select month" />
+                  <div class="chart__slider-readout">
+                    <span class="chart__slider-month">${fmtMonthLabel(series.labels[series.labels.length - 1])}</span>
+                    <span class="chart__slider-sep"> · </span>
+                    <span class="chart__slider-value">${fmtTickForMetric(window.__chartMetric || 'sale', (series[CHART_METRICS[window.__chartMetric || 'sale'].dataKey] || [])[series.labels.length - 1])}</span>
+                  </div>
+                </div>
                 <p class="chart__source">
 
                   Source: SF MLS closed sales, monthly median per ZIP ${data.zip}, geocoded to this neighborhood. Last 24 months through ${series.labels[series.labels.length - 1]}. 2-year change: <strong>${fmtPct(saleChg)}</strong>.
@@ -813,6 +908,10 @@
         const top = panel.getBoundingClientRect().top + window.pageYOffset - navHeight - 12;
         window.scrollTo({ top: Math.max(top, 0), behavior: 'smooth' });
       }
+
+      // Wire the chart slider (rebuilt on every renderHood since the
+      // chart DOM is recreated when the user toggles metric).
+      wireChartSlider(series, window.__chartMetric || 'sale');
     }
 
     function closeHood() {
