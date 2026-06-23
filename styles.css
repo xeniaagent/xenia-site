@@ -399,8 +399,8 @@ em { font-style: italic; color: var(--c-gold); }
    consistently. The inline <style> block in the SVG was being injected via
    innerHTML and wasn't being parsed by the browser. */
 .hood-map__poly {
-  fill: #c9a86a;
-  fill-opacity: 0.6;
+  fill: #2a4a6f;
+  fill-opacity: 0.7;
   stroke: #0e1a2b;
   stroke-width: 2;
   stroke-linejoin: round;
