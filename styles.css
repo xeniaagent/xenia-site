@@ -693,7 +693,7 @@ em { font-style: italic; color: var(--c-gold); }
   grid-template-areas:
     "story market"
     "vibe  market"
-    "disc  disc";
+    ".     disc";
   gap: 40px;
   color: var(--c-ink-2); /* override the white text set on the dark .neighborhoods section */
 }
