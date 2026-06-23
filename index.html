@@ -459,7 +459,7 @@
           </li>
         </ul>
       </div>
-      <form class="contact__form" onsubmit="event.preventDefault(); this.querySelector('.contact__thanks').hidden = false; this.reset();">
+      <form class="contact__form" id="contact-form">
         <h3>Send a message</h3>
         <label>
           <span>Your name</span>
@@ -970,10 +970,10 @@
       // so the hover effect works regardless of whether the CSS class
       // selector applies. The CSS rules are still present as a fallback
       // for browsers that handle SVG class-based hover correctly.
-      const LABEL_REST  = { fontSize: '13px', fontWeight: '800', fill: '#faf3e7', stroke: 'rgba(14,26,43,0.7)', strokeWidth: '3.5' };
-      const LABEL_HOVER = { fontSize: '26px', fontWeight: '900', fill: '#d96b27', stroke: 'rgba(14,26,43,0.5)', strokeWidth: '5', opacity: '1' };
+      const LABEL_REST  = { fontSize: '13px', fontWeight: '800', fill: '#ffffff', stroke: 'rgba(14,26,43,0.85)', strokeWidth: '4' };
+      const LABEL_HOVER = { fontSize: '26px', fontWeight: '900', fill: '#ff8a3d', stroke: 'rgba(14,26,43,0.6)', strokeWidth: '6', opacity: '1' };
       const POLY_REST   = { fillOpacity: '0.7', stroke: '#0e1a2b', strokeWidth: '2' };
-      const POLY_HOVER  = { fillOpacity: '0.95', stroke: '#d96b27', strokeWidth: '4' };
+      const POLY_HOVER  = { fillOpacity: '1', stroke: '#ff8a3d', strokeWidth: '6' };
 
       function applyStyles(el, styles) {
         // Build the full style attribute string. SVG elements in some
