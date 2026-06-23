@@ -386,7 +386,7 @@ em { font-style: italic; color: var(--c-gold); }
   bottom: 24px; right: 24px;
   width: 340px; max-width: 32vw;
   z-index: 3;                /* above the hero (z=2) and hero content */
-  opacity: 0.5;              /* baseline 50% transparency */
+  opacity: 0.6;              /* baseline 60% transparency */
   /* opacity does NOT change on hover — the wrap stays at the same opacity
      and only the targeted polygon's border + label get highlighted */
   pointer-events: auto;
@@ -1367,19 +1367,17 @@ em { font-style: italic; color: var(--c-gold); }
   transform: translate(2px, -2px);
 }
 
-/* Profile photo overlay becomes a clickable link to Google Maps */
+/* Profile photo overlay: photo link + a sibling address-badge link,
+   both pointing to Google Maps. Sibling placement keeps the badge
+   from being clipped by the photo's rounded corners. */
 .about__photo-link {
   display: block;
   position: relative;
   border-radius: 12px;
-  overflow: hidden;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-}
-.about__photo-link:hover .about__photo-tag,
-.about__photo-link:focus-visible .about__photo-tag {
-  background: rgba(14, 26, 43, 0.92);
+  overflow: hidden; /* keep the photo's own border-radius clean */
 }
 .about__photo-link:hover .about__photo,
 .about__photo-link:focus-visible .about__photo {
@@ -1387,6 +1385,31 @@ em { font-style: italic; color: var(--c-gold); }
 }
 .about__photo {
   transition: transform 0.3s ease;
+}
+
+/* Address badge — its own <a>, positioned relative to .about__photo-wrap */
+.about__photo-tag {
+  position: absolute;
+  bottom: -18px;
+  right: 0;          /* sit flush with the photo's right edge instead of overhanging */
+  background: var(--c-ink);
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: var(--r-md);
+  font-size: 13px;
+  line-height: 1.4;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  max-width: 230px;
+  box-shadow: var(--shadow-1);
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s;
+}
+.about__photo-tag:hover,
+.about__photo-tag:focus-visible {
+  background: rgba(14, 26, 43, 0.92);
+  transform: translateY(-2px);
 }
 
 .contact__form {
