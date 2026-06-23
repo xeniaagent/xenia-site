@@ -652,18 +652,29 @@ em { font-style: italic; color: var(--c-gold); }
   .hood-panel__period { display: block; margin-left: 0; margin-top: 2px; font-size: 14px; }
 }
 .hood-panel__disclaimer {
-  margin-top: 24px;
-  padding-top: 16px;
-  border-top: 1px solid var(--c-line);
   font-size: 9.5px;
   line-height: 1.5;
   color: var(--c-mute);
   font-style: italic;
   letter-spacing: 0.01em;
 }
+/* On desktop, the disclaimer sits in the right column under the chart. */
+@media (min-width: 881px) {
+  .hood-panel__disclaimer {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+}
 @media (max-width: 880px) {
   .hood-panel__period { font-size: 14px; }
-  .hood-panel__disclaimer { font-size: 10.5px; line-height: 1.5; }
+  .hood-panel__disclaimer {
+    font-size: 10.5px;
+    line-height: 1.5;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--c-line);
+  }
 }
 .hood-panel__zip {
   font-family: var(--serif);
@@ -691,23 +702,26 @@ em { font-style: italic; color: var(--c-gold); }
   display: grid;
   grid-template-columns: 1.15fr .85fr;
   grid-template-areas:
-    "story market"
-    "vibe  market"
+    "story stats"
+    "vibe  chart"
     ".     disc";
   gap: 40px;
   color: var(--c-ink-2); /* override the white text set on the dark .neighborhoods section */
 }
 .hood-panel__story   { grid-area: story; color: var(--c-ink-2); }
-.hood-panel__market  { grid-area: market; color: var(--c-ink-2); }
-.hood-panel__vibe    { grid-area: vibe; color: var(--c-ink-2); }
+.hood-panel__market  { grid-area: stats;  color: var(--c-ink-2); }
+.hood-panel__chart   { grid-area: chart;  color: var(--c-ink-2); }
+.hood-panel__vibe    { grid-area: vibe;   color: var(--c-ink-2); }
 .hood-panel__disclaimer { grid-area: disc; }
 @media (max-width: 880px) {
   .hood-panel__body {
     grid-template-columns: 1fr;
-    grid-template-areas: "story" "market" "vibe" "disc";
+    grid-template-areas: "story" "market" "vibe" "chart" "disc";
     gap: 28px;
     padding: 24px 22px 32px;
   }
+  .hood-panel__market  { grid-area: market; }
+  .hood-panel__chart   { grid-area: chart; }
   .hood-panel__header { padding: 22px 22px 18px; grid-template-columns: 1fr; }
   .hood-panel__zip { text-align: left; }
 }
