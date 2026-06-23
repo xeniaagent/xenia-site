@@ -628,70 +628,74 @@
         </div>
 
         <div class="hood-panel__body">
-          <div class="hood-panel__story">
-            <p class="story__lede">${v.story}</p>
-          </div>
+          <div class="hood-panel__leftcol">
+            <div class="hood-panel__story">
+              <p class="story__lede">${v.story}</p>
+            </div>
 
-          <div class="hood-panel__market">
-            <h4>Right now, in this neighborhood<span class="hood-panel__period">June 2026</span></h4>
-            <div class="market__stats">
-              <div class="stat">
-                <p class="stat__label">Median condo price</p>
-                <p class="stat__value">${m.median_condo_sell == null ? '—' : '$' + m.median_condo_sell.toLocaleString('en-US')}</p>
-                <p class="stat__sub">condominiums, all sales</p>
-              </div>
-              <div class="stat">
-                <p class="stat__label">Median SFR price</p>
-                <p class="stat__value">${m.median_sfr_sell == null ? '—' : '$' + m.median_sfr_sell.toLocaleString('en-US')}</p>
-                <p class="stat__sub">single-family homes</p>
-              </div>
-              <div class="stat">
-                <p class="stat__label">Days on market</p>
-                <p class="stat__value">${m.median_dom == null ? '—' : m.median_dom}<small style="font-size:14px;color:var(--c-mute);">${m.median_dom == null ? '' : ' days'}</small></p>
-                <p class="stat__sub">median, all sales</p>
-              </div>
-              <div class="stat">
-                <p class="stat__label">Median $/sqft</p>
-                <p class="stat__value">${m.median_psf == null ? '—' : '$' + m.median_psf.toLocaleString('en-US')}</p>
-                <p class="stat__sub">single-unit, all sales</p>
+            <div class="hood-panel__vibe">
+              <h4>What it's like</h4>
+              <p>${v.best_for}</p>
+
+              <div class="hood-panel__factgrid">
+                ${buildFactCell('Noise &amp; pace', v.noise)}
+                ${renderParksCell(v.parks)}
+                ${renderTransitCell(v.transit)}
+                ${renderSchoolsCell(v.schools)}
               </div>
             </div>
-            <p class="market__note">${m.note}</p>
           </div>
 
-          <div class="hood-panel__chart">
-            <div class="chart">
-              <div class="chart__title">
-                <h5><span class="chart__metric-label">${CHART_METRICS[window.__chartMetric || 'sale'].label}</span> <small class="chart__period">${series.labels.length} months</small></h5>
-                <div class="chart__legend">
-                  <div class="chart__toggle" role="tablist" aria-label="Chart metric">
-                    <button type="button" class="chart__toggle-btn" data-metric="sale" role="tab" aria-selected="false" title="Median sale price">Sale</button>
-                    <button type="button" class="chart__toggle-btn" data-metric="psf" role="tab" aria-selected="false" title="Median price per sq ft">$/sqft</button>
-                    <button type="button" class="chart__toggle-btn" data-metric="dom" role="tab" aria-selected="false" title="Median days on market">DOM</button>
-                  </div>
+          <div class="hood-panel__rightcol">
+            <div class="hood-panel__market">
+              <h4>Right now, in this neighborhood<span class="hood-panel__period">June 2026</span></h4>
+              <div class="market__stats">
+                <div class="stat">
+                  <p class="stat__label">Median condo price</p>
+                  <p class="stat__value">${m.median_condo_sell == null ? '—' : '$' + m.median_condo_sell.toLocaleString('en-US')}</p>
+                  <p class="stat__sub">condominiums, all sales</p>
+                </div>
+                <div class="stat">
+                  <p class="stat__label">Median SFR price</p>
+                  <p class="stat__value">${m.median_sfr_sell == null ? '—' : '$' + m.median_sfr_sell.toLocaleString('en-US')}</p>
+                  <p class="stat__sub">single-family homes</p>
+                </div>
+                <div class="stat">
+                  <p class="stat__label">Days on market</p>
+                  <p class="stat__value">${m.median_dom == null ? '—' : m.median_dom}<small style="font-size:14px;color:var(--c-mute);">${m.median_dom == null ? '' : ' days'}</small></p>
+                  <p class="stat__sub">median, all sales</p>
+                </div>
+                <div class="stat">
+                  <p class="stat__label">Median $/sqft</p>
+                  <p class="stat__value">${m.median_psf == null ? '—' : '$' + m.median_psf.toLocaleString('en-US')}</p>
+                  <p class="stat__sub">single-unit, all sales</p>
                 </div>
               </div>
-              ${buildChartSVG(series, data.zip, window.__chartMetric || "sale")}
-              <p class="chart__source">
-
-                Source: SF MLS closed sales, monthly median per ZIP ${data.zip}, geocoded to this neighborhood. Last 24 months through ${series.labels[series.labels.length - 1]}. 2-year change: <strong>${fmtPct(saleChg)}</strong>.
-              </p>
+              <p class="market__note">${m.note}</p>
             </div>
-          </div>
 
-          <div class="hood-panel__vibe">
-            <h4>What it's like</h4>
-            <p>${v.best_for}</p>
+            <div class="hood-panel__chart">
+              <div class="chart">
+                <div class="chart__title">
+                  <h5><span class="chart__metric-label">${CHART_METRICS[window.__chartMetric || 'sale'].label}</span> <small class="chart__period">${series.labels.length} months</small></h5>
+                  <div class="chart__legend">
+                    <div class="chart__toggle" role="tablist" aria-label="Chart metric">
+                      <button type="button" class="chart__toggle-btn" data-metric="sale" role="tab" aria-selected="false" title="Median sale price">Sale</button>
+                      <button type="button" class="chart__toggle-btn" data-metric="psf" role="tab" aria-selected="false" title="Median price per sq ft">$/sqft</button>
+                      <button type="button" class="chart__toggle-btn" data-metric="dom" role="tab" aria-selected="false" title="Median days on market">DOM</button>
+                    </div>
+                  </div>
+                </div>
+                ${buildChartSVG(series, data.zip, window.__chartMetric || "sale")}
+                <p class="chart__source">
 
-            <div class="hood-panel__factgrid">
-              ${buildFactCell('Noise &amp; pace', v.noise)}
-              ${renderParksCell(v.parks)}
-              ${renderTransitCell(v.transit)}
-              ${renderSchoolsCell(v.schools)}
+                  Source: SF MLS closed sales, monthly median per ZIP ${data.zip}, geocoded to this neighborhood. Last 24 months through ${series.labels[series.labels.length - 1]}. 2-year change: <strong>${fmtPct(saleChg)}</strong>.
+                </p>
+              </div>
             </div>
-          </div>
 
-          <p class="hood-panel__disclaimer">All figures shown here are based on independent research using publicly available sources (SF MLS, SF Planning, SF Assessor-Recorder, Zillow ZHVI). The data is provided "as is" and may not reflect current market conditions. Neighborhood boundaries, prices, and statistics can vary from day to day and street to street. Nothing on this site constitutes a guarantee, warranty, or representation by Xenia Brown or her affiliated brokerage. Buyers and sellers should verify all information independently before making any decision.</p>
+            <p class="hood-panel__disclaimer">All figures shown here are based on independent research using publicly available sources (SF MLS, SF Planning, SF Assessor-Recorder, Zillow ZHVI). The data is provided "as is" and may not reflect current market conditions. Neighborhood boundaries, prices, and statistics can vary from day to day and street to street. Nothing on this site constitutes a guarantee, warranty, or representation by Xenia Brown or her affiliated brokerage. Buyers and sellers should verify all information independently before making any decision.</p>
+          </div>
         </div>
       `;
       panel.hidden = false;
